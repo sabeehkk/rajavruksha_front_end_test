@@ -3,7 +3,7 @@ import Header from '../../components/header'
 import PageTitle from '../../components/pagetitle'
 import ProjectList from '../../components/ProjectList'
 import Footer from '../../components/footer'
-import bg from "../../components/assets/editedprojectpic.jpg";
+import bg from "../../components/assets/new_project.jpg";
 
 
 const ProjectPage =() => {
