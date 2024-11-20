@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "../ContactFrom";
+// import ContactForm from "../ContactFrom";
 import "./style.css";
 
 const Contactpage = ({requestAquote}) => {
@@ -13,7 +13,7 @@ const Contactpage = ({requestAquote}) => {
               {/* <div className="site-heading" data-aos="fade-up" >
                 <h2 className="section-title">Request a Quote</h2>
               </div> */}
-              <ContactForm />
+              {/* <ContactForm /> */}
             </div>
           </div>
           <div className="contact-body col-lg-5 col-sm-6 mb-5">

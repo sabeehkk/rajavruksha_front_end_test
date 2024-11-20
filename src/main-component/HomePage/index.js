@@ -13,6 +13,7 @@ import Container from "../Status/status.jsx"
 import OngoingProjects from '../../components/ourOnGoingProjects/ourOnGoingProjects.jsx';
 import NewCarousel from '../../components/newCarousel/newCarousel.jsx';
 
+
 const HomePage =() => {
     return(
         <Fragment>
