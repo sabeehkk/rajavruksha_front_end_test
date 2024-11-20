@@ -5,7 +5,7 @@ import Feature from '../../components/feature'
 import Partners from '../../components/partners'
 import Expertise from '../../components/expertise'
 import CareersPage from '../../components/careers/careers.jsx'
-import bg from "../../components/assets/careersedited.jpg";
+import bg from "../../components/assets/bde_intern.jpg";
 import JobCareer from "../../components/careers/jobCareer.jsx"
 import Footer from '../../components/footer/index.js'
 import CareerPage from '../../components/careers/careerPage.jsx'

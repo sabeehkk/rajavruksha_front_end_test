@@ -69,7 +69,7 @@ const ContactForm = () => {
     try {
       console.log("Preparing to send request to backend...");
 
-      const response = await fetch("http://localhost:3000/contact", {
+      const response = await fetch("https://rajavruksha-server.vercel.app/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

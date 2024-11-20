@@ -4,9 +4,9 @@ const PrivacyPolicy = () => {
   return (
     <div>
       <div className="row">
-        <div className="col-lg-12 col-sm-12 col-md-12 heading">
+        {/* <div className="col-lg-12 col-sm-12 col-md-12 heading">
           Privacy Policy
-        </div>
+        </div> */}
       </div>
       <div className="introduction">
         <p className="para-heading">1. Introduction</p>

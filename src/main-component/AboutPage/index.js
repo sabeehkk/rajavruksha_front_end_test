@@ -6,7 +6,7 @@ import Partners from '../../components/partners'
 import Expertise from '../../components/expertise'
 import Team from '../../components/team'
 import Footer from '../../components/footer'
-import bg from "../../components/assets/editone.jpg";
+import bg from "../../components/assets/project_page.jpg";
 import About from '../../components/about'
 import Animation from "../../components/reactIcons/journeySection"
 

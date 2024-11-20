@@ -56,7 +56,7 @@ const FormContact = () => {
     if (hasErrors) return;
     
     try {
-      const response = await fetch("http://localhost:3000/contact", {
+      const response = await fetch("https://rajavruksha-server.vercel.app/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
