@@ -21,6 +21,9 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.2"
   },
+  "engines": {
+      "node": "16.x"
+    },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "npm install --legacy-peer-deps && react-scripts build",
