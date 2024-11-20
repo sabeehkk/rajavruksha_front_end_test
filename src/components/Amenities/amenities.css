@@ -1,0 +1,98 @@
+.amenities-card {
+  background-color: #234F3D;
+  /* Dark green background */
+  border-radius: 30px;
+  /* Rounded corners */
+  width: 441.5px;
+  /* Set a specific width */
+  padding: 32px;
+  /* Padding inside the card */
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Slight shadow for a raised look */
+  /* height: 500px; */
+  margin-left: 150px;
+}
+
+.card-header {
+  background-color: #D09A41;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.amenities-list li {
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 17px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.4s ease;
+}
+
+.arrow-icon {
+  margin-right: 8px;
+}
+
+.amenities-list li i {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.amenities-list hr {
+  color: white;
+}
+
+.amenities-list li:hover {
+  color: #c6993e;
+}
+
+.arrowright-icon {
+
+  padding: 5px;
+  /* padding-right:7px; */
+
+  /* margin-right: 15rem; */
+  color: #3b3832;
+  margin-right: 10px;
+  background-color: #ffffff;
+  /* Gold */
+  border-radius: 50%;
+  /* width: 28px;
+  height: 28px; */
+  display: inline-block;
+}
+
+@media(max-width: 575px) {
+  .tour-area .container:before {
+    top: 90px
+  }
+
+  .tour_video_waves {
+    position: absolute;
+    left: 40%;
+    top: 33%;
+  }
+
+  .tour-container {
+    width: 201%;
+  }
+
+  .amenities-card {
+    margin-left: -13px;
+    width: 107%;
+    padding: 20px;
+  }
+
+
+}
