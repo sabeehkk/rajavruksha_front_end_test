@@ -8,10 +8,6 @@
 	padding: 70px 0
 }
 
-.footer-connect{
-	margin-left: 80px;
-}
-
 .single-footer h3 {
 	color: #fff;
 	margin-bottom: 20px
@@ -176,10 +172,6 @@ ul.footer-contact {
 @media(max-width: 767px) {
 	.single-footer {
 		margin: 30px 0;
-	}
-
-	.footer-connect{
-		margin-left: 5px;
 	}
 
 	.single-footer p br {

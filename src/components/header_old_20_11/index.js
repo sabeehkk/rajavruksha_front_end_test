@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
-import Logo from "../../components/assets/RRPL_Horizontal.png";
+import Logo from '../../components/assets/RRPL_Horizontal.png'
 import "./style.css";
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header" style={{ paddingLeft: "20px" }}>
+    <header className="header" style={{ paddingLeft: '20px' }}>
       <div className="row">
         <div className="col-lg-12">
           <div className="header-inn">
@@ -30,13 +30,15 @@ const Header = () => {
                 <nav id="menu">
                   <ul className="dropdown">
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link to="/" >Home</Link>
                     </li>
                     <li>
                       <Link to="/about">About</Link>
                     </li>
                     <li>
-                      <Link to="/projects">Projects</Link>
+                      <Link to="/projects">
+                        Projects
+                      </Link>
                       <ul>
                         {/* <li>
                           <Link to="/projects">Project</Link>
@@ -47,14 +49,10 @@ const Header = () => {
                       </ul>
                     </li>
                     <li>
-                      <Link to="#">Career</Link>
-                      <ul style={{ marginTop: "-26px" }}>
-                        <li>
-                          <Link to="bdeCareerForm">BDE</Link>
-                        </li>
-                        <li>
-                          <Link to="bdeIntern">BDE Intern</Link>
-                        </li>
+                      <Link to="/">Career</Link>
+                      <ul>
+                        <li><Link to="bdeCareerForm">BDE</Link></li>
+                        <li><Link to="bdeIntern">BDE Intern</Link></li>
                       </ul>
                     </li>
                     {/* <li>
@@ -112,49 +110,25 @@ const Header = () => {
                 </nav>
               </div>
               <div className="header-action">
-                <div
-                  to="/contact"
-                  className="header-btn"
-                  style={{ marginRight: "20px" }}
-                >
+                <div to="/contact" className="header-btn" style={{ marginRight: '20px' }}>
+
                   <Link
                     to="#"
-                    onClick={() =>
-                      window.open("https://wa.me/916366930174", "_blank")
-                    }
+                    onClick={() => window.open('https://wa.me/916366930174', '_blank')}
                   >
-                    <i
-                      style={{ marginRight: "20px" }}
-                      class="fab fa-whatsapp"
-                    ></i>
+                    <i style={{ marginRight: '20px' }} class="fab fa-whatsapp"></i>
                   </Link>
                   <Link
                     to="#"
-                    onClick={() =>
-                      window.open(
-                        "https://www.youtube.com/@Rajavruksha_Realtors",
-                        "_blank"
-                      )
-                    }
+                    onClick={() => window.open('https://www.youtube.com/@Rajavruksha_Realtors', '_blank')}
                   >
-                    <i
-                      style={{ marginRight: "20px" }}
-                      class="fab fa-youtube"
-                    ></i>
+                    <i style={{ marginRight: '20px' }} class="fab fa-youtube"></i>
                   </Link>
                   <Link
                     to="#"
-                    onClick={() =>
-                      window.open(
-                        "https://www.facebook.com/RajavruskhaRealtors",
-                        "_blank"
-                      )
-                    }
+                    onClick={() => window.open('https://www.facebook.com/RajavruskhaRealtors', '_blank')}
                   >
-                    <i
-                      style={{ marginRight: "20px" }}
-                      className="fab fa-facebook-f"
-                    />
+                    <i style={{ marginRight: '20px' }} className="fab fa-facebook-f" />
                   </Link>
                 </div>
               </div>

@@ -167,7 +167,6 @@ const CareerForm = () => {
             ref={fileInputRef}
             onChange={handleFileChange}
             accept=".pdf"
-            className="input-bde"
           />
           <p style={{ fontSize: "0.6rem", color: "red", marginTop: "-1rem" }}>
             * Please upload a file with the following format: <strong>.pdf</strong>.

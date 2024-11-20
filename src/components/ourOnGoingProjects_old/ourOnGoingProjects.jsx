@@ -1,5 +1,4 @@
 // import React from 'react';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './ourOnGoingProjects.css';
 
 // const OngoingProjects = () => {
@@ -47,7 +46,7 @@ const OngoingProjects = () => {
           <p className="project-description">
             Farmland is not just a dream; it's a sound financial investment with growing demand in the market.
           </p>
-          <Link to="/sylvan-retreat"><button className="project-button">Read More</button></Link>
+          <button className="project-button">Read More</button>
         </div>
       </div>
 

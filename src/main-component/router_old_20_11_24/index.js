@@ -27,8 +27,6 @@ import BdeInternCareer from '../../components/careers/bdeIntCareer.jsx';
 import BdeCareerMain from '../careers/bdeCareer.jsx';
 import BdeInternCareerMain from '../careers/bdeInternCareer.jsx';
 import ScrollToTop from '../../utils/utils.js';
-import MainPrivacyPolicy from '../PrivacyPolicy/index.js';
-import CareerMainFooterComp from '../CareerMainFooter/index.js';
 
 
 
@@ -53,7 +51,7 @@ const AllRoute = () => {
           <Route path='/blog' component={BlogPage} />
           <Route path='/blog-single' component={BlogSinglePage} />
           <Route path='/experienceSection' component={ExperienceSection} />
-          <Route path='/careers' component={CareerMainFooterComp} />
+          {/* <Route path='/careers' component={Careers} /> */}
           {/* <Route path='/careers' component={CareerPage} /> */}
           <Route path="/bdeCareerForm" component={BdeCareerMain} />
           <Route path="/bdeIntern" component={BdeInternCareerMain} />
@@ -62,7 +60,6 @@ const AllRoute = () => {
           <Route path='/journeySection' component={JourneySection} />
           <Route path='/status' component={Status} />
           <Route path='/amenities' component={Amenities} />
-          <Route path='/privacyPolicy' component={MainPrivacyPolicy}/>
           <Route path="*" component={ErrorPage} />
         </Switch>
       </Router>
