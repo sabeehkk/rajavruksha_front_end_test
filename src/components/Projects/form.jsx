@@ -1,144 +1,374 @@
-import React, { Component } from "react";
 
-class FormContact extends Component {
-  state = {
+
+import React, { useState } from "react";
+
+const FormContact = () => {
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     lastname: "",
-    events: "",
     notes: "",
-    error: {},
+    phone_no: "",
+  });
+  
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    lastname: "",
+    notes: "",
+    phone_no: "",
+  });
+  
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  
+  const changeHandler = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    setError((prevError) => ({
+      ...prevError,
+      [name]: "",
+    }));
   };
-
-  changeHandler = (e) => {
-    const error = this.state.error;
-    error[e.target.name] = "";
-
-    this.setState({
-      [e.target.name]: e.target.value,
-      error,
-    });
-  };
-
-  subimtHandler = (e) => {
+  
+  const submitHandler = async (e) => {
     e.preventDefault();
-
-    const { name, email, subject, lastname, events, notes, error } = this.state;
-
-    if (name === "") {
-      error.name = "Please enter your name";
+    let formErrors = { ...error };
+    
+    if (formData.name === "") formErrors.name = "Please enter name";
+    if (formData.email === "") {
+      formErrors.email = "Please enter email";
+    } else if (!emailRegex.test(formData.email)) {
+      formErrors.email = "Please enter a valid email address";
     }
-    if (email === "") {
-      error.email = "Please enter your email";
-    }
-    if (subject === "") {
-      error.subject = "Please enter your subject";
-    }
-    if (lastname === "") {
-      error.lastname = "Please enter your Lastname";
-    }
-    if (events === "") {
-      error.events = "Select your event list";
-    }
-    if (notes === "") {
-      error.notes = "Please enter your note";
-    }
-
-    if (error) {
-      this.setState({
-        error,
+    if (formData.subject === "") formErrors.subject = "Please enter subject";
+    if (formData.lastname === "") formErrors.lastname = "Please enter lastname";
+    if (formData.notes === "") formErrors.notes = "Please enter notes";
+    if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
+    
+    setError(formErrors);
+    
+    const hasErrors = Object.values(formErrors).some((err) => err !== "");
+    if (hasErrors) return;
+    
+    try {
+      const response = await fetch("http://localhost:3000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          lastName: formData.lastname,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.notes,
+          phone_no: formData.phone_no,
+        }),
       });
-    }
-    if (
-      error.name === "" &&
-      error.email === "" &&
-      error.email === "" &&
-      error.lastname === "" &&
-      error.subject === "" &&
-      error.events === "" &&
-      error.notes === ""
-    ) {
-      this.setState({
-        name: "",
-        email: "",
-        subject: "",
-        events: "",
-        notes: "",
-        error: {},
-      });
+
+      if (response.ok) {
+        alert("Your message has been sent successfully!");
+        setFormData({
+          name: "",
+          lastname: "",
+          email: "",
+          subject: "",
+          notes: "",
+          phone_no: "",
+        });
+        setError({
+          name: "",
+          email: "",
+          subject: "",
+          lastname: "",
+          notes: "",
+          phone_no: "",
+        });
+      } else {
+        alert("There was an error sending the message.");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      alert("There was a problem with the server.");
     }
   };
-
-  render() {
-    const { name, email, subject, lastname, error } = this.state;
-
-    return (
-      <form onSubmit={this.subimtHandler} className="form-new">
-        <div className="row">
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-new-field">
-              <input
-                value={name}
-                onChange={this.changeHandler}
-                type="text"
-                name="name"
-                placeholder="Name"
+  
+  return (
+    <form onSubmit={submitHandler} className="form-new">
+      <div className="row">
+        <div className="col-lg-6 col-sm-6">
+          <div className="form-new-field">
+            <input
+              value={formData.name}
+              onChange={changeHandler}
+              type="text"
+              name="name"
+              placeholder="Name"
               />
-              <p>{error.name ? error.name : ""}</p>
-            </div>
+            <p>{error.name}</p>
           </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-new-field">
-              <input
-                value={lastname}
-                onChange={this.changeHandler}
-                type="text"
-                name="lastname"
-                placeholder="Lastname"
+        </div>
+        <div className="col-lg-6 col-sm-6">
+          <div className="form-new-field">
+            <input
+              value={formData.lastname}
+              onChange={changeHandler}
+              type="text"
+              name="lastname"
+              placeholder="Lastname"
               />
-              <p>{error.lastname ? error.lastname : ""}</p>
-            </div>
+            <p>{error.lastname}</p>
           </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-new-field">
-              <input
-                onChange={this.changeHandler}
-                value={email}
-                type="email"
-                name="email"
-                placeholder="Email"
+        </div>
+        <div className="col-lg-6 col-sm-6">
+          <div className="form-new-field">
+            <input
+              value={formData.email}
+              onChange={changeHandler}
+              type="email"
+              name="email"
+              placeholder="Email"
               />
-              <p>{error.email ? error.email : ""}</p>
-            </div>
+            <p>{error.email}</p>
           </div>
-          <div className="col-lg-6 col-sm-6">
-            <div className="form-new-field">
-              <input
-                onChange={this.changeHandler}
-                value={subject}
-                type="text"
-                name="subject"
-                placeholder="Subject"
+        </div>
+        <div className="col-lg-6 col-sm-6">
+          <div className="form-new-field">
+            <input
+              value={formData.phone_no}
+              onChange={changeHandler}
+              type="number"
+              name="phone_no"
+              placeholder="Phone No"
               />
-              <p>{error.subject ? error.subject : ""}</p>
-            </div>
+            <p>{error.phone_no}</p>
           </div>
-          <div className="col-lg-12 col-sm-12">
-            <div className="form-new-field">
-              <textarea name="message" placeholder="Message"></textarea>
-            </div>
+        </div>
+        <div className="col-lg-12 col-sm-12">
+          <div className="form-new-field">
+            <input
+              value={formData.subject}
+              onChange={changeHandler}
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              />
+            <p>{error.subject}</p>
           </div>
-          <div className="col-lg-12">
-            <div className="contact-form-new-action">
+        </div>
+        <div className="col-lg-12 col-sm-12">
+          <div className="form-new-field">
+            <textarea
+              value={formData.notes}
+              onChange={changeHandler}
+              name="notes"
+              placeholder="Notes"
+              rows="4"
+              />
+            <p>{error.notes}</p>
+          </div>
+        </div>
+        <div className="contact-form-new-action">
               <button style={{backgroundClip:''}} className="form-new-button" type="submit">
                 Send Message
               </button>
             </div>
-          </div>
-        </div>
-      </form>
-    );
-  }
-}
+      </div>
+    </form>
+  );
+};
+
 export default FormContact;
+
+
+// // import React, { Component } from "react";
+// import React, { useState } from "react";
+
+
+// const FormContact =()=>{
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     subject: "",
+//     lastname: "",
+//     notes: "",
+//     phone_no: ""
+//   });
+
+//   const [error, setError] = useState({
+//     name: "",
+//     email: "",
+//     subject: "",
+//     lastname: "",
+//     notes: "",
+//     phone_no: ""
+//   });
+//   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+//     // Handle input changes and clear errors
+//   const changeHandler = (e) => {
+//     const { name, value } = e.target;
+//     setFormData((prevData) => ({
+//       ...prevData,
+//       [name]: value
+//     }));
+
+//     // Clear the error for that specific field
+//     setError((prevError) => ({
+//       ...prevError,
+//       [name]: "",
+//     }));
+//   };
+
+  
+//   // Handle form submission
+//   const submitHandler = async (e) => {
+//     console.log('form submitted',formData.name);
+    
+//     e.preventDefault(); 
+//     let formErrors = { ...error };
+//     if (formData.name === "") formErrors.name = "Please enter name";
+//     if (formData.email === "") {
+//       formErrors.email = "Please enter email";
+//     } else if (!emailRegex.test(formData.email)) {
+//       formErrors.email = "Please enter a valid email address";
+//     }
+//     if (formData.subject === "") formErrors.subject = "Please enter subject";
+//     if (formData.lastname === "") formErrors.lastname = "Please enter lastname";
+//     if (formData.notes === "") formErrors.notes = "Please enter note";
+//     if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
+//     setError(formErrors);
+//     const hasErrors = Object.values(formErrors).some((err) => err !== "");
+//     if (hasErrors) return; // Stop form submission if there are validation errors
+//     try {
+//       console.log("Preparing to send request to backend...");
+
+//       const response = await fetch("http://localhost:3000/contact", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//           name: formData.name,
+//           lastName: formData.lastname,
+//           email: formData.email,
+//           subject: formData.subject,
+//           message: formData.notes,
+//           phone_no: formData.phone_no
+//         }),
+//       });
+//       console.log('function clicked');
+      
+
+//       if (response.ok) {
+//         // Handle success response
+//         alert("Your message has been sent successfully!");
+
+//         // Reset form data and error state
+//         setFormData({
+//           name: "",
+//           lastname: "",
+//           email: "",
+//           subject: "",
+//           notes: "",
+//           phone_no: ""
+//         });
+
+//         setError({
+//           name: "",
+//           email: "",
+//           subject: "",
+//           lastname: "",
+//           notes: "",
+//           phone_no: ""
+//         });
+//       } else {
+//         // Handle unsuccessful response (server error, etc.)
+//         alert("There was an error sending the message.");
+//       }
+
+//     } catch (error) {
+//       console.error("Error:", error);
+//       alert("There was a problem with the server.");
+//     }
+//   };
+
+//   return (
+//     <form onSubmit={submitHandler} className="form-new">
+//         <div className="row">
+//           <div className="col-lg-6 col-sm-6">
+//             <div className="form-new-field">
+//               <input
+//                 value={formData.name}
+//                 onChange={changeHandler}
+//                 type="text"
+//                 name="name"
+//                 placeholder="Name"
+//                 error={!!error.name}
+//               />
+//               <p>{error.name ? error.name : ""}</p>
+//             </div>
+//           </div>
+//           <div className="col-lg-6 col-sm-6">
+//             <div className="form-new-field">
+//               <input
+//                  value={formData.lastname}
+//                 onChange={changeHandler}
+//                 type="text"
+//                 name="lastname"
+//                 placeholder="Lastname"
+//                 />
+//               <p>{error.lastname ? error.lastname : ""}</p>
+//             </div>
+//           </div>
+//           <div className="col-lg-6 col-sm-6">
+//             <div className="form-new-field">
+//               <input
+//                 onChange={changeHandler}
+//                 value={formData.email}
+//                 type="email"
+//                 name="email"
+//                 placeholder="Email"
+//                 />
+//               <p>{error.email ? error.email : ""}</p>
+//             </div>
+//           </div>
+//           <div className="col-lg-6 col-sm-6">
+//             <div className="form-new-field">
+//             <input
+//             onChange={changeHandler}
+//             value={formData.phone_no}
+//             type="number"
+//             name="phone_no" // Fix the mismatch here
+//             placeholder="number"
+//               />
+//               <p>{error.phone_no ? error.phone_no : ""}</p>
+//             </div>
+//           </div>
+//           <div className="col-lg-12 col-sm-12">
+//             <div className="form-new-field">
+//             <textarea
+//               name="notes"
+//               placeholder="Message"
+//               onChange={changeHandler}
+//               value={formData.notes}
+//             />
+//             </div>
+//           </div>
+//           <div className="col-lg-12">
+//             <div className="contact-form-new-action">
+//               <button style={{backgroundClip:''}} className="form-new-button" type="submit">
+//                 Send Message
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </form>
+//     );
+//   };
+//   export default FormContact;

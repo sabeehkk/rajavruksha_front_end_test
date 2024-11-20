@@ -44,10 +44,8 @@ const ContactForm = () => {
   // Handle form submission
   const submitHandler = async (e) => {
     e.preventDefault(); // Prevent form reload
-
     // Step 1: Prepare form errors
     let formErrors = { ...error };
-
     // Step 2: Validate each field
     if (formData.name === "") formErrors.name = "Please enter name";
     if (formData.email === "") {

@@ -91,54 +91,54 @@ const ProjectList = () => {
               </div>
               <div className="col-md-5 col-sm-6 mb-5" >
               <div
-  className="project-box"
-  onClick={() => handleProjectClick('Eco Nest', ecoNext)}
->
-  <Link to="/projects-single">
-    {/* <img src={ecoNext} alt="img" /> */}
-    <img
-      src={EconextProject}
-      alt="img"
-      style={{
-        height: '600px',
-        width: '100%', // Ensures the image takes the full width of the card
-        objectFit: 'cover', // Makes the image fit within the card without distortion
-        borderRadius: '8px', // Optional: Adds rounded corners for a polished look
-      }}
-    />
-    <h3>
-      Eco Nest
-      {/* <br /> IN BAHRAIN */}
-    </h3>
-    <p>Eco Acres </p>
-    <div className="project-zoom">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={24}
-        height={24}
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="feather feather-eye"
-      >
-        <path
-          stroke="#ffffff"
-          d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-        />
-        <circle stroke="#ffffff" cx={12} cy={12} r={3} />
-      </svg>
-    </div>
-  </Link>
-</div>
+                className="project-box"
+                onClick={() => handleProjectClick('Eco Nest', ecoNext)}
+              >
+                <Link to="/projects-single">
+                  {/* <img src={ecoNext} alt="img" /> */}
+                  <img
+                    src={EconextProject}
+                    alt="img"
+                    style={{
+                      height: '600px',
+                      width: '100%', // Ensures the image takes the full width of the card
+                      objectFit: 'cover', // Makes the image fit within the card without distortion
+                      borderRadius: '8px', // Optional: Adds rounded corners for a polished look
+                    }}
+                  />
+                  <h3>
+                    Eco Nest
+                    {/* <br /> IN BAHRAIN */}
+                  </h3>
+                  <p>Eco Acres </p>
+                  <div className="project-zoom">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={24}
+                      height={24}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="feather feather-eye"
+                    >
+                      <path
+                        stroke="#ffffff"
+                        d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                      />
+                      <circle stroke="#ffffff" cx={12} cy={12} r={3} />
+                    </svg>
+                  </div>
+                </Link>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-export default ProjectList;
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                );
+              };
+              export default ProjectList;
