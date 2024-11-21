@@ -11,7 +11,7 @@ import BlogSection from '../../components/BlogSection';
 import Footer from '../../components/footer';
 import Container from "../Status/status.jsx"
 import OngoingProjects from '../../components/ourOnGoingProjects/ourOnGoingProjects.jsx';
-import NewCarousel from '../../components/newCarousel/newCarousel.jsx';
+import NewCarousel from '../../components/newCarousel/newCarousel';
 
 
 const HomePage =() => {
