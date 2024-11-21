@@ -78,6 +78,12 @@
 }
 
 @media (max-width: 768px) {
+  .project-card{
+    padding: 27px 23px 4px 23px;
+  }
+  .projects-container-new {
+    min-height: 68vh;
+  }
   .projects-title {
     font-size: 2rem;
   }
