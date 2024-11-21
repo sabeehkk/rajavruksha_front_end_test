@@ -14,7 +14,7 @@ function Sylvanretreats() {
   return (
     <Fragment>
     <Header/>
-    <PageTitle pageTitle={'sylvan-Retreat'} pagesub={'Project Details'} pageImg={bg}/>
+    <PageTitle PageTitle={'sylvan-Retreat'} pagesub={'Project Details'} pageImg={bg}/>
     <Sylvanretreat />
     {/* <ContactForm/> */}
     <ContactUs/>
