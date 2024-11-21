@@ -94,13 +94,13 @@ class Testimonial extends Component {
 
 
     return (
-      <section   className="testimonial-area pt-0" data-aos="fade-up">
+      <div   className="testimonial-area pb-5" data-aos="fade-up">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="site-heading">
                 <h3 className="testimonial-subtitle">Hear From</h3>
-                <h2 className="testimonial-title">Our Happy Customers !</h2>
+                <h2  className="testimonial-title">Our Happy Customers !</h2>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ class Testimonial extends Component {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     );
   }
 }

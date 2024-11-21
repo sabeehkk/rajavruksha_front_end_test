@@ -13,7 +13,7 @@ function Econext() {
   return (
     <Fragment>
     <Header/>
-    <PageTitle pageTitle={'Eco-nest'} pagesub={'Project Details'} pageImg={bg}/>
+    <PageTitle PageTitle={'Eco-nest'} pagesub={'Project Details'} pageImg={bg}/>
     <EcoNexts />
     <ContactUs />
     {/* <Testimonial/> */}

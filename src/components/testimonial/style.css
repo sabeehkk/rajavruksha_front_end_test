@@ -83,7 +83,7 @@
 }
 .tetimonial-slider .slick-dots {
   position: inherit;
-  margin-top: 30px;
+  margin-top: -28px;
 }
 
 .testimonial-subtitle {
@@ -100,7 +100,7 @@
   color: #000;
   font-size: 40px;
   letter-spacing: 0px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 70px;
 }
 
