@@ -186,6 +186,7 @@ function Sylvanretreat() {
                       src={
                         "https://rajavrukshagroup.in/wp-content/uploads/2023/11/compliance.png"
                       }
+                      
                       alt="Project cost"
                       className="syl-img"
                     />
