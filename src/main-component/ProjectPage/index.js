@@ -11,7 +11,7 @@ const ProjectPage =() => {
     return(
         <Fragment>
             <Header/> 
-            <PageTitle pageTitle={'PROJECTS'} pagesub={'Projects'} pageImg={bg}/>
+            <PageTitle PageTitle={'PROJECTS'} pagesub={'Projects'} pageImg={bg}/>
             <ProjectList/>
             <Footer/>
         </Fragment>

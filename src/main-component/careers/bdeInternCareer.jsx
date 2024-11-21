@@ -18,7 +18,7 @@ const BdeInternCareerMain = () => {
     return (
         <Fragment>
             <Header />
-            <PageTitle pageTitle={'Career'} pagesub={'career'} pageImg={bg} intSubtitle={intSubtitle} />
+            <PageTitle PageTitle={'Career'} pagesub={'career'} pageImg={bg} intSubtitle={intSubtitle} />
             {/* <JobCareer/> */}
             <BdeInternCareer />
             <Footer />

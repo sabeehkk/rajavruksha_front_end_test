@@ -19,7 +19,6 @@ import ecoNext from "../../components/assets/ecoproject.jpg";
 import EconextProject from "../../components/assets/project_picture.jpg"
 
 import "./style.css";
-
 const ProjectList = () => {
   const history = useHistory();
   // const handleProjectClick = (name, image) => {
@@ -45,22 +44,19 @@ const ProjectList = () => {
                 </div>
               </div>
             </div>
-            <div className="row align-items-center justify-content-between">
-              <div className="col-md-5 col-sm-6 mt-5">
-                <div className="project-box" onClick={() => handleProjectClick('Sylvan Retreat')}>
-                  {/* <Link to="/projects-single"> */}
-                  {/* <img src={ProjectImage} alt="img" style={{height:'600px'}}/> */}
-                  {/* <img src={'https://img.freepik.com/free-photo/man-using-tablet-eco-friendly-wind-power-project-layout_23-2148847801.jpg?uid=R168516155&ga=GA1.1.1457800326.1726059840&semt=ais_hybrid'} alt="Sylvan Retreat" style={{ height: '600px' }} /> */}
+            <div className="row align-items-center" style={{marginLeft: '7.5rem',marginRight: '7.5rem'}}>
+              <div className="col-md-5 col-sm-6 mt-5"  >
+                <div className="project-box" style={{height:'500px'}} onClick={() => handleProjectClick('Sylvan Retreat')}>
                   <img
-      src={'https://img.freepik.com/free-photo/man-using-tablet-eco-friendly-wind-power-project-layout_23-2148847801.jpg?uid=R168516155&ga=GA1.1.1457800326.1726059840&semt=ais_hybrid'}
-      alt="img"
-      style={{
-        height: '600px',
-        width: '100%', // Ensures the image takes the full width of the card
-        objectFit: 'cover', // Makes the image fit within the card without distortion
-        borderRadius: '8px', // Optional: Adds rounded corners for a polished look
-      }}
-    />
+                    src={'https://img.freepik.com/free-photo/man-using-tablet-eco-friendly-wind-power-project-layout_23-2148847801.jpg?uid=R168516155&ga=GA1.1.1457800326.1726059840&semt=ais_hybrid'}
+                    alt="img"
+                    style={{
+                      height: '600px',
+                      width: '100%', // Ensures the image takes the full width of the card
+                      objectFit: 'cover', // Makes the image fit within the card without distortion
+                      borderRadius: '8px', // Optional: Adds rounded corners for a polished look
+                    }}
+                  />
                   <h3>
                     Sylvan Retreat
                     {/* <br /> IN PARIS */}
@@ -89,9 +85,9 @@ const ProjectList = () => {
                   {/* </Link> */}
                 </div>
               </div>
-              <div className="col-md-5 col-sm-6 mb-5" >
+              <div className="col-md-5 col-sm-6 mb-5" style={{marginLeft:'90px'}}>
               <div
-                className="project-box"
+                className="project-box" style={{height:'500px'}}
                 onClick={() => handleProjectClick('Eco Nest', ecoNext)}
               >
                 <Link to="/projects-single">
@@ -133,12 +129,12 @@ const ProjectList = () => {
                   </div>
                 </Link>
               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                );
-              };
-              export default ProjectList;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  };
+  export default ProjectList;

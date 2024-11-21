@@ -21,7 +21,8 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.45);
+	opacity: 0.58; /* Adjusted to a valid value */
+	background: rgba(0, 0, 0, 0.35); /* Uncomment if you want a background */
 }
 
 .project-box h3 {

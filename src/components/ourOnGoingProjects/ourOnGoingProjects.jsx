@@ -10,7 +10,7 @@ const OngoingProjects = () => {
     <div className="projects-container-new">
       <h1 className="projects-title">Our Ongoing Projects</h1>
       
-      <div className="project-card" style={{ padding: '27px 65px 4px 65px !important' }}>
+      <div className="project-card" >
         <div className="project-image-container">
           <img 
             src="https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-2048x1080.jpg" 

@@ -16,7 +16,7 @@ const AboutPage =() => {
     return(
         <Fragment>
             <Header/>
-            <PageTitle pageTitle={'About Us'} pagesub={'About'} pageImg={bg}/>
+            <PageTitle PageTitle={'About Us'} pagesub={'About'} pageImg={bg}/>
             <About text={Text} image ={bg}/>
             <Animation/>
             {/* <Partners/> */}

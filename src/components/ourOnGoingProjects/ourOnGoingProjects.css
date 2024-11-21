@@ -15,7 +15,7 @@
 }
 
 .project-card {
-  padding: 27px 65px 4px 65px;
+  padding: 27px 65px 4px 65px !important;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -75,8 +75,14 @@
 }
 
 @media (max-width: 768px) {
+  .project-card{
+    padding: 27px 31px 4px 31px !important;
+  }
   .projects-title {
     font-size: 2rem;
+  }
+  .projects-container-new{
+    min-height: 10vh;
   }
 
   .project-subtitle {
