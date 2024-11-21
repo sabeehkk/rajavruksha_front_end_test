@@ -15,14 +15,14 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-4 col-sm-6 order-lg-1 order-1">
               <div className="single-footer">
-                <h3>About</h3>
+                <p id="footer-head">About</p>
                 <p>
                   We guide you in selecting the best property
                   <br />
                   that aligns with your vision and goals
                 </p>
                 <ul className="footer-contact ">
-                  <h3>Contact Details</h3>
+                  <p id="footer-head">Contact Details</p>
                   <li>
                     <i className="fas fa-phone-square-alt" /> +91 8549 955 955
                   </li>
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             <div className="col-lg-2 col-sm-6 order-lg-2 order-3">
               <div className="single-footer">
-                <h3>Quick Links</h3>
+                <p id="footer-head">Quick Links</p>
                 <ul>
                   <li>
                     <Link to="/about">About Us</Link>
@@ -66,7 +66,7 @@ const Footer = () => {
 
             <div className="col-lg-2 col-sm-6 order-lg-3 order-4">
               <div className="single-footer">
-                <h3>Office Timings</h3>
+                <p id="footer-head">Office Timings</p>
                 <ul>
                   <li>
                     <p>Wednesday to Monday :</p>
@@ -89,7 +89,7 @@ const Footer = () => {
             <div className="col-lg-4 col-sm-6 order-lg-4 order-2">
               <div className="single-footer">
                 {/* <h3>Newsletter</h3> */}
-                <h3 className="footer-connect">Connect With Us</h3>
+                <p id="footer-connect">Connect With Us</p>
                 {/* <p>Sign up now for weekly news & updates.</p>
                 <div className="newsletter_form">
                   <form onSubmit={NewsletterHandler}>

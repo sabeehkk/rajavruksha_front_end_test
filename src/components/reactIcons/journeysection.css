@@ -5,6 +5,7 @@
 }
 
 .journey-section h2 {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
   color: #0a3d24;
   margin-bottom: 10px;
@@ -91,10 +92,11 @@
 
 /* Text styles */
 .text-wrapper h3 {
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: underline;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #0a3d24;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 .text-wrapper p {

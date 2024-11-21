@@ -7,6 +7,7 @@
 }
 
 .projects-title {
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: #004d40;
   font-size: 2.5rem;
@@ -15,7 +16,8 @@
 }
 
 .project-card {
-  padding: 27px 65px 4px 65px !important;
+  padding: 27px 65px 4px 65px;
+  /* padding: 19px 25px 4px 22px; */
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -46,6 +48,7 @@
 }
 
 .project-subtitle {
+  font-family: Arial, Helvetica, sans-serif;
   color: #004d40;
   font-size: 1.5rem;
   font-weight: bold;
@@ -75,14 +78,8 @@
 }
 
 @media (max-width: 768px) {
-  .project-card{
-    padding: 27px 31px 4px 31px !important;
-  }
   .projects-title {
     font-size: 2rem;
-  }
-  .projects-container-new{
-    min-height: 10vh;
   }
 
   .project-subtitle {

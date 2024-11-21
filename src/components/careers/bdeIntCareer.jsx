@@ -66,10 +66,10 @@ const BdeInternCareer = () => {
         formDataToSubmit.append("contact_no", formData.contact_no);
         formDataToSubmit.append("file", formData.file);
 
-        const response = await fetch("https://rajavruksha-server.vercel.app/careerForm", {
-          method: "POST",   
+        const response = await fetch("http://localhost:3000/careerForm", {
+          method: "POST",
           body: formDataToSubmit,
-        });   
+        });
 
         if (response.ok) {
           const data = await response.json();
@@ -95,7 +95,7 @@ const BdeInternCareer = () => {
     <section className="containers">
       <div className="job-description" data-aos="fade-right">
         <h2>BUSINESS DEVELOPMENT EXECUTIVE INTERN</h2>
-        <h3>Intern Program Details</h3>
+        <h4>Intern Program Details</h4>
         <p>
           The internship program For Business Development Executive is set for a
           period of 3 months where in the interns will be trained in the below

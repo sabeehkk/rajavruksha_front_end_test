@@ -99,8 +99,8 @@ class Testimonial extends Component {
           <div className="row">
             <div className="col-lg-12">
               <div className="site-heading">
-                <h3 className="sub-title">Hear From</h3>
-                <h2 className="section-title">Our Happy Customers !</h2>
+                <h3 className="testimonial-subtitle">Hear From</h3>
+                <h2 className="testimonial-title">Our Happy Customers !</h2>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ class Testimonial extends Component {
                         <div className="testimonial-meta">
                           {/* <img src={testimonial1} alt="img" /> */}
                           <div className="testimonial-author">
-                            <h4>{value.name}</h4>
+                            <p className="author-name">{value.name}</p>
                             <p>{value.proffession}</p>
                           </div>
                         </div>

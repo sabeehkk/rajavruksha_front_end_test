@@ -14,6 +14,7 @@ import Img8 from "../../img/kitchen.jpg";
 import bg from "../../components/assets/editone.jpg";
 import Tour from "../../components/tour/index";
 import Amenities from "../../components/Amenities/amenities";
+import "../../components/Projects/eco-nest.css"
 
 function EcoNexts() {
   const ecoNestAmenities = [
@@ -43,7 +44,7 @@ function EcoNexts() {
       </div>
         <div className="col-12 mt-4">
           <div className="project-details-top-text"  data-aos="fade-up">
-            <h3>Discover Your Agricultural Dream:</h3>
+            <h3 className='discover-title'>Discover Your Agricultural Dream:</h3>
            <p>Approved by the Kodagu Urban Development Authority(KUDA), Eco Nest beckons<br/> with its serene authority. For Rs.7,49,000/- , a plot’s yours to claim, where nature’s symphony forever remains.</p>
           </div>
        

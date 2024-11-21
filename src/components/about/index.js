@@ -32,7 +32,7 @@ const About = ({ text }) => {
             >
               <div className="site-heading">
                 {/* <h3 className="sub-title">ABOUT US</h3> */}
-                <h2 className="section-title">
+                <h2 className="explore-title">
                   We explore to discover your optimal selection
                 </h2>
                 <div>

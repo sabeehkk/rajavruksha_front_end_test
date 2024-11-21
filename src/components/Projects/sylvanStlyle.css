@@ -29,6 +29,27 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4),
 	margin:auto
 }
 
+.syl-title{
+	font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #000000;
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    /* letter-spacing: 1px; */
+}
+
+.syl-subtitle{
+	font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #000000;
+    margin: 4px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0px;
+	font-size: 17px;
+}
+
 .project-overview-box img {
     border: none;
     width: 90px;
@@ -36,9 +57,9 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4),
     margin-bottom: 20px;
 }
 
-.project-overview-box h5 {
+/* .project-overview-box h5 {
     font-size: 22px;
-}
+} */
 
 .project-overview-box p {
     font-weight: 500;

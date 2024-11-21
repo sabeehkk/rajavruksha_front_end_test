@@ -60,14 +60,14 @@ function Sylvanretreat() {
           </div>
           <div className="col-12 mt-4">
             <div className="project-details-top-text" data-aos="fade-up">
-              <h3>Discover Your Agricultural Dream:</h3>
+              <p className="syl-title">Discover Your Agricultural Dream:</p>
               <p>
                 Escape the hustle and bustle of city life and embark on a
                 journey to a tranquil and fertile oasis. Introducing our
                 exclusive collection of 25 farmland plots, each a canvas of
                 opportunity for you to cultivate your agricultural aspirations.
               </p>
-              <h3>Agricultural Canvas Ready for Your Vision</h3>
+              <p className="syl-title">Agricultural Canvas Ready for Your Vision</p>
               <p>
                 These 25 farmland plots offer an invitation to realize your
                 agricultural dreams. Whether you dream of orchards, Apiculture,
@@ -76,14 +76,14 @@ function Sylvanretreat() {
                 imagination run wild and watch your agricultural dreams
                 flourish.
               </p>
-              <h3 style={{ fontWeight: "bold" }}>Key Features:</h3>
+              <p style={{ fontWeight: "bold" }} className="syl-title">Key Features:</p>
               <p>
                 <span>
                   <VscDebugBreakpointLog
                     style={{ width: "20px", height: "20px" }}
                   />
                 </span>{" "}
-                <span style={{ fontWeight: "bold", color: "black" }}>
+                <span style={{ fontWeight: "bold", color: "black" }} className="syl-title">
                   Rich Soil and Fertile Land
                 </span>
                 : Our farmland is renowned for its rich and fertile soil,
@@ -96,7 +96,7 @@ function Sylvanretreat() {
                     style={{ width: "20px", height: "20px" }}
                   />
                 </span>{" "}
-                <span style={{ fontWeight: "bold", color: "black" }}>
+                <span style={{ fontWeight: "bold", color: "black" }} className="syl-title">
                   Scenic Views:
                 </span>{" "}
                 Enjoy breathtaking vistas of rolling hills and serene landscapes
@@ -108,7 +108,7 @@ function Sylvanretreat() {
                     style={{ width: "20px", height: "20px" }}
                   />
                 </span>{" "}
-                <span style={{ fontWeight: "bold", color: "black" }}>
+                <span style={{ fontWeight: "bold", color: "black" }} className="syl-title">
                   Water Resources:
                 </span>{" "}
                 Abundant access to natural water sources, ensuring your crops
@@ -120,14 +120,14 @@ function Sylvanretreat() {
                     style={{ width: "20px", height: "20px" }}
                   />
                 </span>{" "}
-                <span style={{ fontWeight: "bold", color: "black" }}>
+                <span style={{ fontWeight: "bold", color: "black" }} className="syl-title">
                   Security:
                 </span>{" "}
                 We prioritize your investment's safety, providing 24/7 security
                 to protect your agricultural pursuits.
               </p>
             </div>
-            <h2 style={{ textAlign: "center" }}>Why Choose Us</h2>
+            <h2 style={{ textAlign: "center" }} className="syl-title">Why Choose Us</h2>
 
             <div className="project-overview">
               <div className="row">
@@ -140,7 +140,7 @@ function Sylvanretreat() {
                       alt="Expertise in Agriculture"
                       className="syl-img"
                     />
-                    <h5>Expertise in Agriculture</h5>
+                    <h5 className="syl-subtitle">Expertise in Agriculture</h5>
                     <p>
                       Our team of agricultural experts is ready to assist and
                       advise you in every step of your farming journey.
@@ -157,7 +157,7 @@ function Sylvanretreat() {
                       alt="Project time"
                       className="syl-img"
                     />
-                    <h5>Investment Potential</h5>
+                    <h5 className="syl-subtitle">Investment Potential</h5>
                     <p>
                       Farmland is not just a dream; it's a sound financial
                       investment with growing demand in the market.
@@ -173,7 +173,7 @@ function Sylvanretreat() {
                       alt="People worked"
                       className="syl-img"
                     />
-                    <h5>Sustainability</h5>
+                    <h5 className="syl-subtitle">Sustainability</h5>
                     <p>
                       We're committed to sustainable farming practices and
                       environmental conservation.
@@ -189,7 +189,7 @@ function Sylvanretreat() {
                       alt="Project cost"
                       className="syl-img"
                     />
-                    <h5>Legal Compliance</h5>
+                    <h5 className="syl-subtitle">Legal Compliance</h5>
                     <p>
                       Hassel free process in terms of your documentations that
                       carries from our experts

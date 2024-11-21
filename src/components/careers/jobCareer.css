@@ -20,13 +20,19 @@
 }
 
 .job-description h2 {
+  font-family: Arial, Helvetica, sans-serif;
   color: #006400;
+  font-size: 30px;
+  letter-spacing: 1px;
   font-weight: bold;
 }
 
 .job-description h3,
 .job-description h4 {
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 1rem;
+  margin-bottom: 5px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -54,6 +60,7 @@
 }
 
 .career-form h2 {
+  font-family: Arial, Helvetica, sans-serif;
   padding: 5px;
   /* font-size: 35px; */
   color: #006400;
