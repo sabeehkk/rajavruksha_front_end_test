@@ -54,7 +54,6 @@ const AllRoute = () => {
           <Route path='/blog-single' component={BlogSinglePage} />
           <Route path='/experienceSection' component={ExperienceSection} />
           <Route path='/careers' component={CareerMainFooterComp} />
-          {/* <Route path='/careers' component={CareerPage} /> */}
           <Route path="/bdeCareerForm" component={BdeCareerMain} />
           <Route path="/bdeIntern" component={BdeInternCareerMain} />
           <Route path='/sylvan-retreat' component={SylvanRetreat} />
