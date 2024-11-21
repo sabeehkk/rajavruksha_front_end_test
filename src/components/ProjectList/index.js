@@ -44,9 +44,9 @@ const ProjectList = () => {
                 </div>
               </div>
             </div>
-            <div className="row align-items-center" style={{marginLeft: '7.5rem',marginRight: '7.5rem'}}>
+            <div className="row align-items-center project-box-container">
               <div className="col-md-5 col-sm-6 mt-5"  >
-                <div className="project-box" style={{height:'500px'}} onClick={() => handleProjectClick('Sylvan Retreat')}>
+                <div className="project-box"  onClick={() => handleProjectClick('Sylvan Retreat')}>
                   <img
                     src={'https://img.freepik.com/free-photo/man-using-tablet-eco-friendly-wind-power-project-layout_23-2148847801.jpg?uid=R168516155&ga=GA1.1.1457800326.1726059840&semt=ais_hybrid'}
                     alt="img"
@@ -85,7 +85,7 @@ const ProjectList = () => {
                   {/* </Link> */}
                 </div>
               </div>
-              <div className="col-md-5 col-sm-6 mb-5" style={{marginLeft:'90px'}}>
+              <div className="col-md-5 col-sm-6 mb-5 project-box-div" >
               <div
                 className="project-box" style={{height:'500px'}}
                 onClick={() => handleProjectClick('Eco Nest', ecoNext)}
@@ -119,7 +119,7 @@ const ProjectList = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       className="feather feather-eye"
-                    >
+                            >
                       <path
                         stroke="#ffffff"
                         d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
