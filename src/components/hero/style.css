@@ -300,6 +300,9 @@
   }
 }
 @media (max-width: 767px) {
+  .hero-slide-item .hero-text {
+    padding-right: 82px;
+  }
   .new-carousel {
     display: none;
   }

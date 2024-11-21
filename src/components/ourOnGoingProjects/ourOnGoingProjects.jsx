@@ -1,30 +1,7 @@
 // import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './ourOnGoingProjects.css';
-
-// const OngoingProjects = () => {
-//   return (
-//     <div className="ongoing-projects">
-//       <h2 className="projects-title">Our Ongoing Projects</h2>
-//       <div className="project-card">
-//         <img
-//           src="https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-2048x1080.jpg"
-//           alt="Sylvan Retreat"
-//           className="project-image"
-//         />
-//         <div className="project-info">
-//           <h3 className="project-title">Sylvan Retreat</h3>
-//           <p className="project-description">
-//             Farmland is not just a dream; it's a sound financial investment with growing demand in the market.
-//           </p>
-//           <button className="read-more-btn">Read More</button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default OngoingProjects;
+import bgImg from "../../components/assets/on_going_project_syl.jpg"
 
 
 
@@ -36,11 +13,12 @@ const OngoingProjects = () => {
       
       <div className="project-card">
         <div className="project-image-container">
-          <img 
-            src="https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-2048x1080.jpg" 
+        <img 
+            // src="https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-2048x1080.jpg" 
+            src={bgImg}
             alt="Green farmland under blue sky with white clouds"
             className="project-image"
-          />
+          />
         </div>
         <div className="project-content">
           <h2 className="project-subtitle">Sylvan Retreat</h2>

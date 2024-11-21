@@ -296,12 +296,15 @@
 	}
 }
 @media(max-width: 767px){
+	.hero-slide-item .hero-text {
+		padding-right: 17px;
+	}
 	.new-carousel {
 		display: none;
 	  }
 	.hero-text h2 {
-		font-size: 40px;
-		letter-spacing: 3px;
+		font-size: 30px;
+		letter-spacing: 2px;
 	}
 	.hero-action .cta-btn {
 		display: inline-block;

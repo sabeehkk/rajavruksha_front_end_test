@@ -111,13 +111,13 @@ const About = ({ text }) => {
               data-aos="fade-left"
               data-aos-offset="100"
             >
-              {/* <img className="about_img_1" src={first} alt="img" /> */}
-              {/* <img
+              <img className="about_img_1" src={first} alt="img" />
+              <img
                 className="about_img_1"
                 style={{ filter: "brightness(60%)" }}
                 src={first}
                 alt="img"
-              /> */}
+              />
               <img
                 className="about_img_2"
                 src={

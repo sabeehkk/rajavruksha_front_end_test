@@ -19,89 +19,106 @@ const menus = [
 
   {
     id: 3,
-    title: "Project",
+    title: "Projects",
     link: "/projects",
+    // submenu: [
+    //   {
+    //     id: 31,
+    //     title: "Sylvan-Retreat",
+    //     link: "/sylvan-retreat",
+    //   },
+    //   {
+    //     id: 32,
+    //     title: "Eco-Nest",
+    //     link: "/eco-nest",
+    //   },
+    // ],
+  },
+  {
+    id: 6,
+    title: "Careers",
+    link: "/careers",
     submenu: [
       {
-        id: 31,
-        title: "Project",
-        link: "/projects",
+        id: 61,
+        title: "BDE",
+        link: "/bdeCareerForm",
       },
       {
-        id: 32,
-        title: "Project Details",
-        link: "/projects-single",
+        id: 62,
+        title: "BDE-Intern",
+        link: "/bdeIntern",
       },
     ],
   },
-  {
-    id: 4,
-    title: "Service",
-    link: "/service",
-    submenu: [
-      {
-        id: 41,
-        title: "Service",
-        link: "/service",
-      },
-      {
-        id: 42,
-        title: "Service Details",
-        link: "/service-single",
-      },
-    ],
-  },
-  {
-    id: 7,
-    title: "Pages",
-    link: "/",
-    submenu: [
-      {
-        id: 71,
-        title: "Portfolio",
-        link: "/portfolio",
-      },
-      {
-        id: 75,
-        title: "Team",
-        link: "/team",
-      },
-      {
-        id: 76,
-        title: "Faq",
-        link: "/faq",
-      },
+  // {
+  //   id: 4,
+  //   title: "Service",
+  //   link: "/service",
+  //   submenu: [
+  //     {
+  //       id: 41,
+  //       title: "Service",
+  //       link: "/service",
+  //     },
+  //     {
+  //       id: 42,
+  //       title: "Service Details",
+  //       link: "/service-single",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 7,
+  //   title: "Pages",
+  //   link: "/",
+  //   submenu: [
+  //     {
+  //       id: 71,
+  //       title: "Portfolio",
+  //       link: "/portfolio",
+  //     },
+  //     {
+  //       id: 75,
+  //       title: "Team",
+  //       link: "/team",
+  //     },
+  //     {
+  //       id: 76,
+  //       title: "Faq",
+  //       link: "/faq",
+  //     },
 
-      {
-        id: 79,
-        title: "Contact",
-        link: "/contact",
-      },
-      {
-        id: 70,
-        title: "Error",
-        link: "/404",
-      },
-    ],
-  },
+  //     {
+  //       id: 79,
+  //       title: "Contact",
+  //       link: "/contact",
+  //     },
+  //     {
+  //       id: 70,
+  //       title: "Error",
+  //       link: "/404",
+  //     },
+  //   ],
+  // },
 
-  {
-    id: 5,
-    title: "Blog",
-    link: "/blog",
-    submenu: [
-      {
-        id: 51,
-        title: "Blog",
-        link: "/blog",
-      },
-      {
-        id: 52,
-        title: "Blog Single",
-        link: "/blog-single",
-      },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Blog",
+  //   link: "/blog",
+  //   submenu: [
+  //     {
+  //       id: 51,
+  //       title: "Blog",
+  //       link: "/blog",
+  //     },
+  //     {
+  //       id: 52,
+  //       title: "Blog Single",
+  //       link: "/blog-single",
+  //     },
+  //   ],
+  // },
   {
     id: 88,
     title: "Contact",
