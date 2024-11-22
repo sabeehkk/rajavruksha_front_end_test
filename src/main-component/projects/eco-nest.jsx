@@ -5,7 +5,7 @@ import PageTitle from '../../components/pagetitle'
 import EcoNexts from "../../components/Projects/eco-nest"
 import Testimonial from '../../components/testimonial'
 import Footer from '../../components/footer'
-import bg from "../../components/assets/careersedited.jpg";
+import bg from "../../components/assets/eco_nest_img.jpg";
 import ContactUs from "../../components/Projects/contactform";
 import Layoutguide from '../../components/layoutGuide/layoutguide'
 
