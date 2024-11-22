@@ -21,18 +21,18 @@ const menus = [
     id: 3,
     title: "Projects",
     link: "/projects",
-    // submenu: [
-    //   {
-    //     id: 31,
-    //     title: "Sylvan-Retreat",
-    //     link: "/sylvan-retreat",
-    //   },
-    //   {
-    //     id: 32,
-    //     title: "Eco-Nest",
-    //     link: "/eco-nest",
-    //   },
-    // ],
+    submenu: [
+      {
+        id: 31,
+        title: "Sylvan-Retreat",
+        link: "/sylvan-retreat",
+      },
+      {
+        id: 32,
+        title: "Eco-Nest",
+        link: "/eco-nest",
+      },
+    ],
   },
   {
     id: 6,
