@@ -109,7 +109,7 @@ class TestimonialNewSlider extends Component {
     
     return (
       <div className="testimonial-area" data-aos="fade-up">
-        <div className="containerr">
+        <div className="containerr gal-cont">
           <div className="row">
             <div className="col-lg-12">
               {/* <div className="site-heading"> */}

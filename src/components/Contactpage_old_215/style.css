@@ -155,6 +155,15 @@
 }
 
 /*Responsive*/
+@media(max-width: 767px) {
+	.contact-form input{
+		color: #111;
+		height: 32px;
+		padding: 5px 10px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
 
 /* @media(max-width: 767px) {
 	.contact-form {

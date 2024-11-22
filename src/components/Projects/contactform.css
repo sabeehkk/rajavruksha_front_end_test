@@ -44,7 +44,7 @@
 }
 
 .contact-new-form {
-	height: 479px;
+	height: auto;
 	background-color: #414141;
 	position: relative;
 	/* background-image: url('https://www.shutterstock.com/image-photo/sundappled-forest-dense-green-canopy-260nw-2498121251.jpg'); */
@@ -112,7 +112,7 @@
 @media (max-width: 767px) {
 	.contact-new-form {
 		padding: 30px;
-		height: 671px;
+		/* height: 671px; */
 	}
 	.single-contact-info-new {
 		padding-left: 20px;

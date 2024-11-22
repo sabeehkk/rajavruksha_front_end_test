@@ -113,6 +113,9 @@
 
 /*Responsive*/
 @media (max-width: 991px) {
+  .testimonial-area .site-heading {
+    margin-bottom: 1px;
+  }
   .tetimonial-slider .slick-dots {
     bottom: 0;
   }
@@ -120,7 +123,7 @@
 
 @media(max-width: 767px) {
 	.testimonial-title {
-		font-size: 38px;
+		font-size: 36px;
 		line-height: 44px;
 	}
 	.testimonial-subtitle {
