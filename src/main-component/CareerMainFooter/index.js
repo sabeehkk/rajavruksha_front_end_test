@@ -11,7 +11,7 @@ const CareerMainFooterComp = () => {
   return (
     <Fragment>
       <Header />
-      <PageTitle pageTitle={"Current Openings"} pageImg={bg} />
+      <PageTitle PageTitle={"Current Openings"} pageImg={bg} />
       <CareerFooter />
       <Footer />
     </Fragment>
