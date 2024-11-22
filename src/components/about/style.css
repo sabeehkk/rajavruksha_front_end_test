@@ -123,6 +123,9 @@
 }
 /*Responsive*/
 @media (max-width: 767px) {
+  .brochure-download{
+    margin-bottom: 16px;
+  }
   .signature-left {
     width: 50%;
   }

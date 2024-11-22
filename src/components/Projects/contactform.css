@@ -112,6 +112,7 @@
 @media (max-width: 767px) {
 	.contact-new-form {
 		padding: 30px;
+		height: 671px;
 	}
 	.single-contact-info-new {
 		padding-left: 20px;
