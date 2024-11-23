@@ -5,7 +5,7 @@ import Header from '../../components/header'
 import PageTitle from '../../components/pagetitle'
 import Sylvanretreat from "../../components/Projects/sylvanretreat"
 import Footer from '../../components/footer'
-import bg from "../../components/assets/syl-retreat_img.jpg";
+import bg from "../../components/assets/SylanretreatBanner.jpg";
 import ContactUs from "../../components/Projects/contactform"
 import Carousel from "../../components/carouselImage/carousel"
 function Sylvanretreats() {

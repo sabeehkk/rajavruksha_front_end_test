@@ -3,6 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./carousel.css";
+import gal_img1 from "../../components/assets/syl-retreat_gallary_img1.jpg";
+import gal_img2 from "../../components/assets/syl-retreat_gallary_img2.jpg";
+import gal_img3 from "../../components/assets/syl-retreat_gallary_img3.jpg";
+import gal_img4 from "../../components/assets/syl-retreat_gallary_img4.jpg";
+import gal_img5 from "../../components/assets/syl-retreat_gallary_img5.jpg";
 
 class TestimonialNewSlider extends Component {
   constructor(props) {
@@ -63,52 +68,56 @@ class TestimonialNewSlider extends Component {
 
     const customerFeedback = [
       {
-      carouselImg :'https://rajavrukshagroup.in/wp-content/uploads/2023/11/New-Project-18.webp'
-      
+        carouselImg: gal_img1,
       },
       {
-      carouselImg :'https://images.pexels.com/photos/461960/pexels-photo-461960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-      
+        carouselImg: gal_img2,
       },
       {
-      carouselImg :'https://images.pexels.com/photos/1382102/pexels-photo-1382102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-      
+        carouselImg: gal_img3,
       },
       {
-      name: 'Roshan Kumar',
-      telling: 'Exceptional service and integrity define Rajavruksha. The process of buying our farm was seamless and gratifying.',
-      proffession:'Land Surveyor',
-       carouselImg :'https://images.pexels.com/photos/945630/pexels-photo-945630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        carouselImg: gal_img4,
       },
-      ];
-      
+      {
+        carouselImg: gal_img5,
+      },
+    ];
 
     return (
       <div className="testimonial-area" data-aos="fade-up">
         <div className="containerr gal-cont">
           <div className="row">
             <div className="col-lg-12">
-                <h2 style={{textAlign:'center',lineHeight:'45px'}} className="gallery-title">Gallery</h2>
+              <h2
+                style={{ textAlign: "center", lineHeight: "45px" }}
+                className="gallery-title"
+              >
+                Gallery
+              </h2>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-12">
-          <div style={{paddingLeft:'115px',paddingRight:'115px'}} className="testimonial-new-slider">
-                <Slider style={{marginBottom:'30px'}}  ref={(c) => (this.slider = c)} {...settings}>
-                  {customerFeedback.map((value,index)=>{
+              <div
+                style={{ paddingLeft: "115px", paddingRight: "115px" }}
+                className="testimonial-new-slider"
+              >
+                <Slider
+                  style={{ marginBottom: "30px" }}
+                  ref={(c) => (this.slider = c)}
+                  {...settings}
+                >
+                  {customerFeedback.map((value, index) => {
                     return (
                       <div className="slide">
-                      <div className="gallery-testimonial">
-                        <img src={value.carouselImg} alt={'namesss'} />
-                          <div className="testimonial-meta">
-                          <div className="testimonial-author">
-                          </div>
+                        <div className="gallery-testimonial">
+                          <img src={value.carouselImg} alt={"namesss"} />
                         </div>
                       </div>
-                    </div>
-                    )
-                  })}                  
-                  </Slider>
+                    );
+                  })}
+                </Slider>
               </div>
             </div>
           </div>
@@ -116,7 +125,6 @@ class TestimonialNewSlider extends Component {
       </div>
     );
   }
-  
 }
 
 export default TestimonialNewSlider;

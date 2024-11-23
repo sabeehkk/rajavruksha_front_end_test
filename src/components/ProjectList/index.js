@@ -2,20 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
-import projectImg1 from "../../img/project-4.jpg";
-import projectImg2 from "../../img/project-5.jpg";
-import projectImg3 from "../../img/project-6.jpg";
-import projectImg4 from "../../img/project-7.jpg";
-import projectImg5 from "../../img/project-8.jpg";
-import projectImg6 from "../../img/project-9.jpg";
-import projectImg7 from "../../img/project-10.jpg";
-import projectImg8 from "../../img/project-11.jpg";
-import projectImg9 from "../../img/project-12.jpg";
-import projectImg10 from "../../img/project-13.jpg";
-import ProjectImage from "../../components/assets/pro.jpg";
-import bg from "../../components/assets/editone.jpg";
 import ecoNext from "../../components/assets/ecoproject.jpg";
 import EconextProject from "../../components/assets/project_picture.jpg";
+import SylvanImage from "../../components/assets/Sylvanretreat.jpg"
 
 import "./style.css";
 
@@ -55,7 +44,7 @@ const ProjectList = () => {
                   {/* <img src={'https://img.freepik.com/free-photo/man-using-tablet-eco-friendly-wind-power-project-layout_23-2148847801.jpg?uid=R168516155&ga=GA1.1.1457800326.1726059840&semt=ais_hybrid'} alt="Sylvan Retreat" style={{ height: '600px' }} /> */}
                   <img
                     src={
-                      "https://img.freepik.com/free-photo/man-using-tablet-eco-friendly-wind-power-project-layout_23-2148847801.jpg?uid=R168516155&ga=GA1.1.1457800326.1726059840&semt=ais_hybrid"
+                      SylvanImage
                     }
                     alt="img"
                     style={{
