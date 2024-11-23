@@ -19,10 +19,6 @@ const AboutPage =() => {
             <PageTitle PageTitle={'About Us'} pagesub={'About'} pageImg={bg}/>
             <About text={Text} image ={bg}/>
             <Animation/>
-            {/* <Partners/> */}
-            {/* <Feature/> */}
-            {/* <Expertise/> */}
-            {/* <Team/> */}
             <Footer/>
         </Fragment>
     )

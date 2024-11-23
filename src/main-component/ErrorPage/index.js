@@ -9,7 +9,7 @@ const ErrorPage =() => {
     return(
         <Fragment>
             <Header/>
-            <PageTitle pageTitle={'ERROR'} pagesub={'404 Notfound'}/> 
+            <PageTitle PageTitle={'ERROR'} pagesub={'404 Notfound'}/> 
             <Error/>
             <Footer/>
         </Fragment>

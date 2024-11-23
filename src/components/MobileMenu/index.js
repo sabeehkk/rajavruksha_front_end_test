@@ -51,74 +51,7 @@ const menus = [
       },
     ],
   },
-  // {
-  //   id: 4,
-  //   title: "Service",
-  //   link: "/service",
-  //   submenu: [
-  //     {
-  //       id: 41,
-  //       title: "Service",
-  //       link: "/service",
-  //     },
-  //     {
-  //       id: 42,
-  //       title: "Service Details",
-  //       link: "/service-single",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 7,
-  //   title: "Pages",
-  //   link: "/",
-  //   submenu: [
-  //     {
-  //       id: 71,
-  //       title: "Portfolio",
-  //       link: "/portfolio",
-  //     },
-  //     {
-  //       id: 75,
-  //       title: "Team",
-  //       link: "/team",
-  //     },
-  //     {
-  //       id: 76,
-  //       title: "Faq",
-  //       link: "/faq",
-  //     },
 
-  //     {
-  //       id: 79,
-  //       title: "Contact",
-  //       link: "/contact",
-  //     },
-  //     {
-  //       id: 70,
-  //       title: "Error",
-  //       link: "/404",
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: 5,
-  //   title: "Blog",
-  //   link: "/blog",
-  //   submenu: [
-  //     {
-  //       id: 51,
-  //       title: "Blog",
-  //       link: "/blog",
-  //     },
-  //     {
-  //       id: 52,
-  //       title: "Blog Single",
-  //       link: "/blog-single",
-  //     },
-  //   ],
-  // },
   {
     id: 88,
     title: "Contact",
@@ -192,12 +125,20 @@ export default class MobileMenu extends Component {
         <div
           className={`spinner-master ${isMenuShow ? "active" : ""}`}
           onClick={this.menuHandler}
-          
         >
-          <div id="spinner-form"   className="spinner-spin">
-            <div style={{ backgroundColor: isMenuShow ? 'white' : 'black' }}  className="spinner diagonal part-1"></div>
-            <div style={{ backgroundColor: isMenuShow ? 'white' : 'black' }}  className="spinner horizontal"></div>
-            <div style={{ backgroundColor: isMenuShow ? 'white' : 'black' }}  className="spinner diagonal part-2"></div>
+          <div id="spinner-form" className="spinner-spin">
+            <div
+              style={{ backgroundColor: isMenuShow ? "white" : "black" }}
+              className="spinner diagonal part-1"
+            ></div>
+            <div
+              style={{ backgroundColor: isMenuShow ? "white" : "black" }}
+              className="spinner horizontal"
+            ></div>
+            <div
+              style={{ backgroundColor: isMenuShow ? "white" : "black" }}
+              className="spinner diagonal part-2"
+            ></div>
           </div>
         </div>
       </div>

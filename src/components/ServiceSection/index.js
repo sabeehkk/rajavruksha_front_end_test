@@ -145,9 +145,6 @@ const ServiceSection = () => {
                   <br />
                   <br />
                 </p>
-                {/* <Link to="/service-single" className="cta-btn btn-border">
-                  Read More
-                </Link> */}
               </div>
               {/* <img src={serviceImg3} alt="img" /> */}
             </div>
@@ -183,9 +180,6 @@ const ServiceSection = () => {
                   aesthetic appearance in order to ensure that your investment
                   retains and appreciates its value.
                 </p>
-                {/* <Link to="/service-single" className="cta-btn btn-border">
-                  Read More
-                </Link> */}
               </div>
               {/* <img src={serviceImg3} alt="img" /> */}
             </div>

@@ -7,7 +7,7 @@ import serviceImg3 from "../../img/service-bg-3.jpg";
 import serviceIcon1 from "../../img/service-icon-1.png";
 import serviceIcon2 from "../../img/service-icon-2.png";
 import serviceIcon3 from "../../img/service-icon-3.png";
-import plantingIcon from "../../components/assets/holding-hand.png"
+import plantingIcon from "../../components/assets/holding-hand.png";
 import "./style.css";
 
 const ServiceList = () => {

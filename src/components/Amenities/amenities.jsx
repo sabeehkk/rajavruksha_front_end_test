@@ -1,5 +1,5 @@
 import React from "react";
-import "./amenities.css"; 
+import "./amenities.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,7 +14,7 @@ const AmenitiesCard = ({ amenities, projectType }) => {
     <section
       data-aos="fade-left"
       className="amenities-card mt-5"
-      style={{height: cardHeight }}
+      style={{ height: cardHeight }}
     >
       <div className="card-header" style={{ borderRadius: "30px" }}>
         Amenities

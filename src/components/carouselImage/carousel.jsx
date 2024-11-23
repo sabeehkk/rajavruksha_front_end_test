@@ -82,40 +82,13 @@ class TestimonialNewSlider extends Component {
       },
       ];
       
-    // const customerFeedback = [
-    //   {
-    //     name: 'Smitha',
-    //     telling: 'Choosing Rajavruksha for our farm investment was a wise decision. Professionalism and trustworthiness set them apart.',
-    //     proffession:'Property Manager'
-      
-    //   },
-    //   {
-    //     name: 'Suresh N',
-    //     telling: 'Our experience with Rajavruksha was outstanding. Their dedicated team ensured a smooth journey to our farm ownership.',
-    //     proffession:'Property Consultant'
 
-    //   },
-    //   {
-    //     name: 'Manasa V',
-    //     telling: 'Rajavruksha made our dream of owning a farm a reality. Their transparent dealings and commitment stood out.',
-    //     proffession:'Real Estate Investor'
-    //   },
-    //   {
-    //     name: 'Roshan Kumar',
-    //     telling: 'Exceptional service and integrity define Rajavruksha. The process of buying our farm was seamless and gratifying.',
-    //     proffession:'Land Surveyor'
-    //   },
-    // ];
-    
     return (
       <div className="testimonial-area" data-aos="fade-up">
         <div className="containerr gal-cont">
           <div className="row">
             <div className="col-lg-12">
-              {/* <div className="site-heading"> */}
-                {/* <h3 className="sub-title">Hear From </h3> */}
                 <h2 style={{textAlign:'center',lineHeight:'45px'}} className="gallery-title">Gallery</h2>
-              {/* </div> */}
             </div>
           </div>
           <div className="row">

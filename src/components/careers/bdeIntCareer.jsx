@@ -16,29 +16,17 @@ const BdeInternCareer = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // const handleFileChange = (e) => {
-  //     setFormData({ ...formData, file: e.target.files[0] });
-  // };
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-
-    // Validate file type
     const allowedTypes = ["application/pdf"]; // PDF
     const maxSize = 5 * 1024 * 1024; // 5MB in bytes
-
-    // Check if file exists
     if (file) {
-      // Validate file type
       if (!allowedTypes.includes(file.type)) {
         setErrors({ file: "Only PDF is allowed." });
-      }
-      // Validate file size
-      else if (file.size > maxSize) {
+      } else if (file.size > maxSize) {
         setErrors({ file: "File size must not exceed 5MB." });
       } else {
-        // Clear any existing errors
         setErrors({ file: "" });
-        // Update form data with the selected file
         setFormData({ ...formData, file });
       }
     }
@@ -54,9 +42,7 @@ const BdeInternCareer = () => {
     if (!formData.contact_no)
       formErrors.contact_no = "Please enter a phone number.";
     if (!formData.file) formErrors.file = "Please upload a file.";
-
     setErrors(formErrors);
-
     // If there are no form errors, proceed with submitting the data
     if (Object.keys(formErrors).length === 0) {
       try {
@@ -101,9 +87,6 @@ const BdeInternCareer = () => {
           period of 3 months where in the interns will be trained in the below
           mentioned aspects.
         </p>
-        {/* <h4>Qualifications</h4>
-                <p>BBA, BBM, B.COM, MBA</p> */}
-        {/* <h4>Skills</h4> */}
         <ul className="list-methods">
           <li>Client communication12.</li>
           <li>Negotiation skills.</li>
@@ -129,9 +112,6 @@ const BdeInternCareer = () => {
         <p>Good communication and interpersonal skills.</p>
         <p>Passionate in learning new concepts</p>
         <p>Willing to research new marketing trends.</p>
-        {/* <p>1-2 Years</p>
-                <h4>Salary</h4>
-                <p>15K-30K</p> */}
         <h4>Age</h4>
         <p>19-25 years</p>
         <h4>Timings</h4>
@@ -188,17 +168,17 @@ const BdeInternCareer = () => {
 
         <div className="form" style={{ marginLeft: "1rem" }}>
           <label htmlFor="file">Upload CV *</label>
-          
-            <div>
-              <input
-                type="file"
-                id="file"
-                name="file"
-                ref={fileInputRef}
-                onChange={handleFileChange}
-                accept=".pdf"
-                className="input-bde"
-              />
+
+          <div>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              ref={fileInputRef}
+              onChange={handleFileChange}
+              accept=".pdf"
+              className="input-bde"
+            />
             <div className="file-pdf">
               <p>
                 * Please upload a file with the following format:{" "}

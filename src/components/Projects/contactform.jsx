@@ -2,7 +2,7 @@ import React from "react";
 import ContactForm from "../../components/Projects/form";
 import "../../components/Projects/contactform.css";
 
-const ContactUs = () => {
+const ContactUs = ({onFormSubmit}) => {
   return (
     <div className="contact-page-new-area">
       <div className="container">
@@ -13,7 +13,8 @@ const ContactUs = () => {
                 {/* <h3 className="sub-title">Request a Quote</h3> */}
                 <h2 className="sub-title">Get A Free Quotes</h2>
               </div>
-              <ContactForm />
+              <ContactForm  />
+              {/* <ContactForm  isMessageSent={ima/> */}
             </div>
           </div>
         </div>

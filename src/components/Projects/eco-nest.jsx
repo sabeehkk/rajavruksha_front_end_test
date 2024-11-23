@@ -45,7 +45,7 @@ function EcoNexts() {
         <div className="col-12 mt-4">
           <div className="project-details-top-text"  data-aos="fade-up">
             <h3 className='discover-title'>Discover Your Agricultural Dream:</h3>
-           <p>Approved by the Kodagu Urban Development Authority(KUDA), Eco Nest beckons<br/> with its serene authority. For Rs.7,49,000/- , a plot’s yours to claim, where nature’s symphony forever remains.</p>
+           <p>Approved  by the Kodagu Urban Development Authority(KUDA), Eco Nest beckons<br/> with its serene authority. For Rs.7,49,000/- , a plot’s yours to claim, where nature’s symphony forever remains.</p>
           </div>
        
         </div>

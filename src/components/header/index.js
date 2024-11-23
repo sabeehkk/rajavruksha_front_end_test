@@ -38,12 +38,6 @@ const Header = () => {
                     <li>
                       <Link to="/projects">Projects</Link>
                       <ul>
-                        {/* <li>
-                          <Link to="/projects">Project</Link>
-                        </li> */}
-                        {/* <li>
-                          <Link to="/projects-single">Project Details</Link>
-                        </li> */}
                       </ul>
                     </li>
                     <li>
@@ -57,54 +51,7 @@ const Header = () => {
                         </li>
                       </ul>
                     </li>
-                    {/* <li>
-                      <Link to="/" onClick={onClick}>
-                        Service
-                      </Link>
-                      <ul>
-                        <li className="bg-red-950">
-                          <Link to="/service">Service</Link>
-                        </li>
-                        <li>
-                          <Link to="/service-single">Service Details</Link>
-                        </li>
-                      </ul>
-                    </li> */}
-                    {/* <li>
-                      <Link to="/" onClick={onClick}>
-                        Pages
-                      </Link>
-                      <ul>
-                        <li>
-                          <Link to="/portfolio">Portfolio</Link>
-                        </li>
-                        <li>
-                          <Link to="/team">Team</Link>
-                        </li>
-                        <li>
-                          <Link to="/faq">Faq</Link>
-                        </li>
-                        <li>
-                          <Link to="/contact">Contact</Link>
-                        </li>
-                        <li>
-                          <Link to="/404">Error</Link>
-                        </li>
-                      </ul>
-                    </li> */}
-                    {/* <li>
-                      <Link to="/" onClick={onClick}>
-                        Blog
-                      </Link>
-                      <ul>
-                        <li>
-                          <Link to="/blog">Blog</Link>
-                        </li>
-                        <li>
-                          <Link to="/blog-single">Blog Details</Link>
-                        </li>
-                      </ul>
-                    </li> */}
+                 
                     <li>
                       <Link to="/contact">Contact</Link>
                     </li>

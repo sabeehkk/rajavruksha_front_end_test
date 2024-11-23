@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
 import "./style.css";
 
@@ -11,7 +11,7 @@ const ContactForm = () => {
     subject: "",
     lastname: "",
     notes: "",
-    phone_no: ""
+    phone_no: "",
   });
 
   const [error, setError] = useState({
@@ -20,18 +20,17 @@ const ContactForm = () => {
     subject: "",
     lastname: "",
     notes: "",
-    phone_no: ""
+    phone_no: "",
   });
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-
 
   // Handle input changes and clear errors
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
 
     // Clear the error for that specific field
@@ -43,10 +42,8 @@ const ContactForm = () => {
 
   // Handle form submission
   const submitHandler = async (e) => {
-    e.preventDefault(); // Prevent form reload
-    // Step 1: Prepare form errors
+    e.preventDefault();
     let formErrors = { ...error };
-    // Step 2: Validate each field
     if (formData.name === "") formErrors.name = "Please enter name";
     if (formData.email === "") {
       formErrors.email = "Please enter email";
@@ -57,45 +54,39 @@ const ContactForm = () => {
     if (formData.lastname === "") formErrors.lastname = "Please enter lastname";
     if (formData.notes === "") formErrors.notes = "Please enter note";
     if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
-
-    // Step 3: Set error state
     setError(formErrors);
-
-    // Step 4: Check if there are errors
     const hasErrors = Object.values(formErrors).some((err) => err !== "");
-    if (hasErrors) return; // Stop form submission if there are validation errors
-
-    // Step 5: Proceed with form submission if no errors
+    if (hasErrors) return;
     try {
       console.log("Preparing to send request to backend...");
 
-      const response = await fetch("https://rajavruksha-server.vercel.app/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          lastName: formData.lastname,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.notes,
-          phone_no: formData.phone_no
-        }),
-      });
+      const response = await fetch(
+        "https://rajavruksha-server.vercel.app/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            lastName: formData.lastname,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.notes,
+            phone_no: formData.phone_no,
+          }),
+        }
+      );
 
       if (response.ok) {
-        // Handle success response
         alert("Your message has been sent successfully!");
-
-        // Reset form data and error state
         setFormData({
           name: "",
           lastname: "",
           email: "",
           subject: "",
           notes: "",
-          phone_no: ""
+          phone_no: "",
         });
 
         setError({
@@ -104,13 +95,11 @@ const ContactForm = () => {
           subject: "",
           lastname: "",
           notes: "",
-          phone_no: ""
+          phone_no: "",
         });
       } else {
-        // Handle unsuccessful response (server error, etc.)
         alert("There was an error sending the message.");
       }
-
     } catch (error) {
       console.error("Error:", error);
       alert("There was a problem with the server.");
@@ -123,17 +112,16 @@ const ContactForm = () => {
         <Box
           component="form"
           sx={{
-            '& > :not(style)': {
+            "& > :not(style)": {
               width: {
-                xs: '50%',  // For screens smaller than 600px (Mobile)
-                sm: '80%',   // For screens 600px to 960px (Tablet)
-                md: '80%'    // For screens 960px and larger (Desktop)
-              }
-            }
+                xs: "50%",
+                sm: "80%",
+                md: "80%",
+              },
+            },
           }}
           noValidate
           autoComplete="off"
-
         >
           {/* First Name and Last Name in the same row */}
           <Grid container spacing={2}>
@@ -148,7 +136,9 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.name}
               />
-              {error.name && <FormHelperText error>{error.name}</FormHelperText>}
+              {error.name && (
+                <FormHelperText error>{error.name}</FormHelperText>
+              )}
             </Grid>
 
             <Grid item xs={12} sm={6}>
@@ -162,10 +152,11 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.lastname}
               />
-              {error.lastname && <FormHelperText error>{error.lastname}</FormHelperText>}
+              {error.lastname && (
+                <FormHelperText error>{error.lastname}</FormHelperText>
+              )}
             </Grid>
           </Grid>
-
           {/* Email and Phone No in the same row */}
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
@@ -179,9 +170,10 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.email}
               />
-              {error.email && <FormHelperText error>{error.email}</FormHelperText>}
+              {error.email && (
+                <FormHelperText error>{error.email}</FormHelperText>
+              )}
             </Grid>
-
             <Grid item xs={12} sm={6}>
               <TextField
                 id="phone-no"
@@ -194,10 +186,11 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.phone_no}
               />
-              {error.phone_no && <FormHelperText error>{error.phone_no}</FormHelperText>}
+              {error.phone_no && (
+                <FormHelperText error>{error.phone_no}</FormHelperText>
+              )}
             </Grid>
           </Grid>
-
           {/* Subject in a new row */}
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -211,10 +204,11 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.subject}
               />
-              {error.subject && <FormHelperText error>{error.subject}</FormHelperText>}
+              {error.subject && (
+                <FormHelperText error>{error.subject}</FormHelperText>
+              )}
             </Grid>
           </Grid>
-
           {/* Message in a new row */}
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -230,10 +224,11 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.notes}
               />
-              {error.notes && <FormHelperText error>{error.notes}</FormHelperText>}
+              {error.notes && (
+                <FormHelperText error>{error.notes}</FormHelperText>
+              )}
             </Grid>
           </Grid>
-
           {/* Submit Button */}
         </Box>
         <div className="contact-button mb-5">

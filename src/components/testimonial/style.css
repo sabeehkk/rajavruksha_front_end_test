@@ -10,9 +10,6 @@
 
 .single-testimonial {
 	height: 295px;
-
-  /* height: 0px; */
-  /* background: #fff; */
   overflow: visible;
   padding: 25px;
   background: #ffffff;
@@ -23,11 +20,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .single-testimonial:hover {
-  cursor: pointer;
-  transform: translateY(-10px); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-} */
 
 .testimonial-text img {
   float: left;

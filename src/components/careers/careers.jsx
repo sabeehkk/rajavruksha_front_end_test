@@ -1,8 +1,4 @@
 import React from 'react'
-import Header from '../header'
-import PageTitle from '../pagetitle'
-// import Feature from '../feature'
-// import Partners from '../partners'
 import bg from "../../img/about-bg.png";
 import img1 from "../../img/about-1.png";
 import img2 from "../../img/about-2.png";
@@ -83,7 +79,6 @@ const Careers = () => {
               </div>
             </div>
             <div className="about-right" data-aos="fade-left">
-              {/* <img className="about_img_1" src={img2} alt="img" /> */}
               <img className="about_img_2" src={img1} alt="img" />
             </div>
           </div>

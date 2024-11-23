@@ -48,12 +48,6 @@ const Footer = () => {
                   <li>
                     <Link to="/projects">Our Projects</Link>
                   </li>
-                  {/* <li>
-                    <Link to="/">Our Services</Link>
-                  </li> */}
-                  {/* <li>
-                    <Link to="/">Meet The Team</Link>
-                  </li> */}
                   <li>
                     <Link to="/contact">Contact</Link>
                   </li>
@@ -88,17 +82,8 @@ const Footer = () => {
             </div>
             <div className="col-lg-4 col-sm-6 order-lg-4 order-2">
               <div className="single-footer">
-                {/* <h3>Newsletter</h3> */}
                 <p id="footer-connect">Connect With Us</p>
-                {/* <p>Sign up now for weekly news & updates.</p>
-                <div className="newsletter_form">
-                  <form onSubmit={NewsletterHandler}>
-                    <input type="email" placeholder="Email Address" />
-                    <button type="submit">
-                      <i className="fas fa-long-arrow-alt-right" />
-                    </button>
-                  </form>
-                </div> */}
+              
                 <div class="social">
                   <ul class="no-list">
                     <Link

@@ -70,22 +70,6 @@
     margin-left: 272px;
 }
 
-/* .home-header{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-} */
-
-
-/* .home-header h1{
-    font-size: 5.5rem;
-    text-transform: capitalize;
-    font-weight: 700;
-} */
-
 
 .slider-new{
   display: flex;
@@ -161,10 +145,7 @@ h3.active{
 
 .item{
   pointer-events: none;
-  /* flex: 1 0 20%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.6s ease-in-out; */
+ 
 }
 
 .small1, .small2 {

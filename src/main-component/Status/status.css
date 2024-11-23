@@ -45,12 +45,7 @@
   margin-bottom: 5px;
 }
 
-/* .project-info .item-divider {
-    width: 30px;
-    height: 2px;
-    background-color: #e0e0e0;
-    margin-bottom: 5px;
-  } */
+
 .project-info .item-divider {
   border-bottom: 1px dotted #729f28;
   width: 90px;

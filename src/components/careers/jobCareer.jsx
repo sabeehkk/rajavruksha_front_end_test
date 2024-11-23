@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./jobCareer.css"
-
+import "./jobCareer.css";
 
 const CareerForm = () => {
   const [formData, setFormData] = useState({
@@ -17,49 +16,32 @@ const CareerForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // const handleFileChange = (e) => {
-  //   setFormData({ ...formData, file: e.target.files[0] });
-  // };
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-
-    // Validate file type
-    const allowedTypes = ['application/pdf']; // PDF
+    const allowedTypes = ["application/pdf"]; // PDF
     const maxSize = 5 * 1024 * 1024; // 5MB in bytes
-
-    // Check if file exists
     if (file) {
-      // Validate file type
       if (!allowedTypes.includes(file.type)) {
         setErrors({ file: "Only PDF is allowed." });
-      }
-      // Validate file size
-      else if (file.size > maxSize) {
+      } else if (file.size > maxSize) {
         setErrors({ file: "File size must not exceed 5MB." });
-      }
-      else {
-        // Clear any existing errors
+      } else {
         setErrors({ file: "" });
-        // Update form data with the selected file
         setFormData({ ...formData, file });
       }
     }
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     let formErrors = {};
-
-    // Form validation
     if (!formData.name) formErrors.name = "Enter the name";
     if (!formData.email) formErrors.email = "Please enter a valid email.";
-    if (!formData.contact_no) formErrors.contact_no = "Please enter a phone number.";
+    if (!formData.contact_no)
+      formErrors.contact_no = "Please enter a phone number.";
     if (!formData.file) formErrors.file = "Please upload a file.";
 
     setErrors(formErrors);
-
-    // If there are no form errors, proceed with submitting the data
     if (Object.keys(formErrors).length === 0) {
       try {
         const formDataToSubmit = new FormData();
@@ -68,21 +50,24 @@ const CareerForm = () => {
         formDataToSubmit.append("contact_no", formData.contact_no);
         formDataToSubmit.append("file", formData.file);
 
-        const response = await fetch("https://rajavruksha-server.vercel.app/careerForm", {
-          method: "POST",
-          body: formDataToSubmit
-        });
+        const response = await fetch(
+          "https://rajavruksha-server.vercel.app/careerForm",
+          {
+            method: "POST",
+            body: formDataToSubmit,
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();
           console.log("Form submitted successfully", data);
-          alert("Form Submitted Successfully")
+          alert("Form Submitted Successfully");
           setFormData({
             name: "",
             email: "",
             contact_no: "",
             file: null,
-          })
+          });
           fileInputRef.current.value = null;
         } else {
           console.error("Form submission failed", response.statusText);
@@ -93,18 +78,17 @@ const CareerForm = () => {
     }
   };
 
-
   return (
-    <section className="containers" >
+    <section className="containers">
       <div className="job-description" data-aos="fade-right">
         <h2>BUSINESS DEVELOPMENT EXECUTIVE</h2>
         <h4>Job Role Description</h4>
         <p>
-          The Business Development Executive will be responsible for new business
-          development and overall business growth. Duties will include identifying
-          new business opportunities, building and maintaining client relationships,
-          developing and executing sales strategies, and providing excellent customer
-          service and support.
+          The Business Development Executive will be responsible for new
+          business development and overall business growth. Duties will include
+          identifying new business opportunities, building and maintaining
+          client relationships, developing and executing sales strategies, and
+          providing excellent customer service and support.
         </p>
         <h4>Qualifications</h4>
         <p>MBA in Marketing</p>
@@ -115,17 +99,27 @@ const CareerForm = () => {
           <li>Proven track record in meeting and exceeding sales targets.</li>
           <li>Ability to work independently and as part of a team.</li>
           <li>Strong problem-solving and decision-making skills.</li>
-          <li>Positive attitude and willingness to learn and adapt to new challenges.</li>
+          <li>
+            Positive attitude and willingness to learn and adapt to new
+            challenges.
+          </li>
           <li>Experience in the real estate is a plus.</li>
           <li>Four wheeler driving mandatory for Male candidates.</li>
-          <li>Candidates with multiple linguistic proficiency are preferred.</li>
+          <li>
+            Candidates with multiple linguistic proficiency are preferred.
+          </li>
         </ul>
         <h4>Experience</h4>
         <p>1-2 Years</p>
         <h4>Salary</h4>
         <p>15K-30K</p>
       </div>
-      <form className="career-form" data-aos="fade-left" onSubmit={handleSubmit} enctype="multipart/form-data">
+      <form
+        className="career-form"
+        data-aos="fade-left"
+        onSubmit={handleSubmit}
+        enctype="multipart/form-data"
+      >
         <h2>Career Form</h2>
         <div className="form-group">
           <input
@@ -155,7 +149,9 @@ const CareerForm = () => {
             value={formData.contact_no}
             onChange={handleChange}
           />
-          {errors.contact_no && <span className="error">{errors.contact_no}</span>}
+          {errors.contact_no && (
+            <span className="error">{errors.contact_no}</span>
+          )}
         </div>
 
         <div className="form" style={{ marginLeft: "1rem" }}>
@@ -170,20 +166,28 @@ const CareerForm = () => {
             className="input-bde"
           />
           <p style={{ fontSize: "0.6rem", color: "red", marginTop: "-1rem" }}>
-            * Please upload a file with the following format: <strong>.pdf</strong>.
-            The file size should not exceed <strong>5MB</strong>.
+            * Please upload a file with the following format:{" "}
+            <strong>.pdf</strong>. The file size should not exceed{" "}
+            <strong>5MB</strong>.
           </p>
-          {errors.file && <span className="error" style={{ marginLeft: "0rem", marginTop: "-13px" }}>{errors.file}</span>}
+          {errors.file && (
+            <span
+              className="error"
+              style={{ marginLeft: "0rem", marginTop: "-13px" }}
+            >
+              {errors.file}
+            </span>
+          )}
         </div>
 
         <div className="form-group" style={{ marginLeft: "1rem" }}>
           {/* <input type="checkbox" id="consent" required /> */}
           <label htmlFor="consent">
-            I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me via phone and
-            email regarding my enquiry. I understand that this communication may
-            include follow-up calls, emails, and other messages to assist with my
-            enquiry and provide further information about your services. This will
-            override the registry on DND/NDNC.
+            I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me via
+            phone and email regarding my enquiry. I understand that this
+            communication may include follow-up calls, emails, and other
+            messages to assist with my enquiry and provide further information
+            about your services. This will override the registry on DND/NDNC.
           </label>
         </div>
         <button type="submit" className="submit-button">
