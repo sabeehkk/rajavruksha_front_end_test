@@ -4,9 +4,8 @@ import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
 import "./style.css";
 
-const ContactForm = ({ContactClasss}) => {
-  console.log(ContactClasss,'inside comonent');
-  
+const ContactForm = () => {
+  const [showFullConsentText, setShowFullConsentText] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,6 +41,10 @@ const ContactForm = ({ContactClasss}) => {
       ...prevError,
       [name]: "",
     }));
+  };
+
+  const toggleConsentText = () => {
+    setShowFullConsentText((prev) => !prev);
   };
 
   // Handle form submission
@@ -256,9 +259,14 @@ const ContactForm = ({ContactClasss}) => {
           </Grid>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div
+                style={{ display: "flex", alignItems: "center" }}
+                className="consent-cont"
+              >
                 <input
-                  className= "consent-checkbox"             
+                  className={
+                    showFullConsentText ? "consent-more" : "consent-checkbox"
+                  }
                   type="checkbox"
                   id="consent"
                   name="consent"
@@ -266,14 +274,25 @@ const ContactForm = ({ContactClasss}) => {
                   onChange={changeHandler}
                   required
                 />
-                <label htmlFor="consent" className="consent-brief">
-                  I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me
+                <div>
+                  <label htmlFor="consent" className="consent-brief">
+                    {showFullConsentText
+                      ? `I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me
                   via phone and email regarding my enquiry. I understand that
                   this communication may include follow-up calls, emails, and
                   other messages to assist with my enquiry and provide further
                   information about your services. This will override the
-                  registry on DND/NDNC.
-                </label>
+                  registry on DND/NDNC.`
+                      : `I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me..`}
+                    <Button
+                      size="small"
+                      onClick={toggleConsentText}
+                      style={{ fontSize: "10px" }}
+                    >
+                      {showFullConsentText ? "Read Less" : "Read More"}
+                    </Button>
+                  </label>
+                </div>
               </div>
               {error.consent && (
                 <FormHelperText error>{error.consent}</FormHelperText>
