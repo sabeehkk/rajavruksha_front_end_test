@@ -259,22 +259,22 @@ const ContactForm = () => {
           </Grid>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <div
-                style={{ display: "flex", alignItems: "center" }}
-                className="consent-cont"
-              >
-                <input
-                  className={
-                    showFullConsentText ? "consent-more" : "consent-checkbox"
-                  }
-                  type="checkbox"
-                  id="consent"
-                  name="consent"
-                  checked={formData.consent || false}
-                  onChange={changeHandler}
-                  required
-                />
-                <div>
+              <div className="consent-cont">
+                <div className="consent-checkbox-wrapper">
+                  <input
+                    className={
+                      showFullConsentText ? "consent-more" : "consent-checkbox"
+                    }
+                    type="checkbox"
+                    id="consent"
+                    name="consent"
+                    checked={formData.consent || false}
+                    onChange={changeHandler}
+                    required
+                  />
+                </div>
+
+                <div className="consent-label-wrapper">
                   <label htmlFor="consent" className="consent-brief">
                     {showFullConsentText
                       ? `I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me
@@ -283,7 +283,7 @@ const ContactForm = () => {
                   other messages to assist with my enquiry and provide further
                   information about your services. This will override the
                   registry on DND/NDNC.`
-                      : `I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me..`}
+                      : `I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me via phone and email regarding my enquiry..`}
                     <Button
                       size="small"
                       onClick={toggleConsentText}
