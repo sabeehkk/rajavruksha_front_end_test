@@ -7,22 +7,30 @@ import e2 from "../../components/assets/slidingpic.jpg";
 // import e4 from "../../components/assets/cartoon2.jpg";
 // import e4 from "../../components/assets/cartoon3.jpg";
 // import e5 from "../../components/assets/freepik-export-20241115114842s91d.jpeg";
-import e1 from "../../components/assets/new_carousel_1.jpg";
-import e5 from "../../components/assets/new_carousel_5.jpg";
-import e4 from "../../components/assets/new_carousel_4.jpg";
-import e3 from "../../components/assets/new_carousel_3.jpg";
-import e7 from "../../components/assets/new_carousel_2.jpg";
+// import e1 from "../../components/assets/new_carousel_1.jpg";
+// import e5 from "../../components/assets/new_carousel_5.jpg";
+// import e4 from "../../components/assets/new_carousel_4.jpg";
+// import e3 from "../../components/assets/new_carousel_3.jpg";
+// import e7 from "../../components/assets/new_carousel_2.jpg";
+
+import img1 from "../../components/assets/home_carousel_img1.jpg";
+import img2 from "../../components/assets/home_carousel_img2.jpg";
+import img3 from "../../components/assets/home_carousel_img3.jpg";
+import img4 from "../../components/assets/home_carousel_img4.jpg";
+import img5 from "../../components/assets/home_carousel_img5.jpg";
+import img6 from "../../components/assets/home_carousel_img6.jpg";
+
 
 function NewCarousel() {
   // State to track the active item
   const [activeIndex, setActiveIndex] = useState(0); // Start from the first item
   const items = [
     // 'https://images.unsplash.com/photo-1506706435692-290e0c5b4505?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    e7,
-    e1,
-    e5,
-    e4,
-    e3,
+    img1,
+    img2,
+    img3,
+    img4,
+    img6,
   ];
   // const items = [
   //   "https://images.unsplash.com/photo-1630305106122-80b9ace010c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYxfHx3aWxsYSUyMHByb2plY3RzfGVufDB8fDB8fHww",

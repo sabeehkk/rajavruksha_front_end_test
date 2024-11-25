@@ -18,14 +18,14 @@ const Contactpage = ({requestAquote}) => {
           </div>
           <div className="contact-body col-lg-5 col-sm-6 mb-5">
             <div className="contact-page-left">
-              <h3>Contact info</h3>
+              <h3 className="contact-info-det">Contact info</h3>
               <div className="contact-info">
                 <div className="single-map-info" data-aos="fade-up">
                   <div className="map-info-icon">
                     <span className="fas fa-map-marker-alt" />
                   </div>
                   <div className="map-info-text">
-                    <h5>Head office</h5>
+                    <h3 className="contact-info-head">Head office</h3>
                     <p>
                       #35 A, Kowdi, 2nd Floor, 1st Main Road, Chiranjeevi Layout, Hebbal Kempapura, Bengaluru-560024
                     </p>
@@ -36,7 +36,7 @@ const Contactpage = ({requestAquote}) => {
                     <span className="fas fa-phone-alt" />
                   </div>
                   <div className="contact-info-text">
-                    <h5>Phone</h5>
+                    <h3 className="contact-info-head">Phone</h3>
                     <p>+91 8549 955 955</p>
                     {/* <p>(+09) 123 4567 89</p> */}
                   </div>
@@ -46,7 +46,7 @@ const Contactpage = ({requestAquote}) => {
                     <span className="fas fa-envelope" />
                   </div>
                   <div className="contact-info-text">
-                    <h5>Email</h5>
+                    <h3 className="contact-info-head">Email</h3>
                     <p>enquiry@rajavrukshagroup.in</p>
                     {/* <p>support@company.com</p> */}
                   </div>

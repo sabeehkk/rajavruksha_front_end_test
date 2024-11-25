@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
 import "./style.css";
 
@@ -11,7 +11,8 @@ const ContactForm = () => {
     subject: "",
     lastname: "",
     notes: "",
-    phone_no: ""
+    phone_no: "",
+    consent: false,
   });
 
   const [error, setError] = useState({
@@ -20,18 +21,18 @@ const ContactForm = () => {
     subject: "",
     lastname: "",
     notes: "",
-    phone_no: ""
+    phone_no: "",
+    consent: "",
   });
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-
   // Handle input changes and clear errors
   const changeHandler = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: type === "checkbox" ? checked : value,
     }));
 
     // Clear the error for that specific field
@@ -57,6 +58,8 @@ const ContactForm = () => {
     if (formData.lastname === "") formErrors.lastname = "Please enter lastname";
     if (formData.notes === "") formErrors.notes = "Please enter note";
     if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
+    if (formData.consent === false)
+      formErrors.consent = "You must agree to the terms and conditions.";
 
     // Step 3: Set error state
     setError(formErrors);
@@ -69,20 +72,24 @@ const ContactForm = () => {
     try {
       console.log("Preparing to send request to backend...");
 
-      const response = await fetch("https://rajavruksha-server.vercel.app/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          lastName: formData.lastname,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.notes,
-          phone_no: formData.phone_no
-        }),
-      });
+      const response = await fetch(
+        // "https://rajavruksha-server.vercel.app/contact",
+        "http://localhost:3000/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            lastName: formData.lastname,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.notes,
+            phone_no: formData.phone_no,
+          }),
+        }
+      );
 
       if (response.ok) {
         // Handle success response
@@ -95,7 +102,8 @@ const ContactForm = () => {
           email: "",
           subject: "",
           notes: "",
-          phone_no: ""
+          phone_no: "",
+          consent: false,
         });
 
         setError({
@@ -104,13 +112,13 @@ const ContactForm = () => {
           subject: "",
           lastname: "",
           notes: "",
-          phone_no: ""
+          phone_no: "",
+          consent: false,
         });
       } else {
         // Handle unsuccessful response (server error, etc.)
         alert("There was an error sending the message.");
       }
-
     } catch (error) {
       console.error("Error:", error);
       alert("There was a problem with the server.");
@@ -123,17 +131,16 @@ const ContactForm = () => {
         <Box
           component="form"
           sx={{
-            '& > :not(style)': {
+            "& > :not(style)": {
               width: {
-                xs: '50%',  // For screens smaller than 600px (Mobile)
-                sm: '80%',   // For screens 600px to 960px (Tablet)
-                md: '80%'    // For screens 960px and larger (Desktop)
-              }
-            }
+                xs: "50%", // For screens smaller than 600px (Mobile)
+                sm: "80%", // For screens 600px to 960px (Tablet)
+                md: "80%", // For screens 960px and larger (Desktop)
+              },
+            },
           }}
           noValidate
           autoComplete="off"
-
         >
           {/* First Name and Last Name in the same row */}
           <Grid container spacing={2}>
@@ -148,7 +155,9 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.name}
               />
-              {error.name && <FormHelperText error>{error.name}</FormHelperText>}
+              {error.name && (
+                <FormHelperText error>{error.name}</FormHelperText>
+              )}
             </Grid>
 
             <Grid item xs={12} sm={6}>
@@ -162,7 +171,9 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.lastname}
               />
-              {error.lastname && <FormHelperText error>{error.lastname}</FormHelperText>}
+              {error.lastname && (
+                <FormHelperText error>{error.lastname}</FormHelperText>
+              )}
             </Grid>
           </Grid>
 
@@ -179,7 +190,9 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.email}
               />
-              {error.email && <FormHelperText error>{error.email}</FormHelperText>}
+              {error.email && (
+                <FormHelperText error>{error.email}</FormHelperText>
+              )}
             </Grid>
 
             <Grid item xs={12} sm={6}>
@@ -194,7 +207,9 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.phone_no}
               />
-              {error.phone_no && <FormHelperText error>{error.phone_no}</FormHelperText>}
+              {error.phone_no && (
+                <FormHelperText error>{error.phone_no}</FormHelperText>
+              )}
             </Grid>
           </Grid>
 
@@ -211,7 +226,9 @@ const ContactForm = () => {
                 fullWidth
                 error={!!error.subject}
               />
-              {error.subject && <FormHelperText error>{error.subject}</FormHelperText>}
+              {error.subject && (
+                <FormHelperText error>{error.subject}</FormHelperText>
+              )}
             </Grid>
           </Grid>
 
@@ -226,11 +243,39 @@ const ContactForm = () => {
                 name="notes"
                 value={formData.notes}
                 onChange={changeHandler}
-                rows={4}
+                rows={2}
                 fullWidth
                 error={!!error.notes}
               />
-              {error.notes && <FormHelperText error>{error.notes}</FormHelperText>}
+              {error.notes && (
+                <FormHelperText error>{error.notes}</FormHelperText>
+              )}
+            </Grid>
+          </Grid>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <input
+                  className= "consent-checkbox"             
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  checked={formData.consent || false}
+                  onChange={changeHandler}
+                  required
+                />
+                <label htmlFor="consent" className="consent-brief">
+                  I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me
+                  via phone and email regarding my enquiry. I understand that
+                  this communication may include follow-up calls, emails, and
+                  other messages to assist with my enquiry and provide further
+                  information about your services. This will override the
+                  registry on DND/NDNC.
+                </label>
+              </div>
+              {error.consent && (
+                <FormHelperText error>{error.consent}</FormHelperText>
+              )}
             </Grid>
           </Grid>
 

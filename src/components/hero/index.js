@@ -8,10 +8,12 @@ import "slick-carousel/slick/slick-theme.css";
 import hero1 from "../../img/slider-1.jpg";
 import hero2 from "../../img/slider-2.png";
 import field from "../../components/assets/field.jpg";
-import Container from "../../main-component/Status/status.jsx"
+import Container from "../../main-component/Status/status.jsx";
 
 import "./style.css";
 import NewCarousel from "../newCarousel/newCarousel.jsx";
+import HomePageLandingImg from "../../components/assets/Banner_Landing_Home_page.jpg";
+import HomePageLandingImg2 from "../../components/assets/Banner_Landing_Home_page4.jpg";
 
 class Hero extends Component {
   constructor(props) {
@@ -47,12 +49,11 @@ class Hero extends Component {
       fade: true,
     };
 
-
     return (
-      <section className="hero-area" >
+      <section className="hero-area">
         <div className="hero-slider">
           <div className="hero_arrows">
-        {!isMobile && <NewCarousel />}
+            {!isMobile && <NewCarousel />}
             <button className="button" onClick={this.previous}>
               <i className="fas "></i>
             </button>
@@ -66,44 +67,44 @@ class Hero extends Component {
                 className="hero-slide-item"
                 // style={{ backgroundImage: `url(${field})` }}
                 style={{
-                      backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`
-                    }} 
-                    >
-                <div className="container">
-                  <div className="hero-text">
-                    <h2 style={{fontSize:'39px'}}>
-                     Plow Your Capital into<br/>
-                      Farmland for Growth
-                    </h2>
-                    
-                    <div className="hero-action">
-                      <Link to="/projects" className="cta-btn btn-fill">
-                        See Projects
-                      </Link>
-                      <Link to="/contact" className="cta-btn btn-border">
-                        Get Contact
-                      </Link>
-                    </div>
-                  </div>
-                
-                </div>
-                
-              </div>
-            </div>
-           <div className="slide">
-              <div
-                className="hero-slide-item"
-                // style={{ backgroundImage: `url(${field})` }}
-                // style={{
-                //       backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`
-                //   }}
+                  backgroundImage: `url(${HomePageLandingImg})`,
+                  opacity:0.7
+                  // backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`,
+                }}
               >
                 <div className="container">
                   <div className="hero-text">
-                    
-                    <h2 style={{color:'black',fontSize:'39px'}}>
-                    Invest in Farmland for <br/>
-                    Long-Term Prosperity
+                    <h2 style={{ fontSize: "39px" }}>
+                      Plow Your Capital into
+                      <br />
+                      Farmland for Growth
+                    </h2>
+
+                    <div className="hero-action">
+                      <Link to="/projects" className="cta-btn btn-fill">
+                        See Projects
+                      </Link>
+                      <Link to="/contact" className="cta-btn btn-border">
+                        Get Contact
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="slide">
+              <div
+                className="hero-slide-item"
+                // style={{ backgroundImage: `url(${field})` }}
+                style={{
+                  backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`,
+                }}
+              >
+                <div className="container">
+                  <div className="hero-text">
+                    <h2 style={{ color: "black", fontSize: "39px" }}>
+                      Invest in Farmland for <br />
+                      Long-Term Prosperity
                     </h2>
                     <div className="hero-action">
                       <Link to="/projects" className="cta-btn btn-fill">
@@ -113,10 +114,8 @@ class Hero extends Component {
                         Get Contact
                       </Link>
                     </div>
-
-                    
                   </div>
-                  
+
                   {/* <div className="video-main">
                     <div className="promo-video">
                       <div className="waves-block">
@@ -129,10 +128,9 @@ class Hero extends Component {
                   </div> */}
                 </div>
               </div>
-              </div> 
+            </div>
           </Slider>
         </div>
-        
       </section>
     );
   }
