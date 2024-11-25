@@ -1,63 +1,49 @@
+.consent-cont {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.consent-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.consent-checkbox,
+.consent-more {
+  height: 15px;
+  margin: 5px;
+  width: 15px;
+}
+
 .contact-button {
   margin-left: 12%;
   padding: 19px;
   width: 50%;
-  /* margin-bottom: 25px; */
 }
 
 .contact-form-height {
   margin-left: 80px;
-  /* margin-top: 100px; */
+}
+
+.consent-label-wrapper {
+  flex: 1;
 }
 
 .consent-brief {
   font-size: 10px;
-  margin-top: 5px;
-  margin-left: -16px;
-}
-
-.consent-checkbox {
-  height: 15px;
-  margin-top: 3px;
-  margin-left: -48px;
-}
-
-.consent-more {
-  height: 15px;
-  margin-left: -26px;
-  margin-top: -15px;
+  margin: 0;
 }
 
 @media (max-width: 430px) {
-  .contact-button {
-    margin-left: 3.25%;
-    margin-top: -2%;
-  }
-  form {
-    margin-right: -51px;
-  }
   .consent-brief {
-    margin-left: 30px;
+    font-size: 10px;
   }
-  .consent-checkbox {
-    margin: auto;
-    margin-top: -30px;
-    /* height: 15px;
-        margin-top: -100px;
-        margin-left: -50px; */
-  }
-}
 
-@media (min-width: 401px) and (max-width: 430px) {
-  .consent-brief {
-    margin-left: 30px;
-  }
   .consent-checkbox {
-    margin: auto;
-    margin-top: -18px;
-    /* height: 15px;
-        margin-top: -100px;
-        margin-left: -50px; */
+    height: 15px;
+    width: 15px;
+    margin: 2px;
   }
 }
 
