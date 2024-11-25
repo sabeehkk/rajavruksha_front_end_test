@@ -258,8 +258,7 @@ const ContactForm = ({ContactClasss}) => {
             <Grid item xs={12}>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <input
-                // className={props.ContactClasss ? "consent-checkbox-contact" : "consent-checkbox"}
-
+                  className= "consent-checkbox"             
                   type="checkbox"
                   id="consent"
                   name="consent"

@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 import ecoNext from "../../components/assets/ecoproject.jpg";
-import EconextProject from "../../components/assets/project_picture.jpg";
-import SylvanImage from "../../components/assets/Sylvanretreat.jpg"
+// import EconextProject from "../../components/assets/project_picture.jpg";
+import SylRetreatImg from "../../components/assets/Sylvan_retreat_single_banner_img.jpg";
+import EcoNestImg from "../../components/assets/eco-nest_pro_det_img.jpg";
 
 import "./style.css";
 
@@ -43,9 +44,7 @@ const ProjectList = () => {
                   {/* <img src={ProjectImage} alt="img" style={{height:'600px'}}/> */}
                   {/* <img src={'https://img.freepik.com/free-photo/man-using-tablet-eco-friendly-wind-power-project-layout_23-2148847801.jpg?uid=R168516155&ga=GA1.1.1457800326.1726059840&semt=ais_hybrid'} alt="Sylvan Retreat" style={{ height: '600px' }} /> */}
                   <img
-                    src={
-                      SylvanImage
-                    }
+                    src={SylRetreatImg}
                     alt="img"
                     style={{
                       height: "600px",
@@ -54,7 +53,7 @@ const ProjectList = () => {
                       borderRadius: "8px", // Optional: Adds rounded corners for a polished look
                     }}
                   />
-                  <h3>
+                  <h3 className="syl-retreat-title text-capitalize">
                     Sylvan Retreat
                     {/* <br /> IN PARIS */}
                   </h3>
@@ -90,7 +89,7 @@ const ProjectList = () => {
                   <Link to="/projects-single">
                     {/* <img src={ecoNext} alt="img" /> */}
                     <img
-                      src={EconextProject}
+                      src={EcoNestImg}
                       alt="img"
                       style={{
                         height: "600px",

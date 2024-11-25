@@ -1,6 +1,9 @@
 import React from "react";
 import VideoModal from "../../components/ModalVideo";
-import Thumbnail from "../../components/assets/syl-retreat_thumbnail.jpg"
+
+import tourBG from "../../img/tour-img.png";
+import SylRetreatThumbnail from "../../components/assets/syl-retreat_thumbnail.jpg"
+
 
 import "./style.css";
 
@@ -9,7 +12,7 @@ const Tour = () => {
    <div className="mt-5">
      <div className="col-md-11 tour-container " >
             <div className="tour-inn" data-aos="fade-right" >
-              <img style={{height:'450px',width:'100%'}} src={Thumbnail} alt="img" />
+              <img style={{height:'450px',width:'100%'}} src={SylRetreatThumbnail} alt="img" />
               <div className="video-main">
                 <div className="tour_video_waves">
                   <div className="promo-video">

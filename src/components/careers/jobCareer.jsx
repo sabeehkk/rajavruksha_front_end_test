@@ -50,13 +50,11 @@ const CareerForm = () => {
         formDataToSubmit.append("contact_no", formData.contact_no);
         formDataToSubmit.append("file", formData.file);
 
-        const response = await fetch(
-          "https://rajavruksha-server.vercel.app/careerForm",
-          {
-            method: "POST",
-            body: formDataToSubmit,
-          }
-        );
+        // const response = await fetch("https://rajavruksha-server.vercel.app/careerForm", {
+        const response = await fetch("http://localhost:3000/careerForm", {
+          method: "POST",
+          body: formDataToSubmit
+        });
 
         if (response.ok) {
           const data = await response.json();
