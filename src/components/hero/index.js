@@ -67,9 +67,8 @@ class Hero extends Component {
                 className="hero-slide-item"
                 // style={{ backgroundImage: `url(${field})` }}
                 style={{
-                  backgroundImage: `url(${HomePageLandingImg})`,
-                  opacity:0.7
-                  // backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`,
+                  // backgroundImage: `url(${HomePageLandingImg})`,
+                  backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`,
                 }}
               >
                 <div className="container">
