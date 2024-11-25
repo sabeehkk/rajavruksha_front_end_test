@@ -14,10 +14,10 @@ import e2 from "../../components/assets/slidingpic.jpg";
 // import e7 from "../../components/assets/new_carousel_2.jpg";
 
 import img1 from "../../components/assets/home_carousel_img1.jpg";
-import img2 from "../../components/assets/5.jpg";
+import img2 from "../../components/assets/Sylvan_retreat_single_banner_img.jpg";
 // import img3 from "../../components/assets/home_carousel_img3.jpg";
-import img3 from "../../components/assets/4.jpg";
-import img4 from "../../components/assets/home_carousel_img4.jpg";
+import Mango from "../../components/assets/mangoImg.jpg";
+import Fruit from "../../components/assets/fruit.png";
 import img6 from "../../components/assets/home_carousel_img6.jpg";
 
 function NewCarousel() {
@@ -27,8 +27,8 @@ function NewCarousel() {
     // 'https://images.unsplash.com/photo-1506706435692-290e0c5b4505?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     img1,
     img2,
-    img3,
-    img4,
+    Mango,
+    Fruit,
     img6,
   ];
   // const items = [
