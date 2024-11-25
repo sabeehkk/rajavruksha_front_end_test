@@ -44,16 +44,20 @@
 }
 
 .contact-new-form {
+	padding:10px  0px 10px 14px;
+	width: 40%;
+	margin: auto;
+	border-radius: 40px;
 	height: auto;
-	background-color: #414141;
+	background-color: #edf2f5;
 	position: relative;
 	/* background-image: url('https://www.shutterstock.com/image-photo/sundappled-forest-dense-green-canopy-260nw-2498121251.jpg'); */
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: scroll;
-	padding: 53px 261px;
-	margin-bottom: 100px;
+	/* padding: 53px 261px; */
+	/* margin-bottom: 100px; */
 	z-index: 1;
 	/* background-color: #02050b; */
 	 /* filter: brightness(40%); */

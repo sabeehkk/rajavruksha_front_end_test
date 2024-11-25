@@ -4,7 +4,9 @@ import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
 import "./style.css";
 
-const ContactForm = () => {
+const ContactForm = ({ContactClasss}) => {
+  console.log(ContactClasss,'inside comonent');
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -126,8 +128,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-height">
-      <form onSubmit={submitHandler} className="form">
+    <div className="contact-form-height" >
+      <form onSubmit={submitHandler} >
         <Box
           component="form"
           sx={{
@@ -256,7 +258,8 @@ const ContactForm = () => {
             <Grid item xs={12}>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <input
-                  className="consent-checkbox"
+                // className={props.ContactClasss ? "consent-checkbox-contact" : "consent-checkbox"}
+
                   type="checkbox"
                   id="consent"
                   name="consent"
