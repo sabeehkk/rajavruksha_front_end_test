@@ -2,6 +2,8 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .consent-checkbox-wrapper {
@@ -22,10 +24,17 @@
   width: 50%;
 }
 
-
-
 .contact-form-height {
   margin-left: 80px;
+  min-height: 500px;
+  max-height: 700px;
+  transition: all 0.3s ease;
+}
+
+.error-helper-text {
+  min-height: 20px;
+  font-size: 12px; /* Optional: Adjust as per your design */
+  color: red; /* Optional: Matches the error styling */
 }
 
 .consent-label-wrapper {
@@ -35,6 +44,8 @@
 .consent-brief {
   font-size: 10px;
   margin: 0;
+  line-height: 1.5;
+  overflow: hidden;
 }
 
 /* @media (max-width: 1496px) {
@@ -61,6 +72,24 @@
     width: 15px;
     margin: 2px;
   }
+
+  .contact-form-height {
+    margin-left: 20px; /* Adjust for smaller screens */
+  }
+}
+
+/* For smoother toggle experience */
+.consent-label-wrapper {
+  flex: 1;
+  overflow: hidden; /* Prevent overflow during "Read More/Less" toggle */
+  transition: max-height 0.3s ease;
+}
+
+.contact-button {
+  margin-left: 12%;
+  padding: 19px;
+  width: 50%;
+  transition: margin 0.3s ease; /* Smooth margin adjustment if needed */
 }
 
 .first-name {

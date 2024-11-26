@@ -131,8 +131,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-height" >
-      <form onSubmit={submitHandler} >
+    <div className="contact-form-height">
+      <form onSubmit={submitHandler}>
         <Box
           component="form"
           sx={{
@@ -161,7 +161,9 @@ const ContactForm = () => {
                 error={!!error.name}
               />
               {error.name && (
-                <FormHelperText error>{error.name}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.name}
+                </FormHelperText>
               )}
             </Grid>
 
@@ -177,7 +179,9 @@ const ContactForm = () => {
                 error={!!error.lastname}
               />
               {error.lastname && (
-                <FormHelperText error>{error.lastname}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.lastname}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
@@ -196,7 +200,9 @@ const ContactForm = () => {
                 error={!!error.email}
               />
               {error.email && (
-                <FormHelperText error>{error.email}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.email}
+                </FormHelperText>
               )}
             </Grid>
 
@@ -213,7 +219,9 @@ const ContactForm = () => {
                 error={!!error.phone_no}
               />
               {error.phone_no && (
-                <FormHelperText error>{error.phone_no}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.phone_no}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
@@ -232,7 +240,9 @@ const ContactForm = () => {
                 error={!!error.subject}
               />
               {error.subject && (
-                <FormHelperText error>{error.subject}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.subject}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
@@ -253,7 +263,9 @@ const ContactForm = () => {
                 error={!!error.notes}
               />
               {error.notes && (
-                <FormHelperText error>{error.notes}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.notes}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
@@ -295,7 +307,9 @@ const ContactForm = () => {
                 </div>
               </div>
               {error.consent && (
-                <FormHelperText error>{error.consent}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.consent}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
