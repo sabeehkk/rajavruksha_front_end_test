@@ -37,21 +37,20 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/projects">Projects</Link>
-                      <ul>
-                      </ul>
+                      <ul></ul>
                     </li>
                     <li>
-                      <Link to="#">Career</Link>
-                      <ul style={{ marginTop: "-26px" }}>
+                      <Link to="/careers">Career</Link>
+                      {/* <ul style={{ marginTop: "-26px" }}>
                         <li>
                           <Link to="bdeCareerForm">BDE</Link>
                         </li>
                         <li>
                           <Link to="bdeIntern">BDE Intern</Link>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
-                 
+
                     <li>
                       <Link to="/contact">Contact</Link>
                     </li>
@@ -62,7 +61,7 @@ const Header = () => {
                 <div
                   to="/contact"
                   className="header-btn"
-                  style={{ marginRight: "20px" }}
+                  // style={{ marginRight: "20px" }}
                 >
                   <Link
                     to="#"
@@ -102,6 +101,20 @@ const Header = () => {
                       style={{ marginRight: "20px" }}
                       className="fab fa-facebook-f"
                     />
+                  </Link>
+                  <Link
+                    to="#"
+                    onClick={() =>
+                      window.open(
+                        "https://www.instagram.com/rajavruksha_realtors/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <i
+                      style={{ marginRight: "20px" }}
+                      class="fab fa-instagram"
+                    ></i>
                   </Link>
                 </div>
               </div>

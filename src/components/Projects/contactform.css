@@ -1,17 +1,20 @@
 /* ===================== CONTACT ======================*/
 /* new styles are going here */
-.contact-image{
-   
-}
 
 .contact-page-new-area {
   padding: 78px 76px 2px 123px;
 }
-.contact-image-container {
+/* .contact-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  overflow: hidden;
+} */
+.contact-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 .contact-image {
@@ -20,10 +23,18 @@
   border-radius: 20px;
   object-fit: cover;
 }
+
 /* Responsive Design */
 @media (max-width: 991px) {
   .contact-image {
-    border-radius: 10px;
+    width: 90%; /* Slight padding for smaller screens */
+    max-width: 100%; /* Ensure it doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .contact-image-container {
+    width: 383px;
+    margin-left: -122px;
   }
 
   .contact-new-form {
@@ -148,9 +159,13 @@
 /*Responsive*/
 @media (max-width: 767px) {
   .contact-new-form {
-    padding: 30px;
-    width: 88%;
-    margin-top: -5px;
+    /* padding: 30px; */
+    margin-left: -106px;
+    width: 22rem;
+    min-height: 500px;
+    max-height: 1000px;
+    margin-top: -58px;
+    border-radius: 0px;
     /* height: 671px; */
   }
   .single-contact-info-new {

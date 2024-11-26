@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
 import "./style.css";
 
-const ContactForm = () => {
+const ContactForm = ({ status }) => {
   const [showFullConsentText, setShowFullConsentText] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -316,7 +316,7 @@ const ContactForm = () => {
 
           {/* Submit Button */}
         </Box>
-        <div className="contact-button mb-5">
+        <div className={status ? "project-contact-button" : "contact-button"}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <Button

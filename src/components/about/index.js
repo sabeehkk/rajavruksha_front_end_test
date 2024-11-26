@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-const About = ({ text }) => {
+const About = ({ text, readMore }) => {
   return (
     <div
       className="about-area"
@@ -23,7 +23,7 @@ const About = ({ text }) => {
               data-aos-offset="100"
             >
               <div className="site-heading">
-                <h2 className="explore-title">
+                <h2 className="explore-title text-capitalize">
                   We explore to discover your optimal selection
                 </h2>
                 <div>
@@ -78,9 +78,10 @@ const About = ({ text }) => {
                     </li>
                   </ul>
                   <div className="mobile-read-more-wrapper">
-                    <Link to="/contact">
-                      {" "}
-                      <button className="read-more-button">READ MORE</button>
+                    <Link to="/about">
+                      {!!readMore && (
+                        <button className="read-more-button">READ MORE</button>
+                      )}
                     </Link>
                   </div>
                 </div>
