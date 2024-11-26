@@ -79,9 +79,8 @@ const About = ({ text, readMore }) => {
                   </ul>
                   <div className="mobile-read-more-wrapper">
                     <Link to="/about">
-                      {!!readMore && (
-                        <button className="read-more-button">READ MORE</button>
-                      )}
+                      {" "}
+                      <button className="read-more-button">READ MORE</button>
                     </Link>
                   </div>
                 </div>

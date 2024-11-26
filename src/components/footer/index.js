@@ -2,12 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./style.css";
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 const Footer = () => {
-  const NewsletterHandler = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <footer className="footer-area">
       <div className="footer-top">
@@ -41,9 +39,9 @@ const Footer = () => {
             <div className="col-lg-2 col-sm-6 order-lg-2 order-3">
               <div className="single-footer">
                 <p id="footer-head">Quick Links</p>
-                <ul>
-                  <li>
-                    <Link to="/about">About Us</Link>
+                <ul className="footer_carousel unordered-list">
+                  <li className="unorderedlistlink">
+                    <Link className="unorderedlistlink" to="/about" >About Us</Link>
                   </li>
                   <li>
                     <Link to="/projects">Our Projects</Link>
@@ -136,7 +134,11 @@ const Footer = () => {
                     >
                       <li class="twitter">
                         {" "}
-                        <i class="fab fa-twitter"></i>
+                        <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" style={{border:"none"}} alt="/skype"/>
+                                           {/* <i class="bi bi-twitter-x"></i> */}
+                        {/* <i class="fab fa-twitter"></i> */}
+                        {/* <i className="fa-brands fa-twitter"></i> */}
+                        {/* <i className="fa-solid fa-x"></i> */}
                       </li>
                     </Link>
                   </ul>

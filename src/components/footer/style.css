@@ -1,4 +1,5 @@
 /* ===================== FOOTER ======================*/
+
 .footer-area {
   background: #000;
 }
@@ -8,6 +9,7 @@
   padding: 70px 0;
 }
 
+
 #footer-connect {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +17,7 @@
   font-style: normal;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-left: 80px;
+  margin-left: 115px;
 }
 
 .single-footer h3 {
@@ -24,7 +26,7 @@
 }
 
 #footer-head {
-  color: #fff;
+  color: #d3b66d;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   font-style: normal;
@@ -38,7 +40,7 @@
 .single-footer li {
   list-style: none;
   margin-bottom: 10px;
-  color: #777;
+  color: #ffffff;
   font-weight: 500;
   font-size: 16px;
 }
@@ -49,13 +51,13 @@
 
 .single-footer a,
 .single-footer p {
-  color: #777;
+  color: white;
   font-weight: 500;
   font-size: 16px;
 }
 
 .single-footer a:hover {
-  color: #fff;
+  color: #b79641;
 }
 
 .footer-contact i {
@@ -219,7 +221,10 @@ ul.footer-contact {
   .single-footer {
     margin: 30px 0;
   }
-
+  .social {
+  
+    text-align: start;
+  }
   #footer-connect {
     margin-left: 5px;
   }
@@ -228,10 +233,25 @@ ul.footer-contact {
     display: none;
   }
 }
+@media (max-width: 384px) {
+  .social {
+    text-align: start;
+  }
+  
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .single-footer {
     margin: 30px 0;
+  }
+  .social {
+  
+    text-align: start;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .social {
+    text-align: start;
   }
 }
 

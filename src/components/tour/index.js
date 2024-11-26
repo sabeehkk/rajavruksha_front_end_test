@@ -22,7 +22,8 @@ const Tour = () => {
                       <div className="waves wave-3" />
                     </div>
                   </div>
-                  <VideoModal videoId="bFYc54lb9kE" />
+                  {/* <VideoModal videoId="bFYc54lb9kE" /> */}
+                  <VideoModal videoId="xz14d8sd7Nc" />
                 </div>
               </div>
             </div>
