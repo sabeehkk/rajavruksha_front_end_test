@@ -11,18 +11,18 @@
 
 
 #footer-connect {
-  color: #fff;
+  color: #d3b66d;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-left: 115px;
+  /* margin-left: 115px; */
 }
 
 .single-footer h3 {
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #footer-head {
@@ -57,7 +57,7 @@
 }
 
 .single-footer a:hover {
-  color: #b79641;
+  color: #729f28;
 }
 
 .footer-contact i {
@@ -66,7 +66,7 @@
 }
 
 .footer-contact li {
-  color: #ccc;
+  color: white;
 }
 
 .newsletter_form form {
@@ -160,8 +160,7 @@
 
 ul.footer-contact {
   padding-top: 20px;
-  margin-top: 20px;
-  border-top: 1px solid rgba(119, 119, 119, 0.32);
+  margin-top: -21px;
 }
 
 .copyright {
@@ -219,15 +218,22 @@ ul.footer-contact {
 /*Responsive*/
 @media (max-width: 767px) {
   .single-footer {
-    margin: 30px 0;
+    margin: 17px 0;
+  }
+  ul.footer-contact {
+    padding-top: 5px;
+    margin-top: -21px;
+  }
+  .footer-top {
+    background: #0b3d2c;
+    padding: 10px 0;
   }
   .social {
-  
     text-align: start;
   }
-  #footer-connect {
+  /* #footer-connect {
     margin-left: 5px;
-  }
+  } */
 
   .single-footer p br {
     display: none;
@@ -242,7 +248,7 @@ ul.footer-contact {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .single-footer {
-    margin: 30px 0;
+    margin: 10px 0;
   }
   .social {
   
@@ -258,10 +264,11 @@ ul.footer-contact {
 /* social media icons */
 
 .social {
+  padding-top: 10px;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  text-align: center;
+  text-align: start;
 }
 .social a {
   color: transparent;
