@@ -188,7 +188,7 @@ const CareerForm = () => {
             about your services. This will override the registry on DND/NDNC.
           </label>
         </div>
-        <button type="submit" className="submit-button">
+        <button  type="submit" className="submit-button">
           Send Message
         </button>
       </form>
