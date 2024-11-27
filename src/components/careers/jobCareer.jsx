@@ -152,7 +152,7 @@ const CareerForm = () => {
           )}
         </div>
 
-        <div className="form" style={{ marginLeft: "1rem" }}>
+        {/* <div className="form" style={{ marginLeft: "1rem" }}>
           <label htmlFor="file">Upload CV *</label>
           <input
             type="file"
@@ -172,6 +172,69 @@ const CareerForm = () => {
             <span
               className="error"
               style={{ marginLeft: "0rem", marginTop: "-13px" }}
+            >
+              {errors.file}
+            </span>
+          )}
+        </div> */}
+        <div className="form" style={{ marginLeft: "1rem" }}>
+          <div style={{ display: "block", marginBottom: "0.5rem" }}>
+            Upload CV *
+          </div>
+
+          <label
+            htmlFor="file"
+            className="choose-file"
+            style={{ cursor: "pointer" }}
+          >
+            Choose File
+          </label>
+
+          <input
+            type="file"
+            id="file"
+            name="file"
+            ref={fileInputRef}
+            onChange={handleFileChange}
+            accept=".pdf"
+            className="input-bde"
+            style={{
+              display: "none", // Hide the input element, use the label as the button
+            }}
+          />
+
+          <div
+            style={{
+              display: "inline-block", // Ensure the text is inline with the button
+              marginLeft: "0.5rem", // Add some space between the button and the text
+              fontSize: "0.8rem",
+              color: "#333",
+            }}
+          >
+            {formData.file ? (
+              <>
+                <strong>File selected: </strong>
+                {formData.file.name}
+              </>
+            ) : (
+              "No file chosen"
+            )}
+          </div>
+
+          <p style={{ fontSize: "0.6rem", color: "red", marginTop: "0.5rem" }}>
+            * Please upload a file with the following format:{" "}
+            <strong>.pdf</strong>. The file size should not exceed{" "}
+            <strong>5MB</strong>.
+          </p>
+
+          {errors.file && (
+            <span
+              className="error"
+              style={{
+                display: "block",
+                color: "red",
+                marginTop: "0.5rem",
+              }}
             >
               {errors.file}
             </span>
