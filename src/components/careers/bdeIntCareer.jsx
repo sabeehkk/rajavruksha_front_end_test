@@ -200,7 +200,6 @@ const BdeInternCareer = () => {
           <div style={{ display: "block", marginBottom: "0.5rem" }}>
             Upload CV *
           </div>
-
           <label
             htmlFor="file"
             className="choose-file"
@@ -208,7 +207,6 @@ const BdeInternCareer = () => {
           >
             Choose File
           </label>
-
           <input
             type="file"
             id="file"
@@ -221,7 +219,6 @@ const BdeInternCareer = () => {
               display: "none", // Hide the input element, use the label as the button
             }}
           />
-
           <div
             style={{
               display: "inline-block", // Ensure the text is inline with the button
@@ -239,13 +236,11 @@ const BdeInternCareer = () => {
               "No file chosen"
             )}
           </div>
-
           <p style={{ fontSize: "0.6rem", color: "red", marginTop: "0.5rem" }}>
             * Please upload a file with the following format:{" "}
             <strong>.pdf</strong>. The file size should not exceed{" "}
             <strong>5MB</strong>.
           </p>
-
           {errors.file && (
             <span
               className="error"

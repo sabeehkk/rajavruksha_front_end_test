@@ -5,12 +5,12 @@ import "./style.css";
 const Contactpage = ({requestAquote}) => {
   let ContactClasss="container-class"
   return (
-    <div className="contact-page-area pt-5 pb-5">
+    <div className="contact-page-area pt-5  ">
       <div className="container new-form">
         <div className="row align-items-center">
 
           <div className="col-lg-6 col-sm-6" >
-            <div className="contact-form">
+            <div className="contact-form responsive-contact-formcontact">
               {/* <div className="site-heading" data-aos="fade-up" >
                 <h2 className="section-title">Request a Quote</h2>
               </div> */}
@@ -56,7 +56,7 @@ const Contactpage = ({requestAquote}) => {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row iframe-container">
               <div className="col-lg-6 col-sm-12">
                 <div className="contact-page-right">
                   <iframe

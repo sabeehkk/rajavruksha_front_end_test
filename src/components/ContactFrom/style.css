@@ -70,6 +70,13 @@
     max-height: 1000px;
     transition: all 0.3s ease;
   }
+  .responsive-contact-formcontact{
+    margin-left: -1px;
+    min-height: 500px;
+    max-height: 1000px;
+    transition: all 0.3s ease;
+    margin-right: -155px;
+  }
 
   .responsive-contact-form {
     margin-left: -69px;
@@ -82,7 +89,7 @@
   .contact-button {
     margin-left: -2%;
     padding: 27px;
-    width: 80%;
+    width: 50%;
   }
   .project-contact-button {
     margin-left: 6%;
