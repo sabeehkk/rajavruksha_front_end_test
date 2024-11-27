@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 }
 
-.input-bde{
+.input-bde {
   background-color: transparent;
 }
 
@@ -50,7 +50,6 @@
   list-style-type: disc;
   margin-left: 40px;
 }
-
 
 .career-form {
   flex: 1;
@@ -112,6 +111,27 @@ input::placeholder {
   margin-right: 0.5rem;
 }
 
+.choose-file {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.choose-file:hover {
+  background-color: #e0e0e0;
+}
+
+.choose-file:active {
+  background-color: #d0d0d0; /* Darker background when clicked */
+  transform: scale(0.98); /* Slightly reduce size for a pressed effect */
+}
+
 .submit-button {
   margin: auto;
   display: flex;
@@ -164,7 +184,7 @@ input::placeholder {
   }
 }
 
-@media (min-width:769px) and (max-width:1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .submit-button {
     width: 50%;
   }
