@@ -24,6 +24,18 @@
   object-fit: cover;
 }
 
+@media (max-width: 390px) {
+  .contact-page-new-area {
+    margin-left: -1vh;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 430px) {
+  .contact-page-new-area {
+    margin: 2vh;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 991px) {
   .contact-image {
