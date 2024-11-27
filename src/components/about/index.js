@@ -5,6 +5,7 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 import "./style.css";
+import AboutImg from "../../components/assets/about-1.e32a7109.webp"
 
 const About = ({ text, readMore }) => {
   return (
@@ -107,9 +108,7 @@ const About = ({ text, readMore }) => {
             >
               <img
                 className="about_img_2"
-                src={
-                  "https://byasi-react.themescare.com/static/media/about-1.e32a7109.png"
-                }
+                src={AboutImg}
                 alt="img"
               />
             </div>
