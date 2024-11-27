@@ -72,12 +72,9 @@
   }
 }
 
-
-
 @media (max-width: 430px) {
   .gal-cont {
-    /* margin-top: 324px; */
-    margin-top: 696px;
+    margin-top: 46px;
   }
   .testimonial-new-slider {
     margin: -110px;

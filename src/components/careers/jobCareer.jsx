@@ -53,7 +53,7 @@ const CareerForm = () => {
         // const response = await fetch("https://rajavruksha-server.vercel.app/careerForm", {
         const response = await fetch("http://localhost:3000/careerForm", {
           method: "POST",
-          body: formDataToSubmit
+          body: formDataToSubmit,
         });
 
         if (response.ok) {
@@ -91,7 +91,7 @@ const CareerForm = () => {
         <h4>Qualifications</h4>
         <p>MBA in Marketing</p>
         <h4>Skills</h4>
-        <ul>
+        <ul className="list-methods">
           <li>New Business Development & Lead Generation.</li>
           <li>Excellent Communication.</li>
           <li>Proven track record in meeting and exceeding sales targets.</li>

@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./style.css";
-import '@fortawesome/fontawesome-free/css/all.css';
-import Logo from "../../components/assets/RRPL_Horizontal.png";
 
 
 const Footer = () => {

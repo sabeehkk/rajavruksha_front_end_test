@@ -23,7 +23,7 @@ const About = ({ text, readMore }) => {
               data-aos-offset="100"
             >
               <div className="site-heading">
-                <h2 className="explore-title text-capitalize">
+                <h2 className="explore-title text-capitalize ">
                   We explore to discover your optimal selection
                 </h2>
                 <div>
@@ -78,9 +78,10 @@ const About = ({ text, readMore }) => {
                     </li>
                   </ul>
                   <div className="mobile-read-more-wrapper">
-                    <Link to="/about">
-                      {" "}
-                      <button className="read-more-button">READ MORE</button>
+                  <Link to="/about">
+                      {!!readMore && (
+                        <button className="read-more-button">READ MORE</button>
+                      )}
                     </Link>
                   </div>
                 </div>
