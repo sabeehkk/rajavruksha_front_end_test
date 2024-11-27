@@ -75,6 +75,7 @@ const CareerForm = () => {
       }
     }
   };
+  //hhhhhh
 
   return (
     <section className="containers">
@@ -146,6 +147,7 @@ const CareerForm = () => {
             placeholder="Phone no"
             value={formData.contact_no}
             onChange={handleChange}
+
           />
           {errors.contact_no && (
             <span className="error">{errors.contact_no}</span>
