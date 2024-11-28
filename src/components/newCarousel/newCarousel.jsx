@@ -116,11 +116,12 @@ function NewCarousel() {
 
   const items = [img1, img2, Mango, Fruit, img6];
   const text = [
-    "Discover Your Agricultural Dream",
-    "Managed Farmland",
-    "Organic Fruit Farm",
-    "Agricultural Canvas Ready for Your Vision",
     "Sustainability",
+    // "Managed Farmland",
+    "Investment Potential",
+    "Organic Fruit Farm",
+    "Discover Your Agricultural Dream",
+    "Expertise in Agriculture",
   ];
 
   const next = () => {
@@ -179,9 +180,9 @@ function NewCarousel() {
       </div>
 
       {/* Display the associated text based on activeIndex */}
-      <div className="description-new-carosel">
+      {/* <div className="description-new-carosel">
         <h2>{text[activeIndex]}</h2>
-      </div>
+      </div> */}
     </>
   );
 }
