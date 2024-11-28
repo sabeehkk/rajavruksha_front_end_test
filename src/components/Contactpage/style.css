@@ -1,29 +1,28 @@
 /* ===================== CONTACT ======================*/
-.crm-box{
-	background-color: white;
-	border: 0px solid;
-	border-radius: 10px;
-	padding: 27px 36px 0px 36px;
-	height: 557px;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
-
+.crm-box {
+  background-color: white;
+  border: 0px solid;
+  border-radius: 10px;
+  padding: 27px 36px 0px 36px;
+  height: 557px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 425px) {
-  .crm-box{
+  .crm-box {
     /* padding: 27px 36px 0px 36px; */
     padding: 10px 25px 10px 25px;
   }
 }
-.iframe-container{
+.iframe-container {
   padding-bottom: 50px;
 }
 
 .crm-heading {
-	padding: 4px;
-	text-align: center;
-	color: black;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 25px;
+  padding: 4px;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
 }
 
 .single-contact-info {
@@ -255,6 +254,15 @@
 		transform: rotate(-45deg);
 	}
 } */
+
+.email-link {
+  cursor: pointer;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: rgb(25, 118, 210);
+}
 
 @media (max-width: 425px) {
   .contact-page-right iframe {

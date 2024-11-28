@@ -9,7 +9,6 @@
   padding: 70px 0;
 }
 
-
 #footer-connect {
   color: #d3b66d;
   font-family: Arial, Helvetica, sans-serif;
@@ -35,6 +34,14 @@
 }
 .foote-copyright {
   color: white;
+}
+
+.contact-link {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.contact-link:hover {
+  color: #729f28;
 }
 
 .single-footer li {
@@ -243,7 +250,6 @@ ul.footer-contact {
   .social {
     text-align: start;
   }
-  
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -251,7 +257,6 @@ ul.footer-contact {
     margin: 10px 0;
   }
   .social {
-  
     text-align: start;
   }
 }

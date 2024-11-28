@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
-
 }
 
 .career-ind {
@@ -34,12 +33,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 17px;
 }
 
 .bde-title-intern {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 17px;
 }
 
 .career-ind:hover {
@@ -59,7 +60,7 @@
     display: block;
     margin-left: -5rem;
   }
-  
+
   .career-ind {
     margin: 100px;
     width: 75%;
