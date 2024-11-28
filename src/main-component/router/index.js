@@ -25,11 +25,13 @@ import BdeInternCareerMain from "../careers/bdeInternCareer.jsx";
 import ScrollToTop from "../../utils/utils.js";
 import MainPrivacyPolicy from "../PrivacyPolicy/index.js";
 import CareerMainFooterComp from "../CareerMainFooter/index.js";
+import FloatingIcons from "../../components/FloatingIcons/FloatingIcons.jsx";
 
 const AllRoute = () => {
   return (
     <div>
       <Router>
+        <FloatingIcons />
         <ScrollToTop />
         <Switch>
           <Route exact path="/" component={Homepage} />
