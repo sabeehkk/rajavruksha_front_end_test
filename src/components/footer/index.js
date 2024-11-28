@@ -53,7 +53,7 @@ const Footer = () => {
                       <Link
                         onClick={() =>
                           window.open(
-                            "https://www.instagram.com/rajavruksha",
+                            "https://www.instagram.com/rajavruksha_realtors/",
                             "_blank"
                           )
                         }
