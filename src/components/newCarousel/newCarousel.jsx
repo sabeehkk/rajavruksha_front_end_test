@@ -116,11 +116,11 @@ function NewCarousel() {
 
   const items = [img1, img2, Mango, Fruit, img6];
   const text = [
+    "Discover Your Agricultural Dream",
     "Managed Farmland",
-    "Residential Project",
-    "Row Villa Project",
     "Organic Fruit Farm",
-    "Luxury Living Spaces",
+    "Agricultural Canvas Ready for Your Vision",
+    "Sustainability",
   ];
 
   const next = () => {

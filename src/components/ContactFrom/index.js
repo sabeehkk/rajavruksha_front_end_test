@@ -28,7 +28,6 @@ const ContactForm = ({ status }) => {
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-  // Handle input changes and clear errors
   const changeHandler = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
@@ -36,7 +35,6 @@ const ContactForm = ({ status }) => {
       [name]: type === "checkbox" ? checked : value,
     }));
 
-    // Clear the error for that specific field
     setError((prevError) => ({
       ...prevError,
       [name]: "",
@@ -47,12 +45,9 @@ const ContactForm = ({ status }) => {
     setShowFullConsentText((prev) => !prev);
   };
 
-  // Handle form submission
   const submitHandler = async (e) => {
-    e.preventDefault(); // Prevent form reload
-    // Step 1: Prepare form errors
+    e.preventDefault();
     let formErrors = { ...error };
-    // Step 2: Validate each field
     if (formData.name === "") formErrors.name = "Please enter name";
     if (formData.email === "") {
       formErrors.email = "Please enter email";
@@ -62,18 +57,20 @@ const ContactForm = ({ status }) => {
     if (formData.subject === "") formErrors.subject = "Please enter subject";
     if (formData.lastname === "") formErrors.lastname = "Please enter lastname";
     if (formData.notes === "") formErrors.notes = "Please enter note";
-    if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
+    // if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
+    if (formData?.phone_no === "") {
+      formErrors.phone_no = "Please enter phone number";
+    } else if (!/^\d{10}$/.test(formData.phone_no)) {
+      formErrors.phone_no = "Phone number must be exactly 10 digits";
+    }
     if (formData.consent === false)
       formErrors.consent = "You must agree to the terms and conditions.";
 
-    // Step 3: Set error state
     setError(formErrors);
 
-    // Step 4: Check if there are errors
     const hasErrors = Object.values(formErrors).some((err) => err !== "");
     if (hasErrors) return; // Stop form submission if there are validation errors
 
-    // Step 5: Proceed with form submission if no errors
     try {
       console.log("Preparing to send request to backend...");
 
@@ -97,10 +94,8 @@ const ContactForm = ({ status }) => {
       );
 
       if (response.ok) {
-        // Handle success response
         alert("Your message has been sent successfully!");
 
-        // Reset form data and error state
         setFormData({
           name: "",
           lastname: "",
@@ -121,7 +116,6 @@ const ContactForm = ({ status }) => {
           consent: false,
         });
       } else {
-        // Handle unsuccessful response (server error, etc.)
         alert("There was an error sending the message.");
       }
     } catch (error) {
@@ -147,7 +141,6 @@ const ContactForm = ({ status }) => {
           noValidate
           autoComplete="off"
         >
-          {/* First Name and Last Name in the same row */}
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -186,7 +179,6 @@ const ContactForm = ({ status }) => {
             </Grid>
           </Grid>
 
-          {/* Email and Phone No in the same row */}
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -226,7 +218,6 @@ const ContactForm = ({ status }) => {
             </Grid>
           </Grid>
 
-          {/* Subject in a new row */}
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
@@ -247,7 +238,6 @@ const ContactForm = ({ status }) => {
             </Grid>
           </Grid>
 
-          {/* Message in a new row */}
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
@@ -313,8 +303,6 @@ const ContactForm = ({ status }) => {
               )}
             </Grid>
           </Grid>
-
-          {/* Submit Button */}
         </Box>
         <div className={status ? "project-contact-button" : "contact-button"}>
           <Grid container spacing={2}>
@@ -325,7 +313,7 @@ const ContactForm = ({ status }) => {
                 color="primary"
                 fullWidth
               >
-                Send Message
+                Send Messages
               </Button>
             </Grid>
           </Grid>
