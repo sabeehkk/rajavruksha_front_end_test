@@ -260,7 +260,8 @@
 .hero-slider .hero_arrows {
   padding-left: 0%;
   position: absolute;
-  bottom: 48px;
+  /* bottom: 48px; */
+  bottom: 3px;
   z-index: 11;
   pointer-events: none;
   left: -45px;
@@ -367,5 +368,11 @@
     font-size: 50px;
     letter-spacing: 2px;
     line-height: 55px;
+  }
+}
+
+@media (max-width: 1660px) {
+  .hero_arrows {
+    bottom: 48px;
   }
 }
