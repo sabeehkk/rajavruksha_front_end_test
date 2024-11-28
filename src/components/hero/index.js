@@ -94,14 +94,16 @@ class Hero extends Component {
             <div className="slide">
               <div
                 className="hero-slide-item"
+                
                 // style={{ backgroundImage: `url(${field})` }}
-                // style={{
-                //   backgroundImage: `url('https://utopiaa.in/wp-content/uploads/2024/10/Estate-Investments-4.jpeg')`,
-                // }}
+                style={{
+                  // backgroundImage: `url('https://utopiaa.in/wp-content/uploads/2024/10/Estate-Investments-4.jpeg')`,
+                  backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`,
+                }}
               >
                 <div className="container">
                   <div className="hero-text">
-                    <h2 style={{ color: "black", fontSize: "39px" }}>
+                    <h2 style={{ color: "white", fontSize: "39px" }}>
                       Invest in Farmland for <br />
                       Long-Term Prosperity
                     </h2>

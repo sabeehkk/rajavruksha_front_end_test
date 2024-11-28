@@ -26,19 +26,16 @@ const Footer = () => {
                 <div class="social">
                   <ul class="no-list">
                     <Link
-                      onClick={() =>
-                        window.open(
-                          "https://www.youtube.com/@Rajavruksha_Realtors",
-                          "_blank"
-                        )
-                      }
-                      target="_blank"
-                    >
-                      <li class="youtube">
-                        {" "}
-                        <i class="fab fa-youtube"></i>
-                      </li>
-                    </Link>
+                    to="#"
+                    onClick={() =>
+                      window.open("https://wa.me/916366930174", "_blank")
+                    }
+                  >
+                    <i
+                      style={{ marginRight: "20px" }}
+                      class="fab fa-whatsapp"
+                    ></i>
+                  </Link>
                     <Link
                       onClick={() =>
                         window.open(
