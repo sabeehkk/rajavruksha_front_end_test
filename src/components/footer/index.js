@@ -66,7 +66,7 @@ const Footer = () => {
                       </Link>
                       <Link
                         onClick={() =>
-                          window.open("https://x.com/rajavruksha", "_blank")
+                          window.open("https://x.com/Rajavrukshagrps", "_blank")
                         }
                         target="_blank"
                       >
