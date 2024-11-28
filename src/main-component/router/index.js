@@ -26,13 +26,11 @@ import ScrollToTop from "../../utils/utils.js";
 import MainPrivacyPolicy from "../PrivacyPolicy/index.js";
 import CareerMainFooterComp from "../CareerMainFooter/index.js";
 
-
-
 const AllRoute = () => {
   return (
     <div>
       <Router>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/home" component={Homepage} />

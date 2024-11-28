@@ -49,6 +49,11 @@
 .list-methods li {
   list-style-type: disc;
   margin-left: 40px;
+  color: #777;
+}
+
+.consent-sec {
+  color: #777;
 }
 
 .career-form {
@@ -96,7 +101,7 @@ input::placeholder {
 
 .form-group label {
   font-size: 0.8rem;
-  color: #333;
+  color: #777;
 }
 
 .error {

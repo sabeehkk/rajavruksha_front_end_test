@@ -12,6 +12,7 @@
   justify-content: center;
   display: flex;
 }
+
 @media (min-width: 640px) {
   .layout-image {
     justify-content: center;
