@@ -32,13 +32,33 @@ const CareerForm = () => {
     }
   };
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhoneNumber = (phone) => {
+    const phoneRegex = /^[0-9]{10}$/; // Only 10 digits
+    return phoneRegex.test(phone);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     let formErrors = {};
     if (!formData.name) formErrors.name = "Enter the name";
-    if (!formData.email) formErrors.email = "Please enter a valid email.";
-    if (!formData.contact_no)
-      formErrors.contact_no = "Please enter a phone number.";
+    // if (!formData.email) formErrors.email = "Please enter a valid email.";
+    if (!formData.email) {
+      formErrors.email = "Enter your email address";
+    } else if (!validateEmail(formData.email)) {
+      formErrors.email = "Please enter a valid email address.";
+    }
+    if (!formData.contact_no) {
+      formErrors.contact_no = "Enter your phone number.";
+    } else if (!validatePhoneNumber(formData.contact_no)) {
+      formErrors.contact_no = "Phone number must be 10 digits.";
+    }
+    // if (!formData.contact_no)
+    //   formErrors.contact_no = "Please enter a phone number.";
     if (!formData.file) formErrors.file = "Please upload a file.";
 
     setErrors(formErrors);
@@ -50,11 +70,14 @@ const CareerForm = () => {
         formDataToSubmit.append("contact_no", formData.contact_no);
         formDataToSubmit.append("file", formData.file);
 
-        const response = await fetch("https://rajavruksha-server.vercel.app/careerForm", {
-        // const response = await fetch("http://localhost:3000/careerForm", {
-          method: "POST",
-          body: formDataToSubmit,
-        });
+        const response = await fetch(
+          "https://rajavruksha-server.vercel.app/careerForm",
+          {
+            // const response = await fetch("http://localhost:3000/careerForm", {
+            method: "POST",
+            body: formDataToSubmit,
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();
@@ -252,7 +275,7 @@ const CareerForm = () => {
             about your services. This will override the registry on DND/NDNC.
           </label>
         </div>
-        <button  type="submit" className="submit-button">
+        <button type="submit" className="submit-button">
           Send Message
         </button>
       </form>
