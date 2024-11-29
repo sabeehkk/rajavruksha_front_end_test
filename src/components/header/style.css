@@ -1,10 +1,111 @@
 /* ===================== HEADER ======================*/
 
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* WhatsApp */
+.social-icons a.whatsapp {
+  background-color: #25d366;
+}
+
+.social-icons a.whatsapp:hover {
+  background-color: #1da851;
+}
+
+/* YouTube */
+.social-icons a.youtube {
+  background-color: #ff0000;
+}
+
+.social-icons a.youtube:hover {
+  color: red;
+  background-color: white;
+}
+
+/* Facebook */
+.social-icons a.facebook {
+  background-color: #1877f2;
+}
+
+.social-icons a.facebook:hover {
+  /* background-color: #145dbf; */
+  background-color: white;
+  color:#1877f2 ;
+}
+
+/* Instagram */
+.social-icons a.instagram {
+  background-color: #e1306c;
+  background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fdf497 15%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.social-icons a.instagram:hover {
+  filter: brightness(1.2);
+}
+
+.social-icons a i {
+  line-height: 1;
+}
+
+
+
 .header {
   z-index: 99;
   width: 100%;
   padding-right: 5%;
 }
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  .header-action {
+    display: none; /* Hides the entire container */
+  }
+}
+
+.social-icons-new{
+   color: white;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #73ff00;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.social-icons-new {
+  display: flex;
+  gap: 15px;
+}
+
+
+.social-icons-new a:hover {
+  background-color: #d3b66d;
+  transform: scale(1.1);
+}
+
+.social-icons-new a i {
+  line-height: 1;
+}
+
+
+
+
 
 .header:after {
   position: absolute;

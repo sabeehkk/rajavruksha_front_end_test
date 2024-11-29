@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./style.css";
+import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 const Footer = () => {
   return (
@@ -19,7 +20,6 @@ const Footer = () => {
                 </p>
                 <div className="single-footer">
                   <p id="footer-connect">Connect With Us</p>
-
                   <div class="social">
                     <ul class="no-list">
                       <Link
@@ -69,12 +69,12 @@ const Footer = () => {
                           window.open("https://x.com/Rajavrukshagrps", "_blank")
                         }
                         target="_blank"
-                      >
-                        <li class="twitter">
+                            >
+                        <li class="twitter" >
                           {" "}
                           <img
                             src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png"
-                            style={{ border: "none" }}
+                            style={{ border: "none",padding:'7px' }}
                             alt="/skype"
                           />
                           {/* <i class="bi bi-twitter-x"></i> */}
@@ -85,24 +85,10 @@ const Footer = () => {
                       </Link>
                     </ul>
                   </div>
+
+
                 </div>
-                {/* 
-                <ul className="footer-contact ">
-                  <p id="footer-head">Contact Details</p>
-                  <li>
-                    <i className="fas fa-phone-square-alt" /> +91 8549 955 955
-                  </li>
-                  <li>
-                    <i className="fas fa-envelope" />{" "}
-                    enquiry@rajavrukshagroup.in
-                  </li>
-                  <li>
-                    <i className="fas fa-map" /> #35 A, Kowdi, 2nd Floor, 1st
-                    Main Road, Chiranjeevi Layout, Hebbal Kempapura,
-                    Bengaluru-560024
-                  </li>
-                </ul>
-                 */}
+
               </div>
             </div>
             <div className="col-lg-2 col-sm-6 order-lg-2 order-3">
@@ -164,67 +150,7 @@ const Footer = () => {
                   Road, Chiranjeevi Layout, Hebbal Kempapura, Bengaluru-560024
                 </li>
               </ul>
-              {/* <div className="single-footer">
-                <p id="footer-connect">Connect With Us</p>
-              
-                <div class="social">
-                  <ul class="no-list">
-                    <Link
-                      onClick={() =>
-                        window.open(
-                          "https://www.youtube.com/@Rajavruksha_Realtors",
-                          "_blank"
-                        )
-                      }
-                      target="_blank"
-                    >
-                      <li class="youtube">
-                        {" "}
-                        <i class="fab fa-youtube"></i>
-                      </li>
-                    </Link>
-                    <Link
-                      onClick={() =>
-                        window.open(
-                          "https://www.facebook.com/RajavruskhaRealtors",
-                          "_blank"
-                        )
-                      }
-                      target="_blank"
-                    >
-                      <li class="facebook">
-                        {" "}
-                        <i class="fab fa-facebook"></i>
-                      </li>
-                    </Link>
-                    <Link
-                      onClick={() =>
-                        window.open(
-                          "https://www.instagram.com/rajavruksha",
-                          "_blank"
-                        )
-                      }
-                      target="_blank"
-                    >
-                      <li class="instagram">
-                        {" "}
-                        <i class="fab fa-instagram"></i>
-                      </li>
-                    </Link>
-                    <Link
-                      onClick={() =>
-                        window.open("https://x.com/rajavruksha", "_blank")
-                      }
-                      target="_blank"
-                    >
-                      <li class="twitter">
-                        {" "}
-                        <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" style={{border:"none"}} alt="/skype"/>
-                                                              </li>
-                    </Link>
-                  </ul>
-                </div>
-              </div> */}
+
             </div>
           </div>
         </div>

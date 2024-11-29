@@ -1,5 +1,46 @@
 /* ===================== FOOTER ======================*/
 
+/* Common Styles for Header and Footer Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color:  #000;
+  transform: scale(1.1);
+}
+
+.social-icons a i {
+  line-height: 1;
+}
+
+
+/* WhatsApp */
+.social-icons a.whatsapp {
+  background-color: #25d366;
+}
+
+.social-icons a.whatsapp:hover {
+  background-color: #1da851;
+}
+
+
+
 .footer-area {
   background: #000;
 }
@@ -46,7 +87,7 @@
 }
 
 .single-footer li:last-child {
-  margin-bottom: 0;
+  margin-bottom: -13px;
 }
 
 .single-footer a,
@@ -263,13 +304,13 @@ ul.footer-contact {
 
 /* social media icons */
 
-.social {
+/* .social {
   padding-top: 10px;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
   text-align: start;
-}
+} */
 .social a {
   color: transparent;
 }
@@ -301,7 +342,7 @@ ul.no-list li {
 }
 
 .social .twitter {
-  background: #00aced;
+  background: black;
 }
 
 .social .pinterest {

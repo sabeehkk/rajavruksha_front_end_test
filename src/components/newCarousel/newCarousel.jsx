@@ -180,9 +180,9 @@ function NewCarousel() {
       </div>
 
       {/* Display the associated text based on activeIndex */}
-      {/* <div className="description-new-carosel">
+      <div className="description-new-carosel">
         <h2>{text[activeIndex]}</h2>
-      </div> */}
+      </div>
     </>
   );
 }
