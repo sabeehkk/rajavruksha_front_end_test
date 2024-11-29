@@ -8,7 +8,7 @@ import {
 import "./style.css";
 
 const FloatingIcons = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   const handleClick = (type, value) => {
     if (type === "phone") {
