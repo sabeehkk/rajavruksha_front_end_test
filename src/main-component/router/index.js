@@ -33,6 +33,7 @@ import CareerMainFooterComp from "../CareerMainFooter/index.js";
 import FloatingIcons from "../../components/FloatingIcons/FloatingIcons.jsx";
 import Loader from "../../components/Loader/loader.jsx";
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
+import MainTermsCondition from "../TermsConditions/index.js";
 
 // const RoutesWithLoader = () => {
 //   const [loading, setLoading] = useState(false);
@@ -114,6 +115,7 @@ const AllRoute = () => {
           <Route path="/status" component={Status} />
           <Route path="/amenities" component={Amenities} />
           <Route path="/privacyPolicy" component={MainPrivacyPolicy} />
+          <Route path="/terms-conditions" component={MainTermsCondition} />
           <Route path="*" component={ErrorPage} />
         </Switch>
       </Router>

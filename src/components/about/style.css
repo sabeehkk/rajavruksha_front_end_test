@@ -4,6 +4,24 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.vision {
+  margin-top: 20px;
+}
+.vision h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.vision p {
+  margin-top: 10px;
+}
+
+.mission {
+  margin-top: 20px;
+}
+
+.mission h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .brochure-download {
   background-color: #c79937;
