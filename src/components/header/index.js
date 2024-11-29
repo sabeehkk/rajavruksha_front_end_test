@@ -41,7 +41,6 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/careers">Career</Link>
-
                     </li>
 
                     <li>
@@ -51,50 +50,63 @@ const Header = () => {
                 </nav>
               </div>
               <div className="header-action">
-              <div className="social-icons">
-          <Link
-            to="#"
-            className="youtube"
-            onClick={() => window.open("https://www.youtube.com/@Rajavruksha_Realtors", "_blank")}
-          >
-            <i className="fab fa-youtube"></i>
-          </Link>
-          <Link
-            to="#"
-            className="facebook"
-            onClick={() => window.open("https://www.facebook.com/RajavruskhaRealtors", "_blank")}
-          >
-            <i className="fab fa-facebook-f"></i>
-          </Link>
-          <Link
-            to="#"
-            className="instagram"
-            onClick={() => window.open("https://www.instagram.com/rajavruksha_realtors/", "_blank")}
-          >
-            <i className="fab fa-instagram"></i>
-          </Link>
-          <Link
-               onClick={() =>
-                 window.open("https://x.com/Rajavrukshagrps", "_blank")
-               }
-               target="_blank"
-             >
-               <li class="twitter">
-
-                 {" "}
-                 <img
-                   src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png"
-                   style={{ border: "none",width:'24px' }}
-                   alt="/skype"
-                 />
-                 {/* <i class="bi bi-twitter-x"></i> */}
-                 {/* <i class="fab fa-twitter"></i> */}
-                 {/* <i className="fa-brands fa-twitter"></i> */}
-                 {/* <i className="fa-solid fa-x"></i> */}
-               </li>
-             </Link>
-        </div>
-
+                <div className="social-icons">
+                  <Link
+                    to="#"
+                    className="youtube"
+                    onClick={() =>
+                      window.open(
+                        "https://www.youtube.com/@Rajavruksha_Realtors",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <i className="fab fa-youtube"></i>
+                  </Link>
+                  <Link
+                    to="#"
+                    className="facebook"
+                    onClick={() =>
+                      window.open(
+                        "https://www.facebook.com/RajavruskhaRealtors",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <i className="fab fa-facebook-f"></i>
+                  </Link>
+                  <Link
+                    to="#"
+                    className="instagram"
+                    onClick={() =>
+                      window.open(
+                        "https://www.instagram.com/rajavruksha_realtors/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <i className="fab fa-instagram"></i>
+                  </Link>
+                  <Link
+                    onClick={() =>
+                      window.open("https://x.com/Rajavrukshagrps", "_blank")
+                    }
+                    target="_blank"
+                  >
+                    <li class="twitter">
+                      {" "}
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png"
+                        style={{ border: "none", width: "24px" }}
+                        alt="/skype"
+                      />
+                      {/* <i class="bi bi-twitter-x"></i> */}
+                      {/* <i class="fab fa-twitter"></i> */}
+                      {/* <i className="fa-brands fa-twitter"></i> */}
+                      {/* <i className="fa-solid fa-x"></i> */}
+                    </li>
+                  </Link>
+                </div>
               </div>
               <div
                 id="search-overlay"
