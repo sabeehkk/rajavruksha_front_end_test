@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
+import Loader from "../Loader/loader";
 import "./style.css";
 
 const ContactForm = ({ status }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [showFullConsentText, setShowFullConsentText] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -72,6 +74,7 @@ const ContactForm = ({ status }) => {
     if (hasErrors) return; // Stop form submission if there are validation errors
 
     try {
+      setIsLoading(true);
       console.log("Preparing to send request to backend...");
 
       const response = await fetch(
@@ -121,11 +124,14 @@ const ContactForm = ({ status }) => {
     } catch (error) {
       console.error("Error:", error);
       alert("There was a problem with the server.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <div className="contact-form-height">
+      {!!isLoading && <Loader color="#80c1d1" secondaryColor="#80c1d1" />}
       <form onSubmit={submitHandler}>
         <Box
           component="form"

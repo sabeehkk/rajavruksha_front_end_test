@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Loader from "../Loader/loader";
 import "./jobCareer.css";
 
 const CareerForm = () => {
@@ -9,6 +10,7 @@ const CareerForm = () => {
     file: null,
   });
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const fileInputRef = useRef(null);
 
   const handleChange = (e) => {
@@ -63,6 +65,7 @@ const CareerForm = () => {
 
     setErrors(formErrors);
     if (Object.keys(formErrors).length === 0) {
+      setIsLoading(true);
       try {
         const formDataToSubmit = new FormData();
         formDataToSubmit.append("name", formData.name);
@@ -92,9 +95,13 @@ const CareerForm = () => {
           fileInputRef.current.value = null;
         } else {
           console.error("Form submission failed", response.statusText);
+          alert("form submission failed.Please try again.");
         }
       } catch (error) {
         console.error("An error occurred during form submission", error);
+        alert("An error occurred.Please try again.");
+      } finally {
+        setIsLoading(false);
       }
     }
   };
@@ -102,6 +109,7 @@ const CareerForm = () => {
 
   return (
     <section className="containers">
+      {isLoading && <Loader />}
       <div className="job-description" data-aos="fade-right">
         <h2>BUSINESS DEVELOPMENT EXECUTIVE</h2>
         <h4>Job Role Description</h4>

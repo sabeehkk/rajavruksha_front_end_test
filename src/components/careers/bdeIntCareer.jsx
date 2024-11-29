@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Loader from "../Loader/loader";
 import "./jobCareer.css";
 
 const BdeInternCareer = () => {
@@ -9,6 +10,7 @@ const BdeInternCareer = () => {
     file: null,
   });
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const fileInputRef = useRef(null);
 
   const handleChange = (e) => {
@@ -64,6 +66,7 @@ const BdeInternCareer = () => {
     setErrors(formErrors);
     // If there are no form errors, proceed with submitting the data
     if (Object.keys(formErrors).length === 0) {
+      setIsLoading(true);
       try {
         const formDataToSubmit = new FormData();
         formDataToSubmit.append("name", formData.name);
@@ -94,15 +97,20 @@ const BdeInternCareer = () => {
           fileInputRef.current.value = null;
         } else {
           console.error("Form submission failed", response.statusText);
+          alert("form submission failed.Please try again.");
         }
       } catch (error) {
         console.error("An error occurred during form submission", error);
+        alert("An error occurred.Please try again.");
+      } finally {
+        setIsLoading(false);
       }
     }
   };
 
   return (
     <section className="containers">
+      {isLoading && <Loader />}
       <div className="job-description" data-aos="fade-right">
         <h2>BUSINESS DEVELOPMENT EXECUTIVE INTERN</h2>
         <h4>Intern Program Details</h4>
