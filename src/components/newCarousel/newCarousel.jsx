@@ -4,7 +4,6 @@
 // // import e1 from "../../components/assets/carla.jpg";
 // import e2 from "../../components/assets/slidingpic.jpg";
 
-
 // import img1 from "../../components/assets/home_carousel_img1.jpg";
 // import img2 from "../../components/assets/Sylvan_retreat_single_banner_img.jpg";
 // // import img3 from "../../components/assets/home_carousel_img3.jpg";
@@ -21,7 +20,7 @@
 //     Mango,
 //     Fruit,
 //     img6,
-    
+
 //   ];
 //   const text = [
 //     "Managed Farmland",
@@ -82,10 +81,10 @@
 //               {">"}
 //             </button>
 //           </div>
-        
+
 //         </div>
 //         {/* <div className="description-new-carosel"></div> */}
-       
+
 //       </div>
 //     </div>
 //     {text.map((value,index)=>{
@@ -93,13 +92,12 @@
 //  <h2 key={index}>{value}</h2>
 // </div>
 //     })}
-   
+
 //             </>
 //   );
 // }
 
 // export default NewCarousel;
-
 
 import React, { useState } from "react";
 import "./carouse.css";
@@ -116,11 +114,12 @@ function NewCarousel() {
 
   const items = [img1, img2, Mango, Fruit, img6];
   const text = [
-    "Discover Your Agricultural Dream",
-    "Managed Farmland",
-    "Organic Fruit Farm",
-    "Agricultural Canvas Ready for Your Vision",
     "Sustainability",
+    // "Managed Farmland",
+    "Investment Potential",
+    "Organic Fruit Farm",
+    "Discover Your Agricultural Dream",
+    "Expertise in Agriculture",
   ];
 
   const next = () => {
@@ -136,9 +135,11 @@ function NewCarousel() {
   // Function to determine the class based on position relative to activeIndex
   const getClass = (index) => {
     if (index === activeIndex) return "focus";
-    if (index === (activeIndex - 1 + items.length) % items.length) return "big1";
+    if (index === (activeIndex - 1 + items.length) % items.length)
+      return "big1";
     if (index === (activeIndex + 1) % items.length) return "big2";
-    if (index === (activeIndex - 2 + items.length) % items.length) return "small1";
+    if (index === (activeIndex - 2 + items.length) % items.length)
+      return "small1";
     if (index === (activeIndex + 2) % items.length) return "small2";
     return "";
   };
