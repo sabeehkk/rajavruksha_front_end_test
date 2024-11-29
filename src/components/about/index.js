@@ -5,7 +5,7 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 import "./style.css";
-import AboutImg from "../../components/assets/about-1.e32a7109.webp"
+import AboutImg from "../../components/assets/about-1.e32a7109.webp";
 
 const About = ({ text, readMore }) => {
   return (
@@ -79,7 +79,7 @@ const About = ({ text, readMore }) => {
                     </li>
                   </ul>
                   <div className="mobile-read-more-wrapper">
-                  <Link to="/about">
+                    <Link to="/about">
                       {!!readMore && (
                         <button className="read-more-button">READ MORE</button>
                       )}
@@ -106,11 +106,34 @@ const About = ({ text, readMore }) => {
               data-aos="fade-left"
               data-aos-offset="100"
             >
-              <img
-                className="about_img_2"
-                src={AboutImg}
-                alt="img"
-              />
+              <img className="about_img_2" src={AboutImg} alt="img" />
+            </div>
+          </div>
+          <div className="col-lg-5 col-md-6">
+            <div
+              className="about-left"
+              data-aos="fade-right"
+              data-aos-offset="100"
+            >
+              {!readMore && (
+                <div className="vision">
+                  <h2>Vision</h2>
+                  <p>
+                    To be the premier agency for sustainable and profitable farm
+                    land investments, shaping the future of agriculture
+                  </p>
+                </div>
+              )}
+              {!readMore && (
+                <div className="mission">
+                  <h2>Mission</h2>
+                  <p>
+                    We provide expert real estate services, guiding clients in
+                    acquiring, selling, and investing in farm land with a focus
+                    on sustainability and long-term growth.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

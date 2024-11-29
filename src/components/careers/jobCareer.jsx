@@ -100,6 +100,13 @@ const CareerForm = () => {
       } catch (error) {
         console.error("An error occurred during form submission", error);
         alert("An error occurred.Please try again.");
+        setFormData({
+          name: "",
+          email: "",
+          contact_no: "",
+          file: null,
+        });
+        fileInputRef.current.value = null;
       } finally {
         setIsLoading(false);
       }

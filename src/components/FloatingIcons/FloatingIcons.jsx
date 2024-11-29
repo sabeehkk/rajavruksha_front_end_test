@@ -14,7 +14,7 @@ const FloatingIcons = () => {
     if (type === "phone") {
       window.location.href = `tel:${value}`;
     } else if (type === "whatsapp") {
-      window.open("https://wa.me/918549955955", "_blank");
+      window.open("https://wa.me/916366930174", "_blank");
     }
   };
 
