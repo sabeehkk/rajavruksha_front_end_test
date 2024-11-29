@@ -1,19 +1,16 @@
 /*------------------ Fonts ------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
 /*------------------ Variables ------------------*/
 
-:root{
-    --main-background: rgb(238, 255, 255);
-    --main-text-color: rgb(0, 27, 27);
-    --dark-cyan: rgb(0, 133, 133);
+:root {
+  --main-background: rgb(238, 255, 255);
+  --main-text-color: rgb(0, 27, 27);
+  --dark-cyan: rgb(0, 133, 133);
 }
 
-
 /*------------------ Global Stuff ------------------*/
-
 
 /*------------------ Custom Scrollbar ------------------*/
 
@@ -21,34 +18,31 @@
   pointer-events: none;
   position: absolute;
   transition: all 0.6s ease-in-out; /* Smooth transition */
-  
 }
-
 
 /* newly added style */
 
-::-webkit-scrollbar{
-    width: 7px;
+::-webkit-scrollbar {
+  width: 7px;
 }
 
-::-webkit-scrollbar-track{
-    background-color: var(--main-background);
+::-webkit-scrollbar-track {
+  background-color: var(--main-background);
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: var(--dark-cyan);
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-cyan);
 }
 
 .home-new-carouse,
 .home-popular,
 .home-header,
-.home-popular h3{
-    width: fit-content;
+.home-popular h3 {
+  width: fit-content;
 }
-.home-new-carouse{
+.home-new-carouse {
   padding-bottom: 194px;
 }
-
 
 /* 
 .home-new{
@@ -57,21 +51,20 @@
 } */
 /* 
 */
-.home-popular{
-    padding: 25vh 8vw 15vh 3vw;
-    width: 63%;
-} 
-
-.home-popular h3{
-    text-transform: capitalize;
-    margin: auto;
-    margin-bottom: 25px;
-    font-size: 30px;
-    margin-left: 272px;
+.home-popular {
+  padding: 25vh 8vw 15vh 3vw;
+  width: 63%;
 }
 
+.home-popular h3 {
+  text-transform: capitalize;
+  margin: auto;
+  margin-bottom: 25px;
+  font-size: 30px;
+  margin-left: 272px;
+}
 
-.slider-new{
+.slider-new {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -80,15 +73,14 @@
   margin: 0 auto;
 }
 
-
-li img{
+li img {
   border-radius: 5% / 3%;
   border: 1px solid var(--main-background);
   position: relative;
 }
 
 .slider-prev-new,
-.slider-next-new{
+.slider-next-new {
   width: 50px;
   height: 50px;
   display: flex;
@@ -104,7 +96,7 @@ li img{
   z-index: 2;
 }
 
-.slider-prev-new{
+.slider-prev-new {
   left: -30; /* Align to the left side */
   margin-top: 163px;
 }
@@ -114,16 +106,17 @@ li img{
   margin-top: 163px;
 }
 
-.slider-prev-new::before{
+.slider-prev-new::before {
   /* content: '<'; */
   margin-right: 15px;
 }
 
-.slider-next-new::before{
+.slider-next-new::before {
   /* content: '>'; */
   margin-left: 15px;
 }
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
   background: none;
   border: none;
   font-size: 30px;
@@ -131,33 +124,29 @@ li img{
   cursor: pointer;
 }
 
-
-
-
-
-h2.active{
+h2.active {
   display: block;
 }
 
-h3.active{
+h3.active {
   display: block !important;
 }
 
-.item{
+.item {
   pointer-events: none;
- 
 }
 
-.small1, .small2 {
+.small1,
+.small2 {
   height: 200px;
   position: absolute;
   z-index: -1;
   top: 70px;
   transition: all 0.6s ease-in-out;
-  
 }
 
-.big1, .big2 {
+.big1,
+.big2 {
   height: 250px;
   position: absolute;
   z-index: 0;
@@ -165,11 +154,11 @@ h3.active{
   transition: all 0.6s ease-in-out;
 }
 
-.small1{
+.small1 {
   left: 90px;
 }
 
-.big1{
+.big1 {
   left: 170px;
 }
 
@@ -182,10 +171,37 @@ h3.active{
   transition: all 0.6s ease-in-out;
 }
 
-.big2{
+.big2 {
   left: 400px;
 }
 
-.small2{
+.small2 {
   left: 520px;
+}
+
+.description-new-carosel {
+  text-align: center;
+  margin-right:360px;
+  margin-top: 20px;
+  /* margin-top: 47px; */
+}
+
+.description-new-carosel h2 {
+  /* font-size: 2.5rem; */
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1660px) {
+  .description-new-carosel {
+    text-align: center;
+    margin-right: 330px;
+    margin-top: 39px;
+  }
+  .description-new-carosel h2 {
+    font-size: 30px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
 }

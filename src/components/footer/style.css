@@ -1,4 +1,46 @@
 /* ===================== FOOTER ======================*/
+
+/* Common Styles for Header and Footer Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color:  #000;
+  transform: scale(1.1);
+}
+
+.social-icons a i {
+  line-height: 1;
+}
+
+
+/* WhatsApp */
+.social-icons a.whatsapp {
+  background-color: #25d366;
+}
+
+.social-icons a.whatsapp:hover {
+  background-color: #1da851;
+}
+
+
+
 .footer-area {
   background: #000;
 }
@@ -9,22 +51,22 @@
 }
 
 #footer-connect {
-  color: #fff;
+  color: #d3b66d;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-left: 80px;
+  /* margin-left: 115px; */
 }
 
 .single-footer h3 {
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #footer-head {
-  color: #fff;
+  color: #d3b66d;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   font-style: normal;
@@ -35,27 +77,35 @@
   color: white;
 }
 
+.contact-link {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.contact-link:hover {
+  color: #729f28;
+}
+
 .single-footer li {
   list-style: none;
   margin-bottom: 10px;
-  color: #777;
+  color: #ffffff;
   font-weight: 500;
   font-size: 16px;
 }
 
 .single-footer li:last-child {
-  margin-bottom: 0;
+  margin-bottom: -13px;
 }
 
 .single-footer a,
 .single-footer p {
-  color: #777;
+  color: white;
   font-weight: 500;
   font-size: 16px;
 }
 
 .single-footer a:hover {
-  color: #fff;
+  color: #729f28;
 }
 
 .footer-contact i {
@@ -64,7 +114,7 @@
 }
 
 .footer-contact li {
-  color: #ccc;
+  color: white;
 }
 
 .newsletter_form form {
@@ -158,8 +208,7 @@
 
 ul.footer-contact {
   padding-top: 20px;
-  margin-top: 20px;
-  border-top: 1px solid rgba(119, 119, 119, 0.32);
+  margin-top: -21px;
 }
 
 .copyright {
@@ -217,32 +266,56 @@ ul.footer-contact {
 /*Responsive*/
 @media (max-width: 767px) {
   .single-footer {
-    margin: 30px 0;
+    margin: 17px 0;
   }
-
-  #footer-connect {
+  ul.footer-contact {
+    padding-top: 5px;
+    margin-top: -21px;
+  }
+  .footer-top {
+    background: #0b3d2c;
+    padding: 10px 0;
+  }
+  .social {
+    text-align: start;
+  }
+  /* #footer-connect {
     margin-left: 5px;
-  }
+  } */
 
   .single-footer p br {
     display: none;
   }
 }
+@media (max-width: 384px) {
+  .social {
+    text-align: start;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .single-footer {
-    margin: 30px 0;
+    margin: 10px 0;
+  }
+  .social {
+    text-align: start;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .social {
+    text-align: start;
   }
 }
 
 /* social media icons */
 
-.social {
+/* .social {
+  padding-top: 10px;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  text-align: center;
-}
+  text-align: start;
+} */
 .social a {
   color: transparent;
 }
@@ -274,7 +347,7 @@ ul.no-list li {
 }
 
 .social .twitter {
-  background: #00aced;
+  background: black;
 }
 
 .social .pinterest {

@@ -119,7 +119,7 @@
 }
 /*Responsive*/
 @media (max-width: 767px) {
-  .brochure-download{
+  .brochure-download {
     margin-bottom: 16px;
   }
   .signature-left {
@@ -160,7 +160,7 @@
   }
   .about-right > img {
     float: left;
-    width: 50%;
+    width: 100%;
     position: static;
   }
   .about-text {

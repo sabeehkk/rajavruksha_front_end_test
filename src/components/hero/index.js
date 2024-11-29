@@ -12,6 +12,8 @@ import Container from "../../main-component/Status/status.jsx";
 
 import "./style.css";
 import NewCarousel from "../newCarousel/newCarousel.jsx";
+import HomePageLandingImg from "../../components/assets/Banner_Landing_Home_page.jpg";
+import HomePageLandingImg2 from "../../components/assets/Banner_Landing_Home_page4.jpg";
 
 class Hero extends Component {
   constructor(props) {
@@ -64,6 +66,8 @@ class Hero extends Component {
               <div
                 className="hero-slide-item"
                 style={{
+                  // backgroundImage: `url(${HomePageLandingImg})`,
+                  // opacity:0.7
                   backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`,
                 }}
               >
@@ -74,9 +78,8 @@ class Hero extends Component {
                       <br />
                       Farmland for Growth
                     </h2>
-
                     <div className="hero-action">
-                      <Link to="/projects" className="cta-btn btn-fill">
+                      <Link to="/projects" className="cta-btn btn-border">
                         See Projects
                       </Link>
                       <Link to="/contact" className="cta-btn btn-border">
@@ -88,15 +91,23 @@ class Hero extends Component {
               </div>
             </div>
             <div className="slide">
-              <div className="hero-slide-item">
+              <div
+                className="hero-slide-item"
+                
+                // style={{ backgroundImage: `url(${field})` }}
+                style={{
+                  // backgroundImage: `url('https://utopiaa.in/wp-content/uploads/2024/10/Estate-Investments-4.jpeg')`,
+                  backgroundImage: `url('https://rajavrukshagroup.in/wp-content/uploads/2023/12/pexels-jahoo-clouseau-388415-1536x810.jpg')`,
+                }}
+              >
                 <div className="container">
                   <div className="hero-text">
-                    <h2 style={{ color: "black", fontSize: "39px" }}>
+                    <h2 style={{ color: "white", fontSize: "39px" }}>
                       Invest in Farmland for <br />
                       Long-Term Prosperity
                     </h2>
                     <div className="hero-action">
-                      <Link to="/projects" className="cta-btn btn-fill">
+                      <Link to="/projects" className="cta-btn btn-border">
                         See Projects
                       </Link>
                       <Link to="/contact" className="cta-btn btn-border">
@@ -104,6 +115,18 @@ class Hero extends Component {
                       </Link>
                     </div>
                   </div>
+
+                  {/* <div className="video-main">
+                    <div className="promo-video">
+                      <div className="waves-block">
+                        <div className="waves wave-1" />
+                        <div className="waves wave-2" />
+                        <div className="waves wave-3" />
+                      </div>
+                    </div>
+                    <VideoModal videoId="bFYc54lb9kE" />
+                  </div> */}
+                  
                 </div>
               </div>
             </div>

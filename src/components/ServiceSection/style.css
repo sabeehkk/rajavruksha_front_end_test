@@ -12,6 +12,13 @@
   margin-top: 30px;
 }
 
+.service-area-container {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+
 .service-steps {
   font-family: Arial, Helvetica, sans-serif;
   color: #000000;
@@ -34,21 +41,15 @@
   transition: all 0.4s ease 0s;
 }
 
-
-
 .service-text .btn-border {
   border-width: 1px;
   margin-top: 15px;
 }
 
-
-
 .service-page-area {
   padding-top: 70px;
   padding-bottom: 100px;
 }
-
-
 
 .work-title {
   font-family: Arial, Helvetica, sans-serif;
@@ -56,6 +57,9 @@
 
 /*Responsive*/
 @media (max-width: 767px) {
+  .service-area-container {
+    margin-top: 35px;
+  }
   .service-area {
     padding-top: 0;
   }
@@ -66,7 +70,7 @@
     font-size: 30px;
   }
   .service-steps {
-	font-weight: 600;
+    font-weight: 600;
   }
 }
 .step-header-container {

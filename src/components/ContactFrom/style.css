@@ -1,27 +1,58 @@
+.consent-cont {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.consent-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.consent-checkbox,
+.consent-more {
+  height: 15px;
+  margin: 5px;
+  width: 15px;
+}
+
 .contact-button {
   margin-left: 12%;
   padding: 19px;
   width: 50%;
-  /* margin-bottom: 25px; */
+}
+.project-contact-button {
+  margin-left: 12%;
+  padding: 19px;
+  width: 50%;
 }
 
 
 
 .contact-form-height {
   margin-left: 80px;
-  /* margin-top: 100px; */
+  min-height: 500px;
+  max-height: 700px;
+  transition: all 0.3s ease;
+}
+
+.error-helper-text {
+  min-height: 20px;
+  font-size: 12px;
+  color: red;
+}
+
+.consent-label-wrapper {
+  flex: 1;
 }
 
 .consent-brief {
   font-size: 10px;
-  margin-top: 5px;
-  margin-left: -16px;
-}
-
-.consent-checkbox {
-  height: 15px;
-  margin-top: -35px;
-  margin-left: -31px;
+  margin: 0;
+  line-height: 1.5;
+  overflow: hidden;
 }
 
 .consent-checkbox-contact {
@@ -31,38 +62,56 @@
 }
 
 @media (max-width: 430px) {
-  .contact-button {
-    margin-left: 3.25%;
-    margin-top: 12%;
-  }
-  form {
-    margin-right: -51px;
-  }
   .consent-brief {
-    margin-left: 30px;
+    font-size: 10px;
   }
+
   .consent-checkbox {
-    margin: auto;
-    margin-top: -160px;
-    /* height: 15px;
-        margin-top: -100px;
-        margin-left: -50px; */
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+  }
+
+  .contact-form-height {
+    margin-left: 80px;
+    min-height: 500px;
+    max-height: 1000px;
+    transition: all 0.3s ease;
+  }
+  .responsive-contact-formcontact{
+    margin-left: -1px;
+    min-height: 500px;
+    max-height: 1000px;
+    transition: all 0.3s ease;
+    margin-right: -155px;
+  }
+
+  .responsive-contact-form {
+    margin-left: -69px;
+    min-height: 500px;
+    max-height: 1000px;
+    transition: all 0.3s ease;
+    margin-right: -253px;
+  }
+
+  .contact-button {
+    margin-left: -2%;
+    padding: 27px;
+    width: 50%;
+  }
+  .project-contact-button {
+    margin-left: 6%;
+    padding: 23px;
+    width: 39%;
   }
 }
 
-@media (min-width: 401px) and (max-width: 430px) {
-  .consent-brief {
-    margin-left: 30px;
-  }
-  .consent-checkbox {
-    margin: auto;
-    margin-top: -125px;
-    /* height: 15px;
-        margin-top: -100px;
-        margin-left: -50px; */
-  }
+.consent-label-wrapper {
+  flex: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .first-name {
-  margin: "-5px";
+  margin: -5px;
 }

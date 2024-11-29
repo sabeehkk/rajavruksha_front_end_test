@@ -5,8 +5,9 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 import "./style.css";
+import AboutImg from "../../components/assets/about-1.e32a7109.webp"
 
-const About = ({ text }) => {
+const About = ({ text, readMore }) => {
   return (
     <div
       className="about-area"
@@ -23,7 +24,7 @@ const About = ({ text }) => {
               data-aos-offset="100"
             >
               <div className="site-heading">
-                <h2 className="explore-title">
+                <h2 className="explore-title text-capitalize ">
                   We explore to discover your optimal selection
                 </h2>
                 <div>
@@ -78,9 +79,10 @@ const About = ({ text }) => {
                     </li>
                   </ul>
                   <div className="mobile-read-more-wrapper">
-                    <Link to="/contact">
-                      {" "}
-                      <button className="read-more-button">READ MORE</button>
+                  <Link to="/about">
+                      {!!readMore && (
+                        <button className="read-more-button">READ MORE</button>
+                      )}
                     </Link>
                   </div>
                 </div>
@@ -106,9 +108,7 @@ const About = ({ text }) => {
             >
               <img
                 className="about_img_2"
-                src={
-                  "https://byasi-react.themescare.com/static/media/about-1.e32a7109.png"
-                }
+                src={AboutImg}
                 alt="img"
               />
             </div>

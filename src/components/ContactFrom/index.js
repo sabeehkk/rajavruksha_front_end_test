@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
+import Loader from "../Loader/loader";
 import "./style.css";
 
-const ContactForm = ({ContactClasss}) => {
-  console.log(ContactClasss,'inside comonent');
-  
+const ContactForm = ({ status }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [showFullConsentText, setShowFullConsentText] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,7 +30,6 @@ const ContactForm = ({ContactClasss}) => {
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-  // Handle input changes and clear errors
   const changeHandler = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
@@ -37,19 +37,19 @@ const ContactForm = ({ContactClasss}) => {
       [name]: type === "checkbox" ? checked : value,
     }));
 
-    // Clear the error for that specific field
     setError((prevError) => ({
       ...prevError,
       [name]: "",
     }));
   };
 
-  // Handle form submission
+  const toggleConsentText = () => {
+    setShowFullConsentText((prev) => !prev);
+  };
+
   const submitHandler = async (e) => {
-    e.preventDefault(); // Prevent form reload
-    // Step 1: Prepare form errors
+    e.preventDefault();
     let formErrors = { ...error };
-    // Step 2: Validate each field
     if (formData.name === "") formErrors.name = "Please enter name";
     if (formData.email === "") {
       formErrors.email = "Please enter email";
@@ -59,24 +59,27 @@ const ContactForm = ({ContactClasss}) => {
     if (formData.subject === "") formErrors.subject = "Please enter subject";
     if (formData.lastname === "") formErrors.lastname = "Please enter lastname";
     if (formData.notes === "") formErrors.notes = "Please enter note";
-    if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
+    // if (formData.phone_no === "") formErrors.phone_no = "Please enter number";
+    if (formData?.phone_no === "") {
+      formErrors.phone_no = "Please enter phone number";
+    } else if (!/^\d{10}$/.test(formData.phone_no)) {
+      formErrors.phone_no = "Phone number must be exactly 10 digits";
+    }
     if (formData.consent === false)
       formErrors.consent = "You must agree to the terms and conditions.";
 
-    // Step 3: Set error state
     setError(formErrors);
 
-    // Step 4: Check if there are errors
     const hasErrors = Object.values(formErrors).some((err) => err !== "");
     if (hasErrors) return; // Stop form submission if there are validation errors
 
-    // Step 5: Proceed with form submission if no errors
     try {
+      setIsLoading(true);
       console.log("Preparing to send request to backend...");
 
       const response = await fetch(
-        // "https://rajavruksha-server.vercel.app/contact",
-        "http://localhost:3000/contact",
+        "https://rajavruksha-server.vercel.app/contact",
+        // "http://localhost:3000/contact",
         {
           method: "POST",
           headers: {
@@ -94,10 +97,8 @@ const ContactForm = ({ContactClasss}) => {
       );
 
       if (response.ok) {
-        // Handle success response
         alert("Your message has been sent successfully!");
 
-        // Reset form data and error state
         setFormData({
           name: "",
           lastname: "",
@@ -118,18 +119,20 @@ const ContactForm = ({ContactClasss}) => {
           consent: false,
         });
       } else {
-        // Handle unsuccessful response (server error, etc.)
         alert("There was an error sending the message.");
       }
     } catch (error) {
       console.error("Error:", error);
       alert("There was a problem with the server.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="contact-form-height" >
-      <form onSubmit={submitHandler} >
+    <div className="contact-form-height">
+      {!!isLoading && <Loader color="#80c1d1" secondaryColor="#80c1d1" />}
+      <form onSubmit={submitHandler}>
         <Box
           component="form"
           sx={{
@@ -144,7 +147,6 @@ const ContactForm = ({ContactClasss}) => {
           noValidate
           autoComplete="off"
         >
-          {/* First Name and Last Name in the same row */}
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -158,7 +160,9 @@ const ContactForm = ({ContactClasss}) => {
                 error={!!error.name}
               />
               {error.name && (
-                <FormHelperText error>{error.name}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.name}
+                </FormHelperText>
               )}
             </Grid>
 
@@ -174,12 +178,13 @@ const ContactForm = ({ContactClasss}) => {
                 error={!!error.lastname}
               />
               {error.lastname && (
-                <FormHelperText error>{error.lastname}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.lastname}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
 
-          {/* Email and Phone No in the same row */}
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -193,7 +198,9 @@ const ContactForm = ({ContactClasss}) => {
                 error={!!error.email}
               />
               {error.email && (
-                <FormHelperText error>{error.email}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.email}
+                </FormHelperText>
               )}
             </Grid>
 
@@ -210,12 +217,13 @@ const ContactForm = ({ContactClasss}) => {
                 error={!!error.phone_no}
               />
               {error.phone_no && (
-                <FormHelperText error>{error.phone_no}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.phone_no}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
 
-          {/* Subject in a new row */}
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
@@ -229,12 +237,13 @@ const ContactForm = ({ContactClasss}) => {
                 error={!!error.subject}
               />
               {error.subject && (
-                <FormHelperText error>{error.subject}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.subject}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
 
-          {/* Message in a new row */}
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
@@ -250,41 +259,58 @@ const ContactForm = ({ContactClasss}) => {
                 error={!!error.notes}
               />
               {error.notes && (
-                <FormHelperText error>{error.notes}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.notes}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <input
-                // className={props.ContactClasss ? "consent-checkbox-contact" : "consent-checkbox"}
+              <div className="consent-cont">
+                <div className="consent-checkbox-wrapper">
+                  <input
+                    className={
+                      showFullConsentText ? "consent-more" : "consent-checkbox"
+                    }
+                    type="checkbox"
+                    id="consent"
+                    name="consent"
+                    checked={formData.consent || false}
+                    onChange={changeHandler}
+                    required
+                  />
+                </div>
 
-                  type="checkbox"
-                  id="consent"
-                  name="consent"
-                  checked={formData.consent || false}
-                  onChange={changeHandler}
-                  required
-                />
-                <label htmlFor="consent" className="consent-brief">
-                  I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me
+                <div className="consent-label-wrapper">
+                  <label htmlFor="consent" className="consent-brief">
+                    {showFullConsentText
+                      ? `I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me
                   via phone and email regarding my enquiry. I understand that
                   this communication may include follow-up calls, emails, and
                   other messages to assist with my enquiry and provide further
                   information about your services. This will override the
-                  registry on DND/NDNC.
-                </label>
+                  registry on DND/NDNC.`
+                      : `I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me via phone and email regarding my enquiry..`}
+                    <Button
+                      size="small"
+                      onClick={toggleConsentText}
+                      style={{ fontSize: "10px" }}
+                    >
+                      {showFullConsentText ? "Read Less" : "Read More"}
+                    </Button>
+                  </label>
+                </div>
               </div>
               {error.consent && (
-                <FormHelperText error>{error.consent}</FormHelperText>
+                <FormHelperText className="error-helper-text" error>
+                  {error.consent}
+                </FormHelperText>
               )}
             </Grid>
           </Grid>
-
-          {/* Submit Button */}
         </Box>
-        <div className="contact-button mb-5">
+        <div className={status ? "project-contact-button" : "contact-button"}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <Button
@@ -293,7 +319,7 @@ const ContactForm = ({ContactClasss}) => {
                 color="primary"
                 fullWidth
               >
-                Send Message
+                Send Messages
               </Button>
             </Grid>
           </Grid>
