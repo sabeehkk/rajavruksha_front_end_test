@@ -1,4 +1,21 @@
 /* ===================== CONTACT ======================*/
+.crm-box{
+	background-color: white;
+	border: 0px solid;
+	border-radius: 10px;
+	padding: 27px 36px 0px 36px;
+	height: 557px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
+
+}
+.crm-heading {
+	padding: 4px;
+	text-align: center;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+}
+
 .single-contact-info {
   display: -webkit-box;
   display: -ms-flexbox;

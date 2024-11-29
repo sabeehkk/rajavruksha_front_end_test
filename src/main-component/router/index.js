@@ -32,7 +32,7 @@ const AllRoute = () => {
   return (
     <div>
       <Router>
-        <ScrollToTop />
+        <ScrollToTop/>
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/home" component={Homepage} />

@@ -3,6 +3,7 @@ import ContactForm from "../ContactFrom";
 import "./style.css";
 
 const Contactpage = ({requestAquote}) => {
+  let ContactClasss="container-class"
   return (
     <div className="contact-page-area pt-5 pb-5">
       <div className="container new-form">
@@ -13,7 +14,7 @@ const Contactpage = ({requestAquote}) => {
               {/* <div className="site-heading" data-aos="fade-up" >
                 <h2 className="section-title">Request a Quote</h2>
               </div> */}
-              <ContactForm />
+              <ContactForm ContactClasss={ContactClasss}/>
             </div>
           </div>
           <div className="contact-body col-lg-5 col-sm-6 mb-5">
@@ -55,11 +56,36 @@ const Contactpage = ({requestAquote}) => {
             </div>
           </div>
 
-          <div className="col-lg-12 col-sm-6">
-            <div className="contact-page-right">
-              <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=X-Factor%20Coworkspaces%2035a,%201st%20Cross%20Rd,%20Chiranjeevi%20Layout,%20Hebbal%20Kempapura,%20Bengaluru,%20Karnataka%20560024+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe>
+          <div className="row">
+              <div className="col-lg-6 col-sm-12">
+                <div className="contact-page-right">
+                  <iframe
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    scrolling="no"
+                    marginHeight="0"
+                    marginWidth="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=X-Factor%20Coworkspaces%2035a,%201st%20Cross%20Rd,%20Chiranjeevi%20Layout,%20Hebbal%20Kempapura,%20Bengaluru,%20Karnataka%20560024+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  >
+                    <a href="https://www.gps.ie/">gps systems</a>
+                  </iframe>
+                </div>
+              </div>
+              <div className="col-lg-6 col-sm-12">
+                <div className="crm-box">
+                  <h2 className="crm-heading">Solid Performers CRM</h2>
+                <iframe
+                    id="lead-form"
+                    src="https://account.solidperformers.com/capture_form_data/MTAxNQ=="
+                    style={{ border: "0px", height: "600px", width: "100%" }}
+                  ></iframe>
+                </div>
+              </div>
             </div>
-          </div>
+
+
+
         </div>
       </div>
     </div>

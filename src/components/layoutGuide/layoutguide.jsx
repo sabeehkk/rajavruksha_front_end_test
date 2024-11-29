@@ -7,9 +7,7 @@ function Layoutguide() {
   return (
     <div>
         <div>
-            <h1  style={{
-            textAlign: "center",
-          }} className='layout-title'>Crafting Exquisite Design :
+            <h1   className='layout-title'>Crafting Exquisite Design :
             Your Layout Guide</h1>
         </div>
         <div >
