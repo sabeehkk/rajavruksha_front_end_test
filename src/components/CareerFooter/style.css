@@ -1,11 +1,13 @@
 .careers-list {
   display: flex;
   /* justify-content: space-evenly; */
-  margin-bottom: -40px;
-  margin-top: -30px;
+  /* margin-bottom: -40px;
+  margin-top: -30px; */
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .career-ind {
