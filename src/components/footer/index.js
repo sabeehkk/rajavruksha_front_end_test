@@ -5,6 +5,13 @@ import "./style.css";
 import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 const Footer = () => {
+  const handleLinkClick = (type, value) => {
+    if (type === "email") {
+      window.location.href = `mailto:${value}`;
+    } else if (type === "phone") {
+      window.location.href = `tel:${value}`;
+    }
+  };
   return (
     <footer className="footer-area">
       <div className="footer-top">
@@ -139,10 +146,18 @@ const Footer = () => {
             <div className="col-lg-4 col-sm-6 order-lg-4 order-2">
               <ul className="footer-contact">
                 <p id="footer-head">Contact Details</p>
-                <li>
+                <li
+                  onClick={() => handleLinkClick("phone", "+91 8549 955 955")}
+                  className="contact-link"
+                >
                   <i className="fas fa-phone-square-alt" /> +91 8549 955 955
                 </li>
-                <li>
+                <li
+                  onClick={() =>
+                    handleLinkClick("email", "enquiry@rajavrukshagroup.in")
+                  }
+                  className="contact-link"
+                >
                   <i className="fas fa-envelope" /> enquiry@rajavrukshagroup.in
                 </li>
                 <li>

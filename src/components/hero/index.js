@@ -78,9 +78,8 @@ class Hero extends Component {
                       <br />
                       Farmland for Growth
                     </h2>
-
                     <div className="hero-action">
-                      <Link to="/projects" className="cta-btn btn-fill">
+                      <Link to="/projects" className="cta-btn btn-border">
                         See Projects
                       </Link>
                       <Link to="/contact" className="cta-btn btn-border">
@@ -108,7 +107,7 @@ class Hero extends Component {
                       Long-Term Prosperity
                     </h2>
                     <div className="hero-action">
-                      <Link to="/projects" className="cta-btn btn-fill">
+                      <Link to="/projects" className="cta-btn btn-border">
                         See Projects
                       </Link>
                       <Link to="/contact" className="cta-btn btn-border">
@@ -127,6 +126,7 @@ class Hero extends Component {
                     </div>
                     <VideoModal videoId="bFYc54lb9kE" />
                   </div> */}
+                  
                 </div>
               </div>
             </div>

@@ -20,12 +20,13 @@ const ServiceSection = () => {
   return (
     <section className="service-area ">
       <div
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          margin: "auto",
-          display: "flex",
-        }}
+        className="service-area-container"
+        // style={{
+        //   justifyContent: "center",
+        //   alignItems: "center",
+        //   margin: "auto",
+        //   display: "flex",
+        // }}
       >
         <span style={{ marginRight: "15px", color: "#c6993e" }}>
           ....................

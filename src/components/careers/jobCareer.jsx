@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Loader from "../Loader/loader";
 import "./jobCareer.css";
 
 const CareerForm = () => {
@@ -9,6 +10,7 @@ const CareerForm = () => {
     file: null,
   });
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const fileInputRef = useRef(null);
 
   const handleChange = (e) => {
@@ -32,17 +34,38 @@ const CareerForm = () => {
     }
   };
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhoneNumber = (phone) => {
+    const phoneRegex = /^[0-9]{10}$/; // Only 10 digits
+    return phoneRegex.test(phone);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     let formErrors = {};
     if (!formData.name) formErrors.name = "Enter the name";
-    if (!formData.email) formErrors.email = "Please enter a valid email.";
-    if (!formData.contact_no)
-      formErrors.contact_no = "Please enter a phone number.";
+    // if (!formData.email) formErrors.email = "Please enter a valid email.";
+    if (!formData.email) {
+      formErrors.email = "Enter your email address";
+    } else if (!validateEmail(formData.email)) {
+      formErrors.email = "Please enter a valid email address.";
+    }
+    if (!formData.contact_no) {
+      formErrors.contact_no = "Enter your phone number.";
+    } else if (!validatePhoneNumber(formData.contact_no)) {
+      formErrors.contact_no = "Phone number must be 10 digits.";
+    }
+    // if (!formData.contact_no)
+    //   formErrors.contact_no = "Please enter a phone number.";
     if (!formData.file) formErrors.file = "Please upload a file.";
 
     setErrors(formErrors);
     if (Object.keys(formErrors).length === 0) {
+      setIsLoading(true);
       try {
         const formDataToSubmit = new FormData();
         formDataToSubmit.append("name", formData.name);
@@ -50,11 +73,14 @@ const CareerForm = () => {
         formDataToSubmit.append("contact_no", formData.contact_no);
         formDataToSubmit.append("file", formData.file);
 
-        const response = await fetch("https://rajavruksha-server.vercel.app/careerForm", {
-        // const response = await fetch("http://localhost:3000/careerForm", {
-          method: "POST",
-          body: formDataToSubmit,
-        });
+        const response = await fetch(
+          "https://rajavruksha-server.vercel.app/careerForm",
+          {
+            // const response = await fetch("http://localhost:3000/careerForm", {
+            method: "POST",
+            body: formDataToSubmit,
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();
@@ -69,9 +95,13 @@ const CareerForm = () => {
           fileInputRef.current.value = null;
         } else {
           console.error("Form submission failed", response.statusText);
+          alert("form submission failed.Please try again.");
         }
       } catch (error) {
         console.error("An error occurred during form submission", error);
+        alert("An error occurred.Please try again.");
+      } finally {
+        setIsLoading(false);
       }
     }
   };
@@ -79,6 +109,7 @@ const CareerForm = () => {
 
   return (
     <section className="containers">
+      {isLoading && <Loader />}
       <div className="job-description" data-aos="fade-right">
         <h2>BUSINESS DEVELOPMENT EXECUTIVE</h2>
         <h4>Job Role Description</h4>
@@ -252,7 +283,7 @@ const CareerForm = () => {
             about your services. This will override the registry on DND/NDNC.
           </label>
         </div>
-        <button  type="submit" className="submit-button">
+        <button type="submit" className="submit-button">
           Send Message
         </button>
       </form>

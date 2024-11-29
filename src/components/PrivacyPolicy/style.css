@@ -44,6 +44,10 @@
   text-align: center;
 }
 
+.privacy-points{
+  color: black !important;
+}
+
 @media (max-width: 768px) {
   .heading {
     font-size: 40px;

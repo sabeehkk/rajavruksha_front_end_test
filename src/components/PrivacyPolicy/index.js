@@ -34,16 +34,16 @@ const PrivacyPolicy = () => {
           <p className="para-text">
             We use the information we collect in the following ways:
           </p>
-          <li className="list-text">
+          <li className="list-text privacy-points">
             To provide, operate, and maintain our Site
           </li>
-          <li className="list-text">
+          <li className="list-text privacy-points">
             To improve, personalize, and expand our Site
           </li>
-          <li className="list-text">
+          <li className="list-text privacy-points">
             To understand and analyse how you use our Site
           </li>
-          <li className="list-text">
+          <li className="list-text privacy-points">
             To develop new products, services, features
           </li>
         </ul>

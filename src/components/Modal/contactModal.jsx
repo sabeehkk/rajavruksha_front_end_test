@@ -37,7 +37,8 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
       };
 
       // Perform the POST request to submit the form data
-      fetch("http://localhost:3000/contact", {
+      //http://localhost:3000/contact
+      fetch("https://rajavruksha-server.vercel.app/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
