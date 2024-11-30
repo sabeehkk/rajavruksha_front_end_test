@@ -199,13 +199,20 @@ background-color: #1DA1F2;
 .social-icons a.facebook:hover {
   /* background-color: #145dbf; */
   background-color: white;
-  color:#1877f2 ;
+  color: #1877f2;
 }
 
 /* Instagram */
 .social-icons a.instagram {
   background-color: #e1306c;
-  background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fdf497 15%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fdf497 0%,
+    #fdf497 15%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 
 .social-icons a.instagram:hover {
@@ -216,21 +223,20 @@ background-color: #1DA1F2;
   line-height: 1;
 }
 
-
-
 .header {
   z-index: 99;
   width: 100%;
   padding-right: 5%;
 }
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+@media (max-width: 768px) {
+  /* Adjust the breakpoint as needed */
   .header-action {
     display: none; /* Hides the entire container */
   }
 }
 
-.social-icons-new{
-   color: white;
+.social-icons-new {
+  color: white;
   font-size: 18px;
   display: inline-flex;
   align-items: center;
@@ -247,7 +253,6 @@ background-color: #1DA1F2;
   gap: 15px;
 }
 
-
 .social-icons-new a:hover {
   background-color: #d3b66d;
   transform: scale(1.1);
@@ -256,10 +261,6 @@ background-color: #1DA1F2;
 .social-icons-new a i {
   line-height: 1;
 }
-
-
-
-
 
 .header:after {
   position: absolute;
@@ -673,5 +674,14 @@ background-color: #1DA1F2;
   }
   .header-btn {
     margin-right: -138px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header-action {
+    margin-left: auto;
+  }
+  .mainmenu {
+    margin: auto;
   }
 }

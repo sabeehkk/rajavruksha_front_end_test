@@ -41,7 +41,6 @@ const Header = () => {
                     </li>
                     <li>
                       <Link to="/careers">Career</Link>
-
                     </li>
 
                     <li>
