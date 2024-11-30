@@ -376,3 +376,16 @@
     bottom: 48px;
   }
 }
+/* Target tablets in landscape orientation */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* .hero_arrows {
+    display: none;
+  } */
+  }
+  
+  /* Target tablets in portrait orientation */
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .hero_arrows {
+      display: none;
+    }
+  }

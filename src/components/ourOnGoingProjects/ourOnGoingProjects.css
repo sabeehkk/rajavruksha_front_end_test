@@ -106,6 +106,6 @@
   /* Target tablets in portrait orientation */
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .projects-container-new {
-  min-height: 71vh;
+  min-height: 61vh;
   }
   }
