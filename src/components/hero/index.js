@@ -73,7 +73,7 @@ class Hero extends Component {
               >
                 <div className="container">
                   <div className="hero-text">
-                    <h2 style={{ fontSize: "39px" }}>
+                    <h2>
                       Plow Your Capital into
                       <br />
                       Farmland for Growth
@@ -93,7 +93,6 @@ class Hero extends Component {
             <div className="slide">
               <div
                 className="hero-slide-item"
-                
                 // style={{ backgroundImage: `url(${field})` }}
                 style={{
                   // backgroundImage: `url('https://utopiaa.in/wp-content/uploads/2024/10/Estate-Investments-4.jpeg')`,
@@ -102,7 +101,7 @@ class Hero extends Component {
               >
                 <div className="container">
                   <div className="hero-text">
-                    <h2 style={{ color: "white", fontSize: "39px" }}>
+                    <h2>
                       Invest in Farmland for <br />
                       Long-Term Prosperity
                     </h2>
@@ -126,7 +125,6 @@ class Hero extends Component {
                     </div>
                     <VideoModal videoId="bFYc54lb9kE" />
                   </div> */}
-                  
                 </div>
               </div>
             </div>
