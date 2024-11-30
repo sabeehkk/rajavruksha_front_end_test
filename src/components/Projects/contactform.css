@@ -37,7 +37,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .contact-image {
     width: 90%; /* Slight padding for smaller screens */
     max-width: 100%; /* Ensure it doesn't overflow */

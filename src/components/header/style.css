@@ -697,3 +697,21 @@ background-color: #1DA1F2;
     margin: auto;
   }
 }
+
+/* Target tablets in landscape orientation */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .header{
+    z-index: 99;
+  width: 100%;
+  padding-right: 5%;
+  }
+  }
+  
+  /* Target tablets in portrait orientation */
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .header {
+      z-index: 99;
+      width: 100%;
+      padding-right: 1%;
+  }
+  }

@@ -73,7 +73,7 @@ class Hero extends Component {
               >
                 <div className="container">
                   <div className="hero-text">
-                    <h2 style={{ fontSize: "39px" }}>
+                    <h2 >
                       Plow Your Capital into
                       <br />
                       Farmland for Growth

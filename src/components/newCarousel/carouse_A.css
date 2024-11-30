@@ -181,7 +181,7 @@ h3.active {
 
 .description-new-carosel {
   text-align: center;
-  margin-right: 360px;
+  margin-right:360px;
   margin-top: 20px;
   /* margin-top: 47px; */
 }
@@ -203,6 +203,36 @@ h3.active {
     font-size: 30px;
     color: white;
     transition: all 0.3s ease-in-out;
+  }
+}
+
+
+/* @media (min-width: 1024px) and (max-width: 1440px) {
+  .hero-text h2 {
+    font-size: 18px;
+    margin-right: 25px;
+  }
+  .hero-slide-item .container {
+    left: 48%;
+  }
+  .description-new-carosel h2 {
+    margin-bottom: -42px;
+    font-size: 26px;
+  }
+} */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .hero-text h2 {
+    font-size: 18px;
+    margin-right: 25px;
+  }
+
+  .hero-slide-item .container {
+    left: 48%;
+  }
+
+  .description-new-carosel h2 {
+    margin-bottom: -42px;
+    font-size: 26px;
   }
 }
 
@@ -254,6 +284,7 @@ h3.active {
     margin-left: 18px;
   }
   .slider-next-new {
-    right: 359px;
-  }
+    right: 359px;
+  }
 }
+

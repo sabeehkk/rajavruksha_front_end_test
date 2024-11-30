@@ -83,3 +83,21 @@
     margin-top: 15px;
   }
 }
+/* @media (min-width: 769px) and (max-width: 1024px) {
+  .career-ind {
+    margin: 100px;
+    width: 276px;
+    height: auto;
+    flex-shrink: 0;
+    transition: transform 0.8s ease-in-out;
+  }
+} */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .career-ind {
+    margin: 100px ; /* Center alignment (if applicable) */
+    width: 276px;
+    height: auto;
+    flex-shrink: 0; /* Prevent the element from shrinking */
+    transition: transform 0.8s ease-in-out; /* Smooth transition effect */
+  }
+}

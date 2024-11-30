@@ -146,7 +146,7 @@ function NewCarousel() {
 
   return (
     <>
-      <div className="home-new-carouse">
+      <div className="home-new-carouse " >
         <div className="home-popular">
           <div className="slider-new">
             <div className="slider-prev-new">
