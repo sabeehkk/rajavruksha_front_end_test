@@ -1,4 +1,13 @@
 /* ===================== HERO ======================*/
+@media (max-width: 1440) {
+    .hero-text h2{
+      background-color: red;
+      color: red;
+    }
+  }
+.hero-text h2{
+  color: black;
+}
 .hero-area {
   padding: 0;
   position: relative;
@@ -389,3 +398,5 @@
       display: none;
     }
   }
+
+ 
