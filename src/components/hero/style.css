@@ -2,12 +2,19 @@
 @media (max-width: 1440) {
     .new-text{
   font-size: 39px;
-  color: red;
+  /* color: red; */
+    }
+    .hero-text h2{
+      color: rgb(28, 218, 60);
+      font-size: 39px;
     }
   }
-/* .hero-text h2{
-  color: black;
-} */
+
+
+.hero-text h2{
+  color: rgb(255, 255, 255);
+}
+
 .hero-area {
   padding: 0;
   position: relative;
