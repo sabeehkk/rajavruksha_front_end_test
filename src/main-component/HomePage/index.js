@@ -16,7 +16,7 @@ const HomePage = () => {
       <Header />
       <Hero />
       <Container />
-      <About text={""} readMore={readMore} />
+      <About text={""} readMore={readMore} />      
       <OngoingProjects />
       <ServiceSection />
       <Testimonial />

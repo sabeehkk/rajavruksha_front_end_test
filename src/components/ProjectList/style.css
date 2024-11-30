@@ -242,3 +242,19 @@
 /* ===================================== */
 
 
+/* responsiveness for tablet screen devices */
+/* Target tablets in landscape orientation */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .project-box-container {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+}
+  
+  /* Target tablets in portrait orientation */
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .project-box-container {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+  }
+  }

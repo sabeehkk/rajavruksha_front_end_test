@@ -50,6 +50,28 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
+
+
+
+              <div class="site">
+            </div>
+
+            <div class="wrapper">
+            <a href="#"><div class="bg-ico" id="facebook"><i class="fab fa-facebook social  facebook fa-3x"></i></div></a>
+            {/* <a href="#"><div class="bg-ico" id="pinterest"><i class="fab fa-pinterest social  pinterest fa-3x"></i></div></a> */}
+            {/* <a href="#"><div class="bg-ico" id="twitter"><i class="fab fa-twitter social  twitter fa-3x"></i></div></a> */}
+            <a href="#"><div class="bg-ico" id="instagram"><i class="fab fa-instagram social  instagram fa-3x"></i></div></a>
+            <a href="#">
+              <div class="bg-ico" id="twitter">
+                <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="X Logo" class="social x-logo" />
+              </div>
+            </a>
+            {/* <a href="#"><div class="bg-ico" id="whatsapp"><i class="fab fa-whatsapp social  whatsapp fa-3x"></i></div></a> */}
+            <a href="#"><div class="bg-ico" id="youtube"><i class="fab fa-youtube social  youtube fa-3x"></i></div></a>
+            </div>
+
+
+{/*               
               <div className="header-action">
               <div className="social-icons">
           <Link
@@ -87,15 +109,14 @@ const Header = () => {
                    style={{ border: "none",width:'24px' }}
                    alt="/skype"
                  />
-                 {/* <i class="bi bi-twitter-x"></i> */}
-                 {/* <i class="fab fa-twitter"></i> */}
-                 {/* <i className="fa-brands fa-twitter"></i> */}
-                 {/* <i className="fa-solid fa-x"></i> */}
+               
                </li>
              </Link>
         </div>
+              </div> */}
 
-              </div>
+
+
               <div
                 id="search-overlay"
                 className={`block ${show ? "show" : ""}`}
