@@ -229,6 +229,9 @@ background-color: #1DA1F2;
   padding-right: 5%;
 }
 @media (max-width: 768px) {
+  .wrapper{
+    display: none;
+  }
   /* Adjust the breakpoint as needed */
   .header-action {
     display: none; /* Hides the entire container */

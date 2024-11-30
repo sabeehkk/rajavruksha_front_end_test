@@ -49,9 +49,6 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-
-
-
               <div class="site">
             </div>
 
@@ -68,53 +65,6 @@ const Header = () => {
             {/* <a href="#"><div class="bg-ico" id="whatsapp"><i class="fab fa-whatsapp social  whatsapp fa-3x"></i></div></a> */}
             <a href="#"><div class="bg-ico" id="youtube"><i class="fab fa-youtube social  youtube fa-3x"></i></div></a>
             </div>
-
-
-{/*               
-              <div className="header-action">
-              <div className="social-icons">
-          <Link
-            to="#"
-            className="youtube"
-            onClick={() => window.open("https://www.youtube.com/@Rajavruksha_Realtors", "_blank")}
-          >
-            <i className="fab fa-youtube"></i>
-          </Link>
-          <Link
-            to="#"
-            className="facebook"
-            onClick={() => window.open("https://www.facebook.com/RajavruskhaRealtors", "_blank")}
-          >
-            <i className="fab fa-facebook-f"></i>
-          </Link>
-          <Link
-            to="#"
-            className="instagram"
-            onClick={() => window.open("https://www.instagram.com/rajavruksha_realtors/", "_blank")}
-          >
-            <i className="fab fa-instagram"></i>
-          </Link>
-          <Link
-               onClick={() =>
-                 window.open("https://x.com/Rajavrukshagrps", "_blank")
-               }
-               target="_blank"
-             >
-               <li class="twitter">
-
-                 {" "}
-                 <img
-                   src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png"
-                   style={{ border: "none",width:'24px' }}
-                   alt="/skype"
-                 />
-               
-               </li>
-             </Link>
-        </div>
-              </div> */}
-
-
 
               <div
                 id="search-overlay"
