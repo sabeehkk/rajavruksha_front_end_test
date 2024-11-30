@@ -109,7 +109,7 @@ const About = ({ text, readMore }) => {
               <img className="about_img_2" src={AboutImg} alt="img" />
             </div>
           </div>
-          {/* <div className="col-lg-5 col-md-6 ">
+          <div className="col-lg-5 col-md-6">
             <div
               className="about-left"
               data-aos="fade-right"
@@ -134,44 +134,6 @@ const About = ({ text, readMore }) => {
                   </p>
                 </div>
               )}
-            </div>
-          </div> */}
-          <div className="row">
-            <div className="col-lg-6 col-md-12">
-              <div
-                className="about-left"
-                data-aos="fade-right"
-                data-aos-offset="100"
-              >
-                {!readMore && (
-                  <div className="vision">
-                    <h2>Vision</h2>
-                    <p>
-                      To be the premier agency for sustainable and profitable
-                      farm land investments, shaping the future of agriculture.
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-12">
-              <div
-                className="about-left"
-                data-aos="fade-left"
-                data-aos-offset="100"
-              >
-                {!readMore && (
-                  <div className="mission">
-                    <h2>Mission</h2>
-                    <p>
-                      We provide expert real estate services, guiding clients in
-                      acquiring, selling, and investing in farm land with a
-                      focus on sustainability and long-term growth.
-                    </p>
-                  </div>
-                )}
-              </div>
             </div>
           </div>
         </div>
