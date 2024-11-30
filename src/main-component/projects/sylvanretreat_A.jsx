@@ -21,7 +21,7 @@ function Sylvanretreats() {
       />
       <Sylvanretreat />
       {/* <ContactForm/> */}
-      <ContactUs projectTitle={project_page_syl} />
+      <ContactUs />
       <Carousel />
       <Footer />
     </Fragment>

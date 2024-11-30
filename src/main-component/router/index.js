@@ -84,10 +84,10 @@ const AllRoute = () => {
     <div>
       <Router>
         <FloatingIcons />
-        <TawkMessengerReact
+        {/* <TawkMessengerReact
                     propertyId="66d2d5ab50c10f7a00a26593"
                     widgetId="1i70srim4"
-                    />
+                    /> */}
         <ScrollToTop />
         {/* <RoutesWithLoader /> */}
         <Switch>
