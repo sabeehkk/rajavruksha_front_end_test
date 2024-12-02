@@ -3,11 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./carousel.css";
-import gal_img1 from "../../components/assets/syl-retreat_gallary_img1.jpg";
-import gal_img2 from "../../components/assets/syl-retreat_gallary_img2.jpg";
-import gal_img3 from "../../components/assets/syl-retreat_gallary_img3.jpg";
-import gal_img4 from "../../components/assets/syl-retreat_gallary_img4.jpg";
-import gal_img5 from "../../components/assets/syl-retreat_gallary_img5.jpg";
+import gal_img1 from "../../components/assets/syl-retreat_gallary_img1.webp";
+import gal_img2 from "../../components/assets/syl-retreat_gallary_img2.webp";
+import gal_img3 from "../../components/assets/syl-retreat_gallary_img3.webp";
+import gal_img4 from "../../components/assets/syl-retreat_gallary_img4.webp";
+import gal_img5 from "../../components/assets/syl-retreat_gallary_img5.webp";
 
 class TestimonialNewSlider extends Component {
   constructor(props) {

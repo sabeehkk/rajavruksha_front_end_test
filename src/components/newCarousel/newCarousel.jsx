@@ -102,11 +102,11 @@
 import React, { useState } from "react";
 import "./carouse.css";
 
-import img1 from "../../components/assets/home_carousel_img1.jpg";
-import img2 from "../../components/assets/Sylvan_retreat_single_banner_img.jpg";
-import Mango from "../../components/assets/mangoImg.jpg";
-import Fruit from "../../components/assets/fruit.png";
-import img6 from "../../components/assets/home_carousel_img6.jpg";
+import img1 from "../../components/assets/home_carousel_img1.webp";
+import img2 from "../../components/assets/Sylvan_retreat_single_banner_img.webp";
+import Mango from "../../components/assets/mangoImg.webp";
+import Fruit from "../../components/assets/fruit.webp";
+import img6 from "../../components/assets/home_carousel_img6.webp";
 
 function NewCarousel() {
   // State to track the active item

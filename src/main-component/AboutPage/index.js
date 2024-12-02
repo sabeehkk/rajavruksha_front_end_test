@@ -6,7 +6,7 @@ import Partners from "../../components/partners";
 import Expertise from "../../components/expertise";
 import Team from "../../components/team";
 import Footer from "../../components/footer";
-import bg from "../../components/assets/project_page.jpg";
+import bg from "../../components/assets/project_page.webp";
 import About from "../../components/about";
 import Animation from "../../components/reactIcons/journeySection";
 

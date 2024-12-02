@@ -40,7 +40,7 @@ function Sylvanretreat() {
             <Tour />
           </div>
           <div
-            className="col-lg-4 col-md-12 col-sm-12"
+            className="col-lg-4 col-md-12 col-sm-12 syl-amenities"
             style={{ height: "500px" }}
           >
             <Amenities

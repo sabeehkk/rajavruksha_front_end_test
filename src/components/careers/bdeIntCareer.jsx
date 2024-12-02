@@ -117,7 +117,7 @@ const BdeInternCareer = () => {
 
   return (
     <section className="containers">
-      {isLoading && <Loader />}
+      {isLoading && <Loader logo={false} />}
       <div className="job-description" data-aos="fade-right">
         <h2>BUSINESS DEVELOPMENT EXECUTIVE INTERN</h2>
         <h4>Intern Program Details</h4>

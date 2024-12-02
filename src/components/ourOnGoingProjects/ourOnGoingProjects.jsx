@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./ourOnGoingProjects.css";
 import bgImg from "../../components/assets/on_going_project_syl.jpg";
-import SylRetreatHomePage from "../../components/assets/Sylan retreat_Banner1.jpg";
+import SylRetreatHomePage from "../../components/assets/Sylan retreat_Banner1.webp";
 
 import React from "react";
 const OngoingProjects = () => {
