@@ -10,21 +10,32 @@
   z-index: 9999;
 }
 
-/* Background color applied only if logo is false */
-.loader-with-bg {
+.loader-with-logo {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Optional styling for the Oval spinner */
-/* .oval-spinner {
-  background-color: #f0f0f0; 
-  padding: 10px; 
-  border-radius: 50%; 
-} */
+.loader-default-bg {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly transparent background */
+}
 
-/* Optional styling for the video logo */
-/* .loader-logo {
-  width: 120px;  
-  height: 120px; 
-  object-fit: contain; 
-} */
+.spinner-with-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-logo {
+  width: 60px; /* Adjust size of the logo */
+  height: auto;
+  z-index: 2; /* Ensure the logo is above the spinner */
+}
+
+.Oval {
+  z-index: 1; /* Spinner below the logo */
+}

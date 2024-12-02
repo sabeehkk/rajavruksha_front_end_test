@@ -49,7 +49,7 @@ const RoutesWithLoader = () => {
 
   return (
     <>
-      {loading && <Loader logo={true} />}
+      {loading && <Loader logo={true} color="#C1933C" secondaryColor="#C1933C"/>}
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/home" component={Homepage} />
