@@ -14,16 +14,11 @@ const OngoingProjects = () => {
       <h1 className="projects-title">Our Ongoing Projects</h1>
 
       <div className="project-card">
-<<<<<<< HEAD
-        <div className="project-image-container">
-          <img style={{userSelect:'none'}}
-=======
         <div
           className="project-image-container"
           onContextMenu={disableContextMenu}
         >
           <img
->>>>>>> 33b85ff0f0f027faf6f3a98e14fd3e55b5bef939
             // src="https://images.pexels.com/photos/259280/pexels-photo-259280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             // src={bgImg}
             src={SylRetreatHomePage}
