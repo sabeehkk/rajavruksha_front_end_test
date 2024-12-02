@@ -8,6 +8,9 @@ import "./style.css";
 import AboutImg from "../../components/assets/about-1.e32a7109.webp";
 
 const About = ({ text, readMore }) => {
+  const disableContextMenu = (e) => {
+    e.preventDefault();
+  };
   return (
     <div
       className="about-area"
@@ -105,6 +108,7 @@ const About = ({ text, readMore }) => {
               className="about-right"
               data-aos="fade-left"
               data-aos-offset="100"
+              onContextMenu={disableContextMenu}
             >
               <img className="about_img_2" src={AboutImg} alt="img" />
             </div>

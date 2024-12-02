@@ -32,52 +32,55 @@ import MainPrivacyPolicy from "../PrivacyPolicy/index.js";
 import CareerMainFooterComp from "../CareerMainFooter/index.js";
 import FloatingIcons from "../../components/FloatingIcons/FloatingIcons.jsx";
 import Loader from "../../components/Loader/loader.jsx";
-import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import MainTermsCondition from "../TermsConditions/index.js";
 
-// const RoutesWithLoader = () => {
-//   const [loading, setLoading] = useState(false);
-//   const location = useLocation();
-//   useEffect(() => {
-//     setLoading(true);
-//     const timer = setTimeout(() => {
-//       setLoading(false);
-//     }, 1000);
-//     return timer;
-//   }, [location]);
-//   return (
-//     <>
-//       {loading && <Loader />}
-//       <Switch>
-//         <Route exact path="/" component={Homepage} />
-//         <Route path="/home" component={Homepage} />
-//         <Route path="/about" component={AboutPage} />
-//         <Route path="/projects" component={ProjectPage} />
-//         <Route path="/projects-single" component={ProjectSinglePage} />
-//         <Route path="/service" component={ServicePage} />
-//         <Route path="/service-single" component={ServiceSinglePage} />
-//         <Route path="/portfolio" component={PortfolioPage} />
-//         <Route path="/team" component={TeamPage} />
-//         <Route path="/faq" component={FaqPage} />
-//         <Route path="/contact" component={ContactPage} />
-//         <Route path="/404" component={ErrorPage} />
-//         <Route path="/blog" component={BlogPage} />
-//         <Route path="/blog-single" component={BlogSinglePage} />
-//         <Route path="/experienceSection" component={ExperienceSection} />
-//         <Route path="/careers" component={CareerMainFooterComp} />
-//         <Route path="/bdeCareerForm" component={BdeCareerMain} />
-//         <Route path="/bdeIntern" component={BdeInternCareerMain} />
-//         <Route path="/sylvan-retreat" component={SylvanRetreat} />
-//         <Route path="/eco-nest" component={Econest} />
-//         <Route path="/journeySection" component={JourneySection} />
-//         <Route path="/status" component={Status} />
-//         <Route path="/amenities" component={Amenities} />
-//         <Route path="/privacyPolicy" component={MainPrivacyPolicy} />
-//         <Route path="*" component={ErrorPage} />
-//       </Switch>
-//     </>
-//   );
-// };
+const RoutesWithLoader = () => {
+  const [loading, setLoading] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  return (
+    <>
+      {loading && <Loader logo={true} color="#C1933C" secondaryColor="#C1933C"/>}
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route path="/home" component={Homepage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/projects" component={ProjectPage} />
+        <Route path="/projects-single" component={ProjectSinglePage} />
+        <Route path="/service" component={ServicePage} />
+        <Route path="/service-single" component={ServiceSinglePage} />
+        <Route path="/portfolio" component={PortfolioPage} />
+        <Route path="/team" component={TeamPage} />
+        <Route path="/faq" component={FaqPage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route path="/404" component={ErrorPage} />
+        <Route path="/blog" component={BlogPage} />
+        <Route path="/blog-single" component={BlogSinglePage} />
+        <Route path="/experienceSection" component={ExperienceSection} />
+        <Route path="/careers" component={CareerMainFooterComp} />
+        <Route path="/bdeCareerForm" component={BdeCareerMain} />
+        <Route path="/bdeIntern" component={BdeInternCareerMain} />
+        <Route path="/sylvan-retreat" component={SylvanRetreat} />
+        <Route path="/eco-nest" component={Econest} />
+        <Route path="/journeySection" component={JourneySection} />
+        <Route path="/status" component={Status} />
+        <Route path="/amenities" component={Amenities} />
+        <Route path="/privacyPolicy" component={MainPrivacyPolicy} />
+        <Route path="/terms-conditions" component={MainTermsCondition} />
+        <Route path="*" component={ErrorPage} />
+      </Switch>
+    </>
+  );
+};
 
 const AllRoute = () => {
   return (
@@ -89,35 +92,7 @@ const AllRoute = () => {
                     widgetId="1i70srim4"
                     /> */}
         <ScrollToTop />
-        {/* <RoutesWithLoader /> */}
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/home" component={Homepage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/projects" component={ProjectPage} />
-          <Route path="/projects-single" component={ProjectSinglePage} />
-          <Route path="/service" component={ServicePage} />
-          <Route path="/service-single" component={ServiceSinglePage} />
-          <Route path="/portfolio" component={PortfolioPage} />
-          <Route path="/team" component={TeamPage} />
-          <Route path="/faq" component={FaqPage} />
-          <Route path="/contact" component={ContactPage} />
-          <Route path="/404" component={ErrorPage} />
-          <Route path="/blog" component={BlogPage} />
-          <Route path="/blog-single" component={BlogSinglePage} />
-          <Route path="/experienceSection" component={ExperienceSection} />
-          <Route path="/careers" component={CareerMainFooterComp} />
-          <Route path="/bdeCareerForm" component={BdeCareerMain} />
-          <Route path="/bdeIntern" component={BdeInternCareerMain} />
-          <Route path="/sylvan-retreat" component={SylvanRetreat} />
-          <Route path="/eco-nest" component={Econest} />
-          <Route path="/journeySection" component={JourneySection} />
-          <Route path="/status" component={Status} />
-          <Route path="/amenities" component={Amenities} />
-          <Route path="/privacyPolicy" component={MainPrivacyPolicy} />
-          <Route path="/terms-conditions" component={MainTermsCondition} />
-          <Route path="*" component={ErrorPage} />
-        </Switch>
+        <RoutesWithLoader />
       </Router>
     </div>
   );

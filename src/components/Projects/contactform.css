@@ -42,7 +42,7 @@ max-height: 739px;
 }
 
 /* Responsive Design */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .contact-image {
     width: 90%; /* Slight padding for smaller screens */
     max-width: 100%; /* Ensure it doesn't overflow */
@@ -283,6 +283,11 @@ max-height: 739px;
   transition: all 0.4s ease;
 }
 
+.contact-image-container {
+  width: 383px;
+  /* margin-left: -122px; */
+}
+
 .contact-form-new-action button:hover {
   background: transparent;
   color: #b78d65;
@@ -292,6 +297,10 @@ max-height: 739px;
   .eco-nest-contact {
     width: 104%;
     margin-left: -36px;
+  }
+  .contact-image-container {
+    width: 100%;
+    margin: auto;
   }
 }
 

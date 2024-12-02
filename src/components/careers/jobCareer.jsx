@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Loader from "../Loader/loader";
 import "./jobCareer.css";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const CareerForm = () => {
@@ -128,7 +129,7 @@ const CareerForm = () => {
 
   return (
     <section className="containers">
-      {isLoading && <Loader />}
+      {isLoading && <Loader logo={false} />}
       <div className="job-description" data-aos="fade-right">
         <h2>BUSINESS DEVELOPMENT EXECUTIVE</h2>
         <h4>Job Role Description</h4>

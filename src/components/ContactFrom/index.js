@@ -146,7 +146,9 @@ const ContactForm = ({ status }) => {
 
   return (
     <div className="contact-form-height">
-      {!!isLoading && <Loader color="#80c1d1" secondaryColor="#80c1d1" />}
+      {!!isLoading && (
+        <Loader color="#80c1d1" secondaryColor="#80c1d1" logo={false} />
+      )}
       <form onSubmit={submitHandler}>
         <Box
           component="form"

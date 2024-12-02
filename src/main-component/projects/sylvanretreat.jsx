@@ -5,7 +5,7 @@ import PageTitle from "../../components/pagetitle";
 import Sylvanretreat from "../../components/Projects/sylvanretreat";
 import Testimonial from "../../components/testimonial";
 import Footer from "../../components/footer";
-import bg from "../../components/assets/Sylan_retreat_new_Banner.jpg";
+import bg from "../../components/assets/Sylan_retreat_new_Banner.webp";
 import ContactUs from "../../components/Projects/contactform";
 import Carousel from "../../components/carouselImage/carousel";
 import NewCarousel from "../../components/newCarousel/newCarousel";

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Header from '../../components/header'
 import PageTitle from '../../components/pagetitle'
-import bg from "../../components/assets/bde_intern.jpg";
+import bg from "../../components/assets/bde_intern.webp";
 import Footer from '../../components/footer/index.js'
 import BdeInternCareer from '../../components/careers/bdeIntCareer.jsx'
 

@@ -4,7 +4,7 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import PageTitle from "../../components/pagetitle";
 import PrivacyPolicy from "../../components/PrivacyPolicy";
-import bg from "../../components/assets/privacy_policy.jpg";
+import bg from "../../components/assets/privacy_policy.webp";
 
 const MainPrivacyPolicy = () => {
   return (

@@ -4,8 +4,8 @@ import { useHistory } from "react-router-dom";
 
 import ecoNext from "../../components/assets/ecoproject.jpg";
 // import EconextProject from "../../components/assets/project_picture.jpg";
-import SylRetreatImg from "../../components/assets/Sylvan_retreat_single_banner_img.jpg";
-import EcoNestImg from "../../components/assets/eco-nest_pro_det_img.jpg";
+import SylRetreatImg from "../../components/assets/Sylvan_retreat_single_banner_img.webp";
+import EcoNestImg from "../../components/assets/eco-nest_pro_det_img.webp";
 
 import "./style.css";
 
