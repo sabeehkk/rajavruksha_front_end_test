@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import Loader from "../Loader/loader";
 import "./jobCareer.css";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 const BdeInternCareer = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +11,7 @@ const BdeInternCareer = () => {
     contact_no: "",
     file: null,
   });
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const fileInputRef = useRef(null);
@@ -16,6 +19,14 @@ const BdeInternCareer = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleCaptcha = (value) => {
+    if (value) {
+      setCaptchaVerified(true); // Captcha is valid
+    } else {
+      setCaptchaVerified(false); // Captcha failed
+    }
   };
 
   const handleFileChange = (e) => {
@@ -64,6 +75,10 @@ const BdeInternCareer = () => {
     //   formErrors.contact_no = "Please enter a phone number.";
     if (!formData.file) formErrors.file = "Please upload a file.";
     setErrors(formErrors);
+    if (!captchaVerified) {
+      alert("Please complete the reCAPTCHA.");
+      return;
+    }
     // If there are no form errors, proceed with submitting the data
     if (Object.keys(formErrors).length === 0) {
       setIsLoading(true);
@@ -296,6 +311,10 @@ const BdeInternCareer = () => {
 
         <div className="form-group" style={{ marginLeft: "1rem" }}>
           {/* <input type="checkbox" id="consent" required /> */}
+          <ReCAPTCHA
+                sitekey="6LcZ6o8qAAAAAILBQNMf-b1YNb4a9YvCPKeog3CS"
+                onChange={handleCaptcha}
+              />
           <label htmlFor="consent">
             I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me via
             phone and email regarding my enquiry. I understand that this
