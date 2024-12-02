@@ -11,7 +11,7 @@ const About = ({ text, readMore }) => {
   return (
     <div
       className="about-area"
-      style={{
+      style={{ userSelect:'none',
         backgroundImage: `url(${"https://byasi-react.themescare.com/static/media/about-bg.bedc79f5.png"})`,
       }}
     >
