@@ -6,10 +6,17 @@ import bdeImg from "../../components/assets/BdeImg.webp";
 import bdeIntImg from "../../components/assets/bdeIntern.webp";
 
 const CareerFooter = () => {
+  const disableContextMenu = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
       <div className="careers-list">
-        <div className="career-ind" style={{ marginRight: "-40px" }}>
+        <div
+          className="career-ind"
+          style={{ marginRight: "-40px" }}
+          onContextMenu={disableContextMenu}
+        >
           <Link to="bdeCareerForm">
             <img src={bdeImg} alt="bde" />
             <div className="bde-title">
@@ -17,7 +24,7 @@ const CareerFooter = () => {
             </div>
           </Link>
         </div>
-        <div className="career-ind">
+        <div className="career-ind" onContextMenu={disableContextMenu}>
           <Link to="bdeIntern">
             <img src={bdeIntImg} alt="bdeInt" />
             <div className="bde-title-intern">

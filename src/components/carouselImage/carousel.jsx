@@ -84,6 +84,10 @@ class TestimonialNewSlider extends Component {
       },
     ];
 
+    const disableContextMenu = (e) => {
+      e.preventDefault();
+    };
+
     return (
       <div className="testimonial-area" data-aos="fade-up">
         <div className="containerr gal-cont">
@@ -111,7 +115,10 @@ class TestimonialNewSlider extends Component {
                   {customerFeedback.map((value, index) => {
                     return (
                       <div className="slide">
-                        <div className="gallery-testimonial">
+                        <div
+                          className="gallery-testimonial"
+                          onContextMenu={disableContextMenu}
+                        >
                           <img src={value.carouselImg} alt={"namesss"} />
                         </div>
                       </div>

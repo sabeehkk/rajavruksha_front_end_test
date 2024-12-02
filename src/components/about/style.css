@@ -96,6 +96,9 @@
 
 .about-right {
   position: relative;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .about_img_1 {
