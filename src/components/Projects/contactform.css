@@ -12,11 +12,9 @@
   overflow: hidden;
 } */
 .contact-image-container {
-height: auto;
-max-height: 739px;
+  height: auto;
+  max-height: 739px;
 
-
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +25,9 @@ max-height: 739px;
   height: 600px;
   border-radius: 20px;
   object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .eco-nest-container {
@@ -307,10 +308,10 @@ max-height: 739px;
   transition: all 0.4s ease;
 }
 
-.contact-image-container {
+/* .contact-image-container {
   width: 383px;
-  /* margin-left: -122px; */
-}
+  margin-left: -122px;
+} */
 
 .contact-form-new-action button:hover {
   background: transparent;
@@ -327,4 +328,3 @@ max-height: 739px;
     margin: auto;
   }
 }
-

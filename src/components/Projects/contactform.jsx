@@ -36,7 +36,12 @@ const ContactUs = ({
           {!!projectTitle && (
             <div className="col-lg-6 col-sm-6">
               <div className="contact-image-container">
-                <img src={Map} alt="Contact" className="contact-image" />
+                <img
+                  src={Map}
+                  alt="Contact"
+                  className="contact-image"
+                  onContextMenu={disableContextMenu}
+                />
               </div>
             </div>
           )}
