@@ -286,7 +286,7 @@ const ContactForm = ({ status }) => {
             <Grid item xs={12}>
               <ReCAPTCHA
                 // sitekey="6Lem4Y8qAAAAAP5GA-KEiS_3fBdJQxuhFL6IqHxV"
-                sitekey="6Lem4Y8qAAAAAP5GA-KEiS_3fBdJQxuhFL6IqHxV"
+                sitekey="6LcZ6o8qAAAAAILBQNMf-b1YNb4a9YvCPKeog3CS"
                 onChange={handleCaptcha}
               />
             </Grid>
