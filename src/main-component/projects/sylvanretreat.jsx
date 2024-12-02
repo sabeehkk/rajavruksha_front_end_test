@@ -8,6 +8,7 @@ import Footer from "../../components/footer";
 import bg from "../../components/assets/Sylan_retreat_new_Banner.webp";
 import ContactUs from "../../components/Projects/contactform";
 import Carousel from "../../components/carouselImage/carousel";
+import NewCarousel from "../../components/newCarousel/newCarousel";
 function Sylvanretreats() {
   const project_page_syl = "Sylvan-Retreat";
   return (
@@ -22,6 +23,7 @@ function Sylvanretreats() {
       <Sylvanretreat />
       {/* <ContactForm/> */}
       <ContactUs projectTitle={project_page_syl} />
+      {/* <NewCarousel/> */}
       <Carousel />
       <Footer />
     </Fragment>

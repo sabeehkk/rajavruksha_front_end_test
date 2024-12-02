@@ -99,7 +99,7 @@
 
 // export default NewCarousel;
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./carouse.css";
 
 import img1 from "../../components/assets/home_carousel_img1.webp";
@@ -132,6 +132,16 @@ function NewCarousel() {
     );
   };
 
+  // Auto-slide functionality using useEffect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next(); // Automatically go to the next slide
+    }, 3000); // Adjust the time interval (in milliseconds) as needed
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []); // Empty dependency array ensures this runs once on mount
+
+
   // Function to determine the class based on position relative to activeIndex
   const getClass = (index) => {
     if (index === activeIndex) return "focus";
@@ -146,7 +156,7 @@ function NewCarousel() {
 
   return (
     <>
-      <div className="home-new-carouse">
+      <div className="home-new-carouse " >
         <div className="home-popular">
           <div className="slider-new">
             <div className="slider-prev-new">

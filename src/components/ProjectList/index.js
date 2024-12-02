@@ -47,6 +47,7 @@ const ProjectList = () => {
                     src={SylRetreatImg}
                     alt="img"
                     style={{
+                      userSelect:'none',
                       height: "600px",
                       width: "100%", // Ensures the image takes the full width of the card
                       objectFit: "cover", // Makes the image fit within the card without distortion

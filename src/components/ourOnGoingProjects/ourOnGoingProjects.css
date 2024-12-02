@@ -110,4 +110,13 @@
   .projects-container-new {
     min-height: 61vh;
   }
+  }
+
+
+  /* For screens with a resolution of 2560px width (27-inch monitors) */
+@media (min-width: 2560px) and (max-width: 2719px) {
+  .projects-container-new {
+    min-height: 61vh;
+   
+  }
 }

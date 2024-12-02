@@ -106,6 +106,7 @@ const Footer = () => {
             </Link>
             {/* <a href="#"><div class="bg-ico" id="whatsapp"><i class="fab fa-whatsapp social  whatsapp fa-3x"></i></div></a> */}
             <Link onClick={() => window.open("https://www.youtube.com/@Rajavruksha_Realtors", "_blank")}><div class="bg-ico" id="youtube"><i class="fab fa-youtube social  youtube fa-3x"></i></div></Link>
+            <Link onClick={() => window.open("https://www.youtube.com/@Rajavruksha_Realtors", "_blank")}><div class="bg-ico" id="linkeding"><i class="fab fa-linkedin social  linkedin fa-3x"></i></div></Link>
             </div>
 
                 </div>
