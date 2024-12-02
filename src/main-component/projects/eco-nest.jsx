@@ -21,9 +21,13 @@ function Econext() {
       />
       <EcoNexts />
       <div className="flex-container">
-        <ContactUs page={contact_page_title} />
-        <Layoutguide />
+        <ContactUs
+          page={contact_page_title}
+          contact_page_title={contact_page_title}
+        />
       </div>
+      <Layoutguide />
+
       <Footer />
     </Fragment>
   );

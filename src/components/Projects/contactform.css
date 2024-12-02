@@ -12,11 +12,9 @@
   overflow: hidden;
 } */
 .contact-image-container {
-height: auto;
-max-height: 739px;
+  height: auto;
+  max-height: 739px;
 
-
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +25,29 @@ max-height: 739px;
   height: 600px;
   border-radius: 20px;
   object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.eco-nest-container {
+  text-align: center; /* Center-aligns the content */
+}
+
+.eco-nest-route {
+  height: 200px;
+  margin: 0 auto 10px auto; /* Center image and reduce top/bottom spacing */
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.eco-nest-text {
+  margin-top: 10px; /* Space between the image and paragraph */
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
 }
 
 @media (max-width: 390px) {
@@ -130,7 +151,8 @@ max-height: 739px;
 
 .eco-nest-contact {
   padding: 20px 30px;
-  width: 200%;
+  /* width: 200%; */
+  width: 100%;
   margin: auto;
   border-radius: 40px;
   height: auto;
@@ -261,6 +283,9 @@ max-height: 739px;
   .contact-page-right-new {
     margin-top: 30px;
   }
+  .eco-nest-container {
+    margin-left: -57px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .contact-new-form {
@@ -283,10 +308,10 @@ max-height: 739px;
   transition: all 0.4s ease;
 }
 
-.contact-image-container {
+/* .contact-image-container {
   width: 383px;
-  /* margin-left: -122px; */
-}
+  margin-left: -122px;
+} */
 
 .contact-form-new-action button:hover {
   background: transparent;
@@ -303,4 +328,3 @@ max-height: 739px;
     margin: auto;
   }
 }
-
