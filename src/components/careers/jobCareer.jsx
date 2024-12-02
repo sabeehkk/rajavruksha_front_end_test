@@ -295,7 +295,7 @@ const CareerForm = () => {
         <div className="form-group" style={{ marginLeft: "1rem" }}>
           {/* <input type="checkbox" id="consent" required />  */}
           <ReCAPTCHA
-                sitekey="6Lf9QMUpAAAAALTTOuMe4_MoVGmF9cwj2NtwsaK_"
+                sitekey="6Lfx3o8qAAAAAA55HZyjYxM2KDniMChH5zjBke1v"
                 onChange={handleCaptcha}
               />
           <label htmlFor="consent">
