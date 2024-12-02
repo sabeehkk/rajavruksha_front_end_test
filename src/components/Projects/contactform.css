@@ -12,6 +12,11 @@
   overflow: hidden;
 } */
 .contact-image-container {
+height: auto;
+max-height: 739px;
+
+
+  
   display: flex;
   justify-content: center;
   align-items: center;
