@@ -59,6 +59,9 @@
   /* margin-bottom: 25px;
     margin-top:25px; */
   margin: 25px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .slide {
