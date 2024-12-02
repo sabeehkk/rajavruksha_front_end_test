@@ -3,10 +3,12 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
 import Loader from "../Loader/loader";
+import ReCAPTCHA from "react-google-recaptcha";
 import "./style.css";
 
 const ContactForm = ({ status }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showFullConsentText, setShowFullConsentText] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -47,9 +49,18 @@ const ContactForm = ({ status }) => {
     setShowFullConsentText((prev) => !prev);
   };
 
+  const handleCaptcha = (value) => {
+    if (value) {
+      setCaptchaVerified(true); // Captcha is valid
+    } else {
+      setCaptchaVerified(false); // Captcha failed
+    }
+  };
+
   const submitHandler = async (e) => {
     e.preventDefault();
     let formErrors = { ...error };
+   
     if (formData.name === "") formErrors.name = "Please enter name";
     if (formData.email === "") {
       formErrors.email = "Please enter email";
@@ -64,6 +75,10 @@ const ContactForm = ({ status }) => {
       formErrors.phone_no = "Please enter phone number";
     } else if (!/^\d{10}$/.test(formData.phone_no)) {
       formErrors.phone_no = "Phone number must be exactly 10 digits";
+    }
+    if (!captchaVerified) {
+      alert("Please complete the reCAPTCHA.");
+      return;
     }
     if (formData.consent === false)
       formErrors.consent = "You must agree to the terms and conditions.";
@@ -265,6 +280,18 @@ const ContactForm = ({ status }) => {
               )}
             </Grid>
           </Grid>
+
+          {/* Add the reCAPTCHA here */}
+          {/* <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <ReCAPTCHA
+                sitekey="6Lf9QMUpAAAAALTTOuMe4_MoVGmF9cwj2NtwsaK_"
+                onChange={handleCaptcha}
+              />
+            </Grid>
+          </Grid> */}
+
+
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <div className="consent-cont">
@@ -281,7 +308,7 @@ const ContactForm = ({ status }) => {
                     required
                   />
                 </div>
-
+                
                 <div className="consent-label-wrapper">
                   <label htmlFor="consent" className="consent-brief">
                     {showFullConsentText
