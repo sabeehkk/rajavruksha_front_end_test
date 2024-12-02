@@ -7,7 +7,6 @@ import BdeInternCareer from '../../components/careers/bdeIntCareer.jsx'
 
 const BdeInternCareerMain = () => {
     const intSubtitle = "Business Development Executive Intern"
-
     return (
         <Fragment>
             <Header />

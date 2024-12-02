@@ -311,10 +311,10 @@ const BdeInternCareer = () => {
 
         <div className="form-group" style={{ marginLeft: "1rem" }}>
           {/* <input type="checkbox" id="consent" required /> */}
-          {/* <ReCAPTCHA
+          <ReCAPTCHA
                 sitekey="6Lf9QMUpAAAAALTTOuMe4_MoVGmF9cwj2NtwsaK_"
                 onChange={handleCaptcha}
-              /> */}
+              />
           <label htmlFor="consent">
             I hereby authorize Rajavruksha Realtors Pvt Ltd to contact me via
             phone and email regarding my enquiry. I understand that this
