@@ -26,8 +26,15 @@
 .social-icons a.youtube {
   background-color: #c4302b;
 }
-
 .social-icons a.youtube:hover {
+  background-color: #ff0000;
+}
+.social-icons a.linkedin {
+  background-color: #c4302b;
+}
+
+
+.social-icons a.linkedin:hover {
   background-color: #ff0000;
 }
 
@@ -386,6 +393,9 @@ ul.no-list li {
 
 .social .facebook {
   background: #3b5998;
+}
+.social .linkedin{
+  background: red;
 }
 
 .social .twitter {
