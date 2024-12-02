@@ -24,6 +24,26 @@
   object-fit: cover;
 }
 
+.eco-nest-container {
+  text-align: center; /* Center-aligns the content */
+}
+
+.eco-nest-route {
+  height: 200px;
+  margin: 0 auto 10px auto; /* Center image and reduce top/bottom spacing */
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.eco-nest-text {
+  margin-top: 10px; /* Space between the image and paragraph */
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
 @media (max-width: 390px) {
   .contact-page-new-area {
     margin-left: -1vh;
@@ -125,7 +145,8 @@
 
 .eco-nest-contact {
   padding: 20px 30px;
-  width: 200%;
+  /* width: 200%; */
+  width: 100%;
   margin: auto;
   border-radius: 40px;
   height: auto;
@@ -255,6 +276,9 @@
   }
   .contact-page-right-new {
     margin-top: 30px;
+  }
+  .eco-nest-container {
+    margin-left: -57px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {

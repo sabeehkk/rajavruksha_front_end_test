@@ -3,10 +3,19 @@ import React from "react";
 import "../../components/Projects/contactform.css";
 import ContactForm from "../../components/ContactFrom";
 import Map from "../../components/assets/Map.jpg";
+import EcoNestBarScan from "../../components/assets/Econest_Location.png";
 import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
-const ContactUs = ({ onFormSubmit, projectTitle, page }) => {
+const ContactUs = ({
+  onFormSubmit,
+  projectTitle,
+  page,
+  contact_page_title,
+}) => {
   const status = "project";
+  const disableContextMenu = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="contact-page-new-area">
       <div className="containerss">
@@ -29,6 +38,19 @@ const ContactUs = ({ onFormSubmit, projectTitle, page }) => {
               <div className="contact-image-container">
                 <img src={Map} alt="Contact" className="contact-image" />
               </div>
+            </div>
+          )}
+          {!!contact_page_title && (
+            <div className="col-lg-6 col-sm-6 eco-nest-container">
+              <img
+                src={EcoNestBarScan}
+                alt="bar-scan"
+                className="eco-nest-route"
+                onContextMenu={disableContextMenu}
+              />
+              <p className="eco-nest-text text-capitalize">
+                scan here to know more about the route map
+              </p>
             </div>
           )}
         </div>
