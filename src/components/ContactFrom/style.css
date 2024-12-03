@@ -61,6 +61,11 @@
   margin-left: -31px;
 }
 
+@media (max-width: 720px) {
+          .responsive-contact-formcontact{
+            margin-left: 150px;
+          }
+}
 @media (max-width: 430px) {
   .consent-brief {
     font-size: 10px;
@@ -84,6 +89,7 @@
     max-height: 1000px;
     transition: all 0.3s ease;
     margin-right: -155px;
+
   }
 
   .responsive-contact-form {

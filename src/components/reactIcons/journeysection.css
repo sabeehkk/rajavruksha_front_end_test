@@ -150,9 +150,34 @@
   }
 }
 
-@media (min-width:769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .res-icon {
     width: 282px;
     height: 58px;
+  }
+  .journey-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-wrapper {
+    margin-top: 17px;
+    text-align: center;
+  }
+  .journey-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .icon-wrapper,
+  .res-icon {
+    align-items: center;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    /* margin-bottom: 15px; */
+    /* margin-right: 0;  */
+  }
+  .journey-card {
+    flex-direction: column;
+    align-items: center;
   }
 }

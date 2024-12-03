@@ -351,8 +351,8 @@
 
 @media (min-width: 401px) and (max-width: 430px) {
   .contact-form::before {
-    width: 329px;
-    width: 352px;
+    /* width: 329px; */
+    width: 375px;
     border-radius: 0;
     left: 16px;
   }
