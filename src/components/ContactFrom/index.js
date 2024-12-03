@@ -284,7 +284,7 @@ const ContactForm = ({ status }) => {
           </Grid>
 
           {/* Add the reCAPTCHA here */}
-          <Grid container spacing={2}>
+          <Grid container spacing={2} style={{width:''}}>
             <Grid item xs={12}>
               <ReCAPTCHA
                 // sitekey="6Lem4Y8qAAAAAP5GA-KEiS_3fBdJQxuhFL6IqHxV"

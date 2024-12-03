@@ -21,8 +21,8 @@ const App = () => {
                     widgetId="1i70srim4"
                     />
                 <AllRoute />
-    </div>
-    );
+        </div>
+          );
 };
 
 export default App;
