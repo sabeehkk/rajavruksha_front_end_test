@@ -1,4 +1,5 @@
 /* ===================== ABOUT ======================*/
+
 .about-area {
   padding: 50px;
   background-repeat: no-repeat;
@@ -202,6 +203,17 @@
   }
   .about_img_1 {
     display: none;
+  }
+  .about_img_2 {
+    margin: auto;
+    width: 100%;
+  }
+  .about-left {
+    display: flex;
+    justify-content: space-around;
+  }
+  .features-list-wrapper {
+    margin: 62px;
   }
 }
 @media (width: 1024px) {
